@@ -15392,4 +15392,103 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   border: 1px solid #e9ecef;
 }
 
+body {
+  background-color: #f6f4ef;
+  color: #171717;
+}
+
+.alder-stone-navbar {
+  border-bottom: 1px solid #dedbd4;
+  padding: 1.5rem 0;
+}
+
+.alder-stone-brand {
+  color: #171717;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.alder-stone-brand:hover, .alder-stone-brand:focus {
+  color: #171717;
+}
+
+.alder-stone-navbar .navbar-nav {
+  gap: 1.25rem;
+}
+
+.alder-stone-navbar .nav-link {
+  color: #171717;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0;
+}
+.alder-stone-navbar .nav-link:hover, .alder-stone-navbar .nav-link:focus, .alder-stone-navbar .nav-link.active {
+  color: #6d6b67;
+}
+
+.alder-stone-navbar .navbar-toggler {
+  border: 0;
+  border-radius: 0;
+  padding: 0.25rem;
+}
+
+.alder-stone-footer {
+  background-color: #171717;
+  color: #f6f4ef;
+  margin-top: 4rem;
+  padding: 4rem 0 1.5rem;
+}
+
+.alder-stone-footer-brand {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.alder-stone-footer-intro,
+.alder-stone-footer-contact,
+.alder-stone-footer-bottom {
+  color: #b8b5ae;
+}
+
+.alder-stone-footer-intro {
+  max-width: 30rem;
+}
+
+.alder-stone-footer a {
+  color: #f6f4ef;
+  text-decoration: none;
+}
+.alder-stone-footer a:hover, .alder-stone-footer a:focus {
+  color: #b8b5ae;
+}
+
+.alder-stone-footer-contact {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-style: normal;
+}
+
+.alder-stone-footer-bottom {
+  border-top: 1px solid #3d3d3b;
+  font-size: 0.875rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .alder-stone-navbar .navbar-nav {
+    gap: 0.75rem;
+    padding-top: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .alder-stone-footer-contact {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
 /*# sourceMappingURL=child-theme.css.map */
