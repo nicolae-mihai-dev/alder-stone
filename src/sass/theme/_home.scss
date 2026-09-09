@@ -1,61 +1,35 @@
 // Material Monograph: portfolio-led home page art direction for Alder & Stone.
-
-$home-canvas: #f2eee6;
-$home-canvas-light: #f8f5ef;
-$home-forest: #1b2721;
-$home-forest-deep: #27372e;
-$home-stone: #77766e;
-$home-sand: #b8ae9f;
-$home-mineral: #b98959;
-$home-rule: rgba(27, 39, 33, 0.18);
-$home-light-rule: rgba(242, 238, 230, 0.26);
-$home-display: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-$home-sans:
-  ui-sans-serif,
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  sans-serif;
-$home-space-xs: 0.5rem;
-$home-space-sm: 1rem;
-$home-space-md: 1.5rem;
-$home-space-lg: 2rem;
-$home-space-xl: 3rem;
-$home-section-space: clamp(5rem, 8vw, 8rem);
-$home-space-eyebrow-to-heading: $home-space-md;
-$home-space-heading-to-copy: $home-space-lg;
-$home-space-copy-to-action: $home-space-lg;
-$home-space-action-to-details: $home-space-xl;
+// Shared colours, typography and rhythm are defined in _alder-stone-design-system.scss.
 
 .home-page {
-  background: $home-canvas;
+  background: $alder-canvas;
   overflow: hidden;
 
   .container {
-    max-width: 82.5rem;
+    max-width: $alder-content-width;
   }
 }
 
 // Keep the homepage masthead in normal document flow so it remains visible with or without the WordPress admin bar.
 .site-header--home {
-  background: $home-forest;
+  background: $alder-forest;
   position: relative;
   z-index: 10;
 
   .alder-stone-navbar {
-    background: $home-forest;
-    border-bottom-color: $home-light-rule;
+    background: $alder-forest;
+    border-bottom-color: $alder-light-rule;
   }
 
   .alder-stone-brand,
   .nav-link {
-    color: $home-canvas;
+    color: $alder-canvas;
   }
 
   .alder-stone-brand:hover,
   .nav-link:hover,
   .nav-link:focus {
-    color: $home-mineral;
+    color: $alder-mineral;
   }
 }
 
@@ -63,27 +37,21 @@ $home-space-action-to-details: $home-space-xl;
 .about-intro__eyebrow,
 .home-section-link,
 .home-project__meta {
-  font-family: $home-sans;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
+  @include alder-eyebrow;
 }
 
 .home-eyebrow {
-  color: $home-stone;
+  color: $alder-stone;
 }
 
 .home-eyebrow,
 .about-intro__eyebrow {
-  margin: 0 0 $home-space-eyebrow-to-heading;
+  margin: 0 0 $alder-space-eyebrow-to-heading;
 }
 
 .home-hero {
-  background: $home-forest;
-  color: $home-canvas;
+  background: $alder-forest;
+  color: $alder-canvas;
   isolation: isolate;
   min-height: clamp(42rem, 88vh, 59rem);
   position: relative;
@@ -117,27 +85,27 @@ $home-space-action-to-details: $home-space-xl;
   }
 
   &__content {
-    background: $home-forest;
-    border-top: 0.25rem solid $home-mineral;
+    background: $alder-forest;
+    border-top: 0.25rem solid $alder-mineral;
     max-width: clamp(23rem, 43vw, 39rem);
     padding: clamp(1.75rem, 3.8vw, 4rem);
   }
 
   .home-eyebrow {
-    color: $home-mineral;
+    color: $alder-mineral;
   }
 
   &__title {
-    color: $home-canvas;
-    font-size: clamp(2.75rem, 4.6vw, 5rem);
+    @include alder-hero-title;
+
+    color: $alder-canvas;
     margin-top: 0;
   }
 
   &__text {
     color: #d8d4cb;
-    font-size: clamp(1rem, 1.35vw, 1.25rem);
-    line-height: 1.65;
-    margin: $home-space-lg 0 0;
+    @include alder-hero-copy;
+    margin: $alder-space-lg 0 0;
     max-width: 29rem;
 
     p {
@@ -158,47 +126,26 @@ $home-space-action-to-details: $home-space-xl;
 .home-section-title,
 .home-cta__title,
 .about-intro__title {
-  font-family: $home-display;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
+  @include alder-display-title;
 }
 
 .home-text-link,
 .home-cta__link {
-  align-items: center;
-  border-radius: 0;
-  display: inline-flex;
-  font-family: $home-sans;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  justify-content: space-between;
-  letter-spacing: 0.14em;
-  line-height: 1.2;
-  margin-top: $home-space-copy-to-action;
-  padding: 1rem 1.2rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition:
-    background-color 180ms ease,
-    border-color 180ms ease,
-    color 180ms ease;
-  width: 210px;
+  @include alder-action;
+
+  margin-top: $alder-space-copy-to-action;
 }
 
 .home-text-link {
-  background: $home-mineral;
-  border: 1px solid $home-mineral;
-  color: $home-forest;
+  background: $alder-mineral;
+  border: 1px solid $alder-mineral;
+  color: $alder-forest;
 }
 
 .home-text-link:hover {
   background: transparent;
-  border-color: $home-canvas;
-  color: $home-canvas;
+  border-color: $alder-canvas;
+  color: $alder-canvas;
 }
 
 .home-text-link::after,
@@ -213,14 +160,14 @@ $home-space-action-to-details: $home-space-xl;
 
 .home-featured-projects,
 .home-process {
-  padding: $home-section-space 0;
+  padding: $alder-section-space 0;
 }
 
 // About Alder & Stone: use the existing intro fields and selected work as a single editorial composition.
 .about-intro {
-  background: $home-canvas-light;
-  color: $home-forest;
-  padding: $home-section-space 0;
+  background: $alder-canvas-light;
+  color: $alder-forest;
+  padding: $alder-section-space 0;
 
   &__inner {
     align-items: start;
@@ -240,32 +187,32 @@ $home-space-action-to-details: $home-space-xl;
   }
 
   &__eyebrow {
-    color: $home-mineral;
+    color: $alder-mineral;
   }
 
   &__title {
-    color: $home-forest;
+    color: $alder-forest;
     max-width: 40rem;
   }
 
   &__copy {
-    color: $home-stone;
+    color: $alder-stone;
     font-size: clamp(1rem, 1.25vw, 1.2rem);
     line-height: 1.65;
-    margin-top: $home-space-heading-to-copy;
+    margin-top: $alder-space-heading-to-copy;
     max-width: 31.25rem;
 
     p {
       margin: 0;
 
       + p {
-        margin-top: $home-space-xs;
+        margin-top: $alder-space-xs;
       }
     }
   }
 
   &__link {
-    margin-top: $home-space-copy-to-action;
+    margin-top: $alder-space-copy-to-action;
   }
 
   &__principles {
@@ -273,7 +220,7 @@ $home-space-action-to-details: $home-space-xl;
     gap: clamp(1rem, 2vw, 2rem);
     grid-template-columns: repeat(3, minmax(0, 1fr));
     list-style: none;
-    margin: $home-space-action-to-details 0 0;
+    margin: $alder-space-action-to-details 0 0;
     padding: 0;
   }
 
@@ -282,8 +229,8 @@ $home-space-action-to-details: $home-space-xl;
     gap: 0.65rem;
 
     &-number {
-      color: $home-mineral;
-      font-family: $home-display;
+      color: $alder-mineral;
+      font-family: $alder-display;
       font-size: clamp(1.5rem, 2vw, 2.1rem);
       font-weight: 400;
       letter-spacing: -0.04em;
@@ -291,8 +238,8 @@ $home-space-action-to-details: $home-space-xl;
     }
 
     &-label {
-      color: $home-forest;
-      font-family: $home-sans;
+      color: $alder-forest;
+      font-family: $alder-sans;
       font-size: 0.625rem;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -341,58 +288,58 @@ $home-space-action-to-details: $home-space-xl;
 }
 
 .home-services {
-  background: $home-forest-deep;
-  color: $home-canvas;
-  padding: $home-section-space 0;
+  background: $alder-forest-deep;
+  color: $alder-canvas;
+  padding: $alder-section-space 0;
 
   //   .home-section-header {
-  //     border-top-color: $home-light-rule;
+  //     border-top-color: $alder-light-rule;
   //   }
 
   .home-eyebrow,
   .home-service__number {
-    color: $home-mineral;
+    color: $alder-mineral;
   }
 
   .home-section-title,
   .home-service__title {
-    color: $home-canvas;
+    color: $alder-canvas;
   }
 
   &__list {
-    border-bottom: 1px solid $home-light-rule;
+    border-bottom: 1px solid $alder-light-rule;
   }
 }
 
 .home-section-header {
   align-items: flex-end;
   display: flex;
-  gap: $home-space-lg;
+  gap: $alder-space-lg;
   justify-content: space-between;
-  margin-bottom: $home-space-xl;
-  padding-top: $home-space-sm;
+  margin-bottom: $alder-space-xl;
+  padding-top: $alder-space-sm;
 }
 
 .home-section-title {
-  color: $home-forest;
+  color: $alder-forest;
 }
 
 .about-intro__title,
 .home-section-title,
 .home-cta__title {
-  font-size: clamp(2.5rem, 4.2vw, 4.65rem);
+  @include alder-section-title;
 }
 
 .home-service {
   align-items: center;
-  border-top: 1px solid $home-light-rule;
+  border-top: 1px solid $alder-light-rule;
   display: grid;
   gap: clamp(1.5rem, 4vw, 5rem);
   grid-template-columns: 4rem minmax(0, 0.8fr) minmax(15rem, 1fr);
   padding: clamp(2rem, 3.8vw, 3.75rem) 0;
 
   &__number {
-    font-family: $home-display;
+    font-family: $alder-display;
     font-size: clamp(2.6rem, 4.2vw, 4.75rem);
     font-weight: 400;
     letter-spacing: -0.05em;
@@ -409,38 +356,32 @@ $home-space-action-to-details: $home-space-xl;
 .home-service__title,
 .home-process__title,
 .home-project__title {
-  font-family: $home-display;
-  font-size: clamp(1.7rem, 2.45vw, 2.85rem);
-  font-weight: 400;
-  letter-spacing: -0.035em;
-  line-height: 0.98;
-  margin: 0;
-  padding: 0;
+  @include alder-item-title;
 }
 
 .home-featured-projects {
-  background: $home-forest;
-  color: $home-canvas;
+  background: $alder-forest;
+  color: $alder-canvas;
 }
 
 .home-featured-projects .home-section-header {
-  border-top-color: $home-light-rule;
+  border-top-color: $alder-light-rule;
 }
 
 .home-featured-projects .home-eyebrow,
 .home-featured-projects .home-project__meta {
-  color: $home-mineral;
+  color: $alder-mineral;
 }
 
 .home-featured-projects .home-section-title,
 .home-featured-projects .home-project__title {
-  color: $home-canvas;
+  color: $alder-canvas;
 }
 
 .home-section-link {
   align-items: center;
   border-bottom: 1px solid currentcolor;
-  color: $home-canvas;
+  color: $alder-canvas;
   display: inline-flex;
   padding-bottom: 0.55rem;
   text-decoration: none;
@@ -448,13 +389,13 @@ $home-space-action-to-details: $home-space-xl;
 }
 
 .home-section-link:hover {
-  color: $home-mineral;
+  color: $alder-mineral;
 }
 
 .home-featured-projects__grid {
   align-items: stretch;
   display: grid;
-  gap: $home-space-lg;
+  gap: $alder-space-lg;
   grid-template-areas:
     "primary secondary-one"
     "primary secondary-two";
@@ -498,7 +439,7 @@ $home-space-action-to-details: $home-space-xl;
 
 .home-project__media {
   aspect-ratio: 1.64 / 1;
-  background: $home-forest-deep;
+  background: $alder-forest-deep;
   margin: 0;
   overflow: hidden;
 
@@ -533,38 +474,38 @@ $home-space-action-to-details: $home-space-xl;
 }
 
 .home-project__title {
-  margin-top: $home-space-md;
+  margin-top: $alder-space-md;
   transition: color 180ms ease;
 }
 
 .home-project__link:hover .home-project__title {
-  color: $home-mineral;
+  color: $alder-mineral;
 }
 
 .home-project__meta {
   line-height: 1.5;
-  margin: $home-space-sm 0 0;
+  margin: $alder-space-sm 0 0;
 }
 
 .home-project__meta-separator {
-  margin: 0 0.5rem;
+  margin: 0 0.5rem 0 0.5rem;
 }
 
 .home-statistics {
-  background: $home-sand;
-  color: $home-forest;
+  background: $alder-sand;
+  color: $alder-forest;
   padding: clamp(4.5rem, 8vw, 8rem) 0;
 }
 
 .home-statistics__grid {
-  border-bottom: 1px solid $home-rule;
-  border-top: 1px solid $home-rule;
+  border-bottom: 1px solid $alder-rule;
+  border-top: 1px solid $alder-rule;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .home-statistic {
-  border-left: 1px solid $home-rule;
+  border-left: 1px solid $alder-rule;
   padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 3.5vw, 4rem);
 }
 
@@ -574,19 +515,19 @@ $home-space-action-to-details: $home-space-xl;
 }
 
 .home-statistic__value {
-  color: $home-forest;
-  font-family: $home-display;
+  color: $alder-forest;
+  font-family: $alder-display;
   font-size: clamp(4.5rem, 7.8vw, 8.75rem);
   font-variant-numeric: tabular-nums;
   font-weight: 400;
   letter-spacing: -0.07em;
   line-height: 0.76;
-  margin: 0 0 $home-space-sm;
+  margin: 0 0 $alder-space-sm;
 }
 
 .home-statistic__label {
-  color: $home-forest;
-  font-family: $home-sans;
+  color: $alder-forest;
+  font-family: $alder-sans;
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -596,17 +537,17 @@ $home-space-action-to-details: $home-space-xl;
 }
 
 .home-process {
-  background: $home-canvas-light;
+  background: $alder-canvas-light;
 }
 
 .home-process .home-section-title,
 .home-process .home-process__title {
-  color: $home-forest;
+  color: $alder-forest;
 }
 
 .home-process .home-eyebrow,
 .home-process .home-process__number {
-  color: $home-mineral;
+  color: $alder-mineral;
 }
 
 .home-process__list {
@@ -616,7 +557,7 @@ $home-space-action-to-details: $home-space-xl;
 }
 
 .home-process__step {
-  border-top: 1px solid $home-rule;
+  border-top: 1px solid $alder-rule;
   padding-top: 1.25rem;
 }
 
@@ -629,26 +570,23 @@ $home-space-action-to-details: $home-space-xl;
 }
 
 .home-process__number {
-  font-family: $home-display;
+  font-family: $alder-display;
   font-size: clamp(4rem, 7vw, 7.75rem);
   font-weight: 400;
   letter-spacing: -0.065em;
   line-height: 0.8;
-  margin: 0 0 $home-space-lg;
-}
-
-.home-process__title {
+  margin: 0 0 $alder-space-lg;
 }
 
 .home-process__text {
-  color: $home-stone;
-  margin-top: $home-space-sm;
+  color: $alder-stone;
+  margin-top: $alder-space-sm;
   max-width: 19rem;
 }
 
 .home-cta {
-  background: $home-forest;
-  color: $home-canvas;
+  background: $alder-forest;
+  color: $alder-canvas;
   position: relative;
   isolation: isolate;
   min-height: clamp(32rem, 52vw, 46rem);
@@ -669,32 +607,32 @@ $home-space-action-to-details: $home-space-xl;
 
   &__grid {
     align-self: center;
-    background: $home-forest;
-    border-top: 0.25rem solid $home-mineral;
+    background: $alder-forest;
+    border-top: 0.25rem solid $alder-mineral;
     max-width: clamp(22rem, 46vw, 42rem);
     padding: clamp(2rem, 4.2vw, 4.5rem);
   }
 
   &__title {
-    color: $home-canvas;
+    color: $alder-canvas;
     max-width: 9.5ch;
   }
 
   &__text {
     color: #d5d1c8;
-    margin-top: $home-space-heading-to-copy;
+    margin-top: $alder-space-heading-to-copy;
     max-width: 28rem;
   }
 
   &__link {
-    background: $home-mineral;
-    border: 1px solid $home-mineral;
-    color: $home-forest;
+    background: $alder-mineral;
+    border: 1px solid $alder-mineral;
+    color: $alder-forest;
 
     &:hover {
       background: transparent;
-      border-color: $home-canvas;
-      color: $home-canvas;
+      border-color: $alder-canvas;
+      color: $alder-canvas;
     }
   }
 }
@@ -703,7 +641,7 @@ $home-space-action-to-details: $home-space-xl;
 .home-section-link:focus-visible,
 .home-project__link:focus-visible,
 .home-cta__link:focus-visible {
-  outline: 3px solid $home-mineral;
+  outline: 3px solid $alder-mineral;
   outline-offset: 0.35rem;
 }
 
@@ -764,11 +702,11 @@ $home-space-action-to-details: $home-space-xl;
 
 @media (max-width: 767.98px) {
   .site-header--home .alder-stone-navbar {
-    background: $home-forest;
+    background: $alder-forest;
   }
 
   .site-header--home .navbar-collapse {
-    border-top: 1px solid $home-light-rule;
+    border-top: 1px solid $alder-light-rule;
     margin-top: 1rem;
     padding: 1rem 0 0.5rem;
   }
@@ -801,7 +739,7 @@ $home-space-action-to-details: $home-space-xl;
     gap: 4rem;
   }
   .about-intro__copy {
-    margin-top: $home-space-heading-to-copy;
+    margin-top: $alder-space-heading-to-copy;
     max-width: 32.5rem;
   }
 
@@ -816,8 +754,8 @@ $home-space-action-to-details: $home-space-xl;
   .home-section-header {
     align-items: flex-start;
     flex-direction: column;
-    gap: $home-space-md;
-    margin-bottom: $home-space-xl;
+    gap: $alder-space-md;
+    margin-bottom: $alder-space-xl;
   }
 
   .home-service {
@@ -852,7 +790,7 @@ $home-space-action-to-details: $home-space-xl;
 
   .home-statistic {
     border-left: 0;
-    border-top: 1px solid $home-rule;
+    border-top: 1px solid $alder-rule;
     padding: 2.5rem 0;
   }
 
@@ -889,7 +827,7 @@ $home-space-action-to-details: $home-space-xl;
   }
 
   .home-hero__title {
-    font-size: clamp(2.45rem, 11.5vw, 3.6rem);
+    font-size: $alder-hero-title-size-mobile;
   }
 
   .home-hero__content,
@@ -904,7 +842,7 @@ $home-space-action-to-details: $home-space-xl;
   .home-section-title,
   .about-intro__title,
   .home-cta__title {
-    font-size: clamp(2.3rem, 10.5vw, 3.35rem);
+    font-size: $alder-section-title-size-mobile;
   }
 
   .home-statistics {

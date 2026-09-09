@@ -1,0 +1,399 @@
+// Services is an interior-page variation of the home-page visual system.
+// It shares the same typography and material palette, but uses a tighter editorial rhythm.
+
+.services-page {
+  background: $alder-canvas;
+  color: $alder-forest;
+  overflow-x: clip;
+
+  .container {
+    max-width: $alder-content-width;
+  }
+}
+
+.services-page + .alder-stone-footer {
+  margin-top: 0;
+}
+
+.services-eyebrow {
+  @include alder-eyebrow;
+
+  color: $alder-mineral;
+  margin-bottom: $alder-space-eyebrow-to-heading;
+}
+
+// Hero: an editorial page opener with image as content, never as a background treatment.
+.services-hero {
+  background: $alder-canvas-light;
+  padding: clamp(3.75rem, 6vw, 6rem) 0 clamp(4rem, 6vw, 6.5rem);
+
+  &__inner {
+    border-top: 1px solid $alder-rule;
+    padding-top: $alder-space-md;
+  }
+
+  .services-eyebrow {
+    color: $alder-mineral;
+  }
+
+  &__title {
+    @include alder-hero-title;
+
+    color: $alder-forest;
+  }
+
+  &__text {
+    @include alder-hero-copy;
+
+    color: $alder-stone;
+    margin-top: $alder-space-heading-to-copy;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    @include alder-action;
+
+    background: $alder-forest;
+    border: 1px solid $alder-forest;
+    color: $alder-canvas;
+    margin-top: $alder-space-copy-to-action;
+    max-width: 100%;
+
+    &::after {
+      content: "\2192";
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    &:hover {
+      background: $alder-mineral;
+      border-color: $alder-mineral;
+      color: $alder-forest;
+    }
+
+    &:focus-visible {
+      outline: 3px solid $alder-mineral;
+      outline-offset: 0.35rem;
+    }
+  }
+
+  &__media {
+    aspect-ratio: 1.85 / 1;
+    margin: clamp(2.5rem, 5vw, 4.5rem) 0 0;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+// Intro: a single reading sequence, never a title column facing a thin copy column.
+.services-intro {
+  padding: clamp(4rem, 6vw, 6.5rem) 0;
+
+  &__content {
+    text-align: center;
+    border-top: 1px solid $alder-rule;
+    padding-top: $alder-space-md;
+  }
+
+  &__title {
+    @include alder-section-title;
+
+    color: $alder-forest;
+  }
+
+  &__text {
+    @include alder-body-copy;
+
+    color: $alder-stone;
+    margin: 2rem auto 0;
+    max-width: 43rem;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Four capabilities as a flat material ledger rather than isolated SaaS cards.
+.services-list {
+  background: $alder-forest-deep;
+  color: $alder-canvas;
+  padding: clamp(4rem, 6vw, 6.5rem) 0;
+
+  &__grid {
+    border-bottom: 1px solid $alder-light-rule;
+    border-top: 1px solid $alder-light-rule;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__item {
+    border-bottom: 1px solid $alder-light-rule;
+    min-width: 0;
+    padding: clamp(2rem, 3.5vw, 3.5rem);
+
+    &:nth-child(odd) {
+      border-right: 1px solid $alder-light-rule;
+    }
+
+    &:nth-child(4n + 1),
+    &:nth-child(4n) {
+      background: $alder-mineral;
+      color: $alder-forest-deep;
+
+      .services-list__number,
+      .services-list__title,
+      .services-list__text {
+        color: $alder-forest-deep;
+      }
+    }
+
+    &--last-row {
+      border-bottom: 0;
+    }
+  }
+
+  &__number {
+    @include alder-display-title;
+
+    color: $alder-mineral;
+    font-size: clamp(2.25rem, 3.3vw, 3.75rem);
+    letter-spacing: -0.05em;
+    line-height: 0.85;
+  }
+
+  &__title {
+    @include alder-item-title;
+
+    color: $alder-canvas;
+    margin-top: $alder-space-sm;
+  }
+
+  &__text {
+    @include alder-body-copy;
+
+    color: $alder-light-text;
+    margin-top: $alder-space-sm;
+    max-width: 29rem;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// Process is a distinct visual pause: image behind, practical guidance held in a light material panel.
+.services-process {
+  align-items: center;
+  background: $alder-forest-deep;
+  display: flex;
+  isolation: isolate;
+  min-height: clamp(32rem, 48vw, 44rem);
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  position: relative;
+
+  &--with-media::after {
+    background: rgba(27, 39, 33, 0.42);
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: 0;
+  }
+
+  &__media {
+    inset: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__content {
+    background: $alder-canvas-light;
+    border-top: 0.25rem solid $alder-mineral;
+    border-radius: 0.5rem;
+    max-width: 38rem;
+    padding: clamp(2rem, 4vw, 2rem);
+  }
+
+  &__title {
+    @include alder-section-title;
+
+    color: $alder-forest;
+    max-width: 18ch;
+  }
+
+  &__text {
+    @include alder-body-copy;
+
+    color: $alder-stone;
+    margin-top: $alder-space-heading-to-copy;
+    max-width: 34rem;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// CTA uses one compact message block, not an empty counterpart column.
+.services-cta {
+  align-items: center;
+  background: $alder-forest;
+  color: $alder-canvas;
+  display: flex;
+  padding: clamp(4rem, 6vw, 6.5rem) 0;
+
+  .container {
+    width: 100%;
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 48rem;
+    text-align: center;
+  }
+
+  &__title {
+    @include alder-section-title;
+
+    color: $alder-canvas;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 17ch;
+  }
+
+  &__text {
+    @include alder-body-copy;
+
+    color: $alder-light-text;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $alder-space-heading-to-copy;
+    max-width: 34rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    @include alder-action;
+
+    background: $alder-mineral;
+    border: 1px solid $alder-mineral;
+    color: $alder-forest;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $alder-space-copy-to-action;
+    max-width: 100%;
+
+    &::after {
+      content: "\2192";
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    &:hover {
+      background: transparent;
+      border-color: $alder-canvas;
+      color: $alder-canvas;
+    }
+
+    &:focus-visible {
+      outline: 3px solid $alder-mineral;
+      outline-offset: 0.35rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services-hero {
+    padding: 3.5rem 0 4.5rem;
+
+    &__media {
+      aspect-ratio: 4 / 3;
+      margin-top: 2.5rem;
+    }
+  }
+
+  .services-list__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-list__item {
+    border-right: 0;
+
+    &:nth-child(odd) {
+      border-right: 0;
+    }
+
+    &--last-row {
+      border-bottom: 1px solid $alder-light-rule;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .services-page .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .services-hero__title {
+    font-size: $alder-hero-title-size-mobile;
+  }
+
+  .services-intro__title,
+  .services-process__title,
+  .services-cta__title {
+    font-size: $alder-section-title-size-mobile;
+  }
+
+  .services-list__number {
+    font-size: 2.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-hero__link,
+  .services-cta__button {
+    transition: none;
+  }
+}

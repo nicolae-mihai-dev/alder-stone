@@ -1,0 +1,108 @@
+// Shared Alder & Stone design foundation.
+// Page files own their layout; this file owns the visual language they share.
+
+$alder-canvas: #f2eee6;
+$alder-canvas-light: #f8f5ef;
+$alder-forest: #1b2721;
+$alder-forest-deep: #27372e;
+$alder-stone: #77766e;
+$alder-sand: #b8ae9f;
+$alder-mineral: #b98959;
+$alder-rule: rgba(27, 39, 33, 0.18);
+$alder-light-rule: rgba(242, 238, 230, 0.26);
+$alder-light-text: #d8d4cb;
+
+$alder-display: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+$alder-sans:
+  ui-sans-serif,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+$alder-space-xs: 0.5rem;
+$alder-space-sm: 1rem;
+$alder-space-md: 1.5rem;
+$alder-space-lg: 2rem;
+$alder-space-xl: 3rem;
+$alder-section-space: clamp(5rem, 8vw, 8rem);
+$alder-space-eyebrow-to-heading: $alder-space-md;
+$alder-space-heading-to-copy: $alder-space-lg;
+$alder-space-copy-to-action: $alder-space-lg;
+$alder-space-action-to-details: $alder-space-xl;
+$alder-content-width: 82.5rem;
+$alder-hero-title-size: clamp(2.75rem, 4.6vw, 5rem);
+$alder-hero-title-size-mobile: clamp(2.45rem, 11.5vw, 3.6rem);
+$alder-section-title-size: clamp(2.5rem, 4.2vw, 4.65rem);
+$alder-section-title-size-mobile: clamp(2.3rem, 10.5vw, 3.35rem);
+$alder-item-title-size: clamp(1.7rem, 2.45vw, 2.85rem);
+
+@mixin alder-eyebrow {
+  font-family: $alder-sans;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.35;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@mixin alder-display-title {
+  font-family: $alder-display;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.93;
+  margin: 0;
+  padding: 0;
+  text-wrap: balance;
+}
+
+@mixin alder-hero-title {
+  @include alder-display-title;
+
+  font-size: $alder-hero-title-size;
+}
+
+@mixin alder-section-title {
+  @include alder-display-title;
+
+  font-size: $alder-section-title-size;
+}
+
+@mixin alder-item-title {
+  @include alder-display-title;
+
+  font-size: $alder-item-title-size;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+@mixin alder-body-copy {
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.65;
+}
+
+@mixin alder-hero-copy {
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  line-height: 1.65;
+}
+
+@mixin alder-action {
+  align-items: center;
+  border-radius: 0;
+  display: inline-flex;
+  font-family: $alder-sans;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  justify-content: space-between;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+  width: 210px;
+}

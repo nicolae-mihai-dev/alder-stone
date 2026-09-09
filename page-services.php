@@ -27,6 +27,11 @@ get_header();
 		$hero_eyebrow = $get_services_field( 'services_hero_eyebrow' );
 		$hero_title   = $get_services_field( 'services_hero_title' );
 		$hero_text    = $get_services_field( 'services_hero_text' );
+		$hero_image_id = absint( $get_services_field( 'services_hero_image' ) );
+
+		if ( ! $hero_image_id ) {
+			$hero_image_id = get_post_thumbnail_id( $services_page_id );
+		}
 
 		// Introduction fields.
 		$intro_title = $get_services_field( 'services_intro_title' );
@@ -60,6 +65,11 @@ get_header();
 		$process_eyebrow = $get_services_field( 'services_process_eyebrow' );
 		$process_title   = $get_services_field( 'services_process_title' );
 		$process_text    = $get_services_field( 'services_process_text' );
+		$process_image_id = absint( $get_services_field( 'services_process_image' ) );
+
+		if ( ! $process_image_id ) {
+			$process_image_id = $hero_image_id;
+		}
 
 		// Call to action fields.
 		$cta_title  = $get_services_field( 'services_cta_title' );
@@ -68,74 +78,98 @@ get_header();
 		?>
 
 		<?php if ( $has_value( $hero_eyebrow ) || $has_value( $hero_title ) || $has_value( $hero_text ) ) : ?>
-			<section class="services-page__hero py-5">
+			<section class="services-hero">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-8">
+					<div class="services-hero__inner">
+						<div class="services-hero__content">
 							<?php if ( $has_value( $hero_eyebrow ) ) : ?>
-								<p class="text-uppercase small mb-3"><?php echo esc_html( $hero_eyebrow ); ?></p>
+								<p class="services-eyebrow"><?php echo esc_html( $hero_eyebrow ); ?></p>
 							<?php endif; ?>
 
 							<?php if ( $has_value( $hero_title ) ) : ?>
-								<h1 class="mb-4"><?php echo esc_html( $hero_title ); ?></h1>
+								<h1 class="services-hero__title"><?php echo esc_html( $hero_title ); ?></h1>
 							<?php endif; ?>
 
 							<?php if ( $has_value( $hero_text ) ) : ?>
-								<div class="lead mb-0"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
+								<div class="services-hero__text"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
 							<?php endif; ?>
+
+							<a class="services-hero__link" href="#services">
+								<?php esc_html_e( 'Explore services', 'alder-stone' ); ?>
+							</a>
 						</div>
+
+						<?php if ( $hero_image_id ) : ?>
+							<figure class="services-hero__media">
+								<?php
+								echo wp_get_attachment_image(
+									$hero_image_id,
+									'full',
+									false,
+									array(
+										'class'         => 'services-hero__image',
+										'alt'           => '',
+										'fetchpriority' => 'high',
+										'loading'       => 'eager',
+										'sizes'         => '(min-width: 1200px) 82.5rem, 100vw',
+									)
+								);
+								?>
+							</figure>
+						<?php endif; ?>
 					</div>
 				</div>
 			</section>
 		<?php endif; ?>
 
 		<?php if ( $has_value( $intro_title ) || $has_value( $intro_text ) ) : ?>
-			<section class="services-page__intro py-5">
+			<section class="services-intro">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-8">
-							<?php if ( $has_value( $intro_title ) ) : ?>
-								<h2 class="mb-4"><?php echo esc_html( $intro_title ); ?></h2>
-							<?php endif; ?>
+					<div class="services-intro__content">
+						<?php if ( $has_value( $intro_title ) ) : ?>
+							<h2 class="services-intro__title"><?php echo esc_html( $intro_title ); ?></h2>
+						<?php endif; ?>
 
-							<?php if ( $has_value( $intro_text ) ) : ?>
-								<div class="entry-content mb-0">
-									<?php echo wp_kses_post( apply_filters( 'the_content', $intro_text ) ); ?>
-								</div>
-							<?php endif; ?>
-						</div>
+						<?php if ( $has_value( $intro_text ) ) : ?>
+							<div class="services-intro__text entry-content">
+								<?php echo wp_kses_post( apply_filters( 'the_content', $intro_text ) ); ?>
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</section>
 		<?php endif; ?>
 
 		<?php
-		$available_service_items = array_filter(
-			$service_items,
-			static function( $service_item ) use ( $has_value ) {
-				return $has_value( $service_item['number'] ) || $has_value( $service_item['title'] ) || $has_value( $service_item['text'] );
-			}
+		$available_service_items = array_values(
+			array_filter(
+				$service_items,
+				static function( $service_item ) use ( $has_value ) {
+					return $has_value( $service_item['number'] ) || $has_value( $service_item['title'] ) || $has_value( $service_item['text'] );
+				}
+			)
 		);
+		$service_item_count    = count( $available_service_items );
+		$last_row_item_count   = $service_item_count % 2 ? 1 : 2;
+		$last_row_start_index  = $service_item_count - $last_row_item_count;
 		?>
 		<?php if ( ! empty( $available_service_items ) ) : ?>
-			<section class="services-page__services py-5">
+			<section class="services-list" id="services">
 				<div class="container">
-					<div class="row g-4">
-						<?php foreach ( $available_service_items as $service_item ) : ?>
-							<article class="col-md-6">
-								<div class="border h-100 p-4">
+					<div class="services-list__grid">
+						<?php foreach ( $available_service_items as $service_item_index => $service_item ) : ?>
+							<article class="services-list__item<?php echo esc_attr( $service_item_index >= $last_row_start_index ? ' services-list__item--last-row' : '' ); ?>">
 									<?php if ( $has_value( $service_item['number'] ) ) : ?>
-										<p class="small mb-3"><?php echo esc_html( $service_item['number'] ); ?></p>
+										<p class="services-list__number"><?php echo esc_html( $service_item['number'] ); ?></p>
 									<?php endif; ?>
 
 									<?php if ( $has_value( $service_item['title'] ) ) : ?>
-										<h2 class="h3 mb-3"><?php echo esc_html( $service_item['title'] ); ?></h2>
+										<h2 class="services-list__title"><?php echo esc_html( $service_item['title'] ); ?></h2>
 									<?php endif; ?>
 
 									<?php if ( $has_value( $service_item['text'] ) ) : ?>
-										<div class="mb-0"><?php echo wp_kses_post( wpautop( esc_html( $service_item['text'] ) ) ); ?></div>
+										<div class="services-list__text"><?php echo wp_kses_post( wpautop( esc_html( $service_item['text'] ) ) ); ?></div>
 									<?php endif; ?>
-								</div>
 							</article>
 						<?php endforeach; ?>
 					</div>
@@ -144,52 +178,66 @@ get_header();
 		<?php endif; ?>
 
 		<?php if ( $has_value( $process_eyebrow ) || $has_value( $process_title ) || $has_value( $process_text ) ) : ?>
-			<section class="services-page__process py-5">
+			<section class="services-process<?php echo esc_attr( $process_image_id ? ' services-process--with-media' : '' ); ?>">
+				<?php if ( $process_image_id ) : ?>
+					<figure class="services-process__media" aria-hidden="true">
+						<?php
+						echo wp_get_attachment_image(
+							$process_image_id,
+							'full',
+							false,
+							array(
+								'class'   => 'services-process__image',
+								'alt'     => '',
+								'loading' => 'lazy',
+								'sizes'   => '100vw',
+							)
+						);
+						?>
+					</figure>
+				<?php endif; ?>
+
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-8">
-							<?php if ( $has_value( $process_eyebrow ) ) : ?>
-								<p class="text-uppercase small mb-3"><?php echo esc_html( $process_eyebrow ); ?></p>
-							<?php endif; ?>
+					<div class="services-process__content">
+						<?php if ( $has_value( $process_eyebrow ) ) : ?>
+							<p class="services-eyebrow"><?php echo esc_html( $process_eyebrow ); ?></p>
+						<?php endif; ?>
 
-							<?php if ( $has_value( $process_title ) ) : ?>
-								<h2 class="mb-4"><?php echo esc_html( $process_title ); ?></h2>
-							<?php endif; ?>
+						<?php if ( $has_value( $process_title ) ) : ?>
+							<h2 class="services-process__title"><?php echo esc_html( $process_title ); ?></h2>
+						<?php endif; ?>
 
-							<?php if ( $has_value( $process_text ) ) : ?>
-								<div class="entry-content mb-0">
-									<?php echo wp_kses_post( apply_filters( 'the_content', $process_text ) ); ?>
-								</div>
-							<?php endif; ?>
-						</div>
+						<?php if ( $has_value( $process_text ) ) : ?>
+							<div class="services-process__text entry-content">
+								<?php echo wp_kses_post( apply_filters( 'the_content', $process_text ) ); ?>
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</section>
 		<?php endif; ?>
 
 		<?php if ( $has_value( $cta_title ) || $has_value( $cta_text ) || ! empty( $cta_button ) ) : ?>
-			<section class="services-page__cta py-5">
+			<section class="services-cta">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-8">
-							<?php if ( $has_value( $cta_title ) ) : ?>
-								<h2 class="mb-4"><?php echo esc_html( $cta_title ); ?></h2>
-							<?php endif; ?>
+					<div class="services-cta__content">
+						<?php if ( $has_value( $cta_title ) ) : ?>
+							<h2 class="services-cta__title"><?php echo esc_html( $cta_title ); ?></h2>
+						<?php endif; ?>
 
-							<?php if ( $has_value( $cta_text ) ) : ?>
-								<div class="mb-4"><?php echo wp_kses_post( wpautop( esc_html( $cta_text ) ) ); ?></div>
-							<?php endif; ?>
+						<?php if ( $has_value( $cta_text ) ) : ?>
+							<div class="services-cta__text"><?php echo wp_kses_post( wpautop( esc_html( $cta_text ) ) ); ?></div>
+						<?php endif; ?>
 
-							<?php if ( is_array( $cta_button ) && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) : ?>
-								<?php
-								$cta_button_target = ! empty( $cta_button['target'] ) ? $cta_button['target'] : '_self';
-								$cta_button_rel    = '_blank' === $cta_button_target ? 'noopener noreferrer' : '';
-								?>
-								<a class="btn btn-primary" href="<?php echo esc_url( $cta_button['url'] ); ?>" target="<?php echo esc_attr( $cta_button_target ); ?>"<?php echo $cta_button_rel ? ' rel="' . esc_attr( $cta_button_rel ) . '"' : ''; ?>>
-									<?php echo esc_html( $cta_button['title'] ); ?>
-								</a>
-							<?php endif; ?>
-						</div>
+						<?php if ( is_array( $cta_button ) && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) : ?>
+							<?php
+							$cta_button_target = ! empty( $cta_button['target'] ) ? $cta_button['target'] : '_self';
+							$cta_button_rel    = '_blank' === $cta_button_target ? 'noopener noreferrer' : '';
+							?>
+							<a class="services-cta__button" href="<?php echo esc_url( $cta_button['url'] ); ?>" target="<?php echo esc_attr( $cta_button_target ); ?>"<?php echo $cta_button_rel ? ' rel="' . esc_attr( $cta_button_rel ) . '"' : ''; ?>>
+								<?php echo esc_html( $cta_button['title'] ); ?>
+							</a>
+						<?php endif; ?>
 					</div>
 				</div>
 			</section>
