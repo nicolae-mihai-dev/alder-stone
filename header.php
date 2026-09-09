@@ -7,6 +7,8 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+$alder_stone_is_front_page = is_front_page();
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -22,12 +24,12 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="site" id="page">
 
-	<header class="site-header" id="wrapper-navbar">
+	<header class="site-header<?php echo esc_attr( $alder_stone_is_front_page ? ' site-header--home' : '' ); ?>" id="wrapper-navbar">
 		<a class="skip-link visually-hidden-focusable" href="#content">
 			<?php esc_html_e( 'Skip to content', 'alder-stone' ); ?>
 		</a>
 
-		<nav class="navbar navbar-expand-lg navbar-light alder-stone-navbar" aria-label="<?php esc_attr_e( 'Primary menu', 'alder-stone' ); ?>">
+		<nav class="navbar navbar-expand-lg <?php echo esc_attr( $alder_stone_is_front_page ? 'navbar-dark' : 'navbar-light' ); ?> alder-stone-navbar" aria-label="<?php esc_attr_e( 'Primary menu', 'alder-stone' ); ?>">
 			<div class="container">
 				<a class="navbar-brand alder-stone-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<?php esc_html_e( 'ALDER & STONE', 'alder-stone' ); ?>

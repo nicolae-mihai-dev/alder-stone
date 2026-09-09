@@ -25,6 +25,12 @@ function alder_stone_register_home_acf_fields() {
 			'fields' => array(
 				// Hero.
 				array(
+					'key'       => 'field_alder_stone_home_tab_hero',
+					'label'     => __( 'Hero', 'alder-stone' ),
+					'type'      => 'tab',
+					'placement' => 'left',
+				),
+				array(
 					'key'   => 'field_alder_stone_home_hero_eyebrow',
 					'label' => __( 'Hero Eyebrow', 'alder-stone' ),
 					'name'  => 'home_hero_eyebrow',
@@ -66,6 +72,12 @@ function alder_stone_register_home_acf_fields() {
 
 				// Intro.
 				array(
+					'key'       => 'field_alder_stone_home_tab_intro',
+					'label'     => __( 'About Alder & Stone', 'alder-stone' ),
+					'type'      => 'tab',
+					'placement' => 'left',
+				),
+				array(
 					'key'   => 'field_alder_stone_home_intro_eyebrow',
 					'label' => __( 'Intro Eyebrow', 'alder-stone' ),
 					'name'  => 'home_intro_eyebrow',
@@ -86,8 +98,21 @@ function alder_stone_register_home_acf_fields() {
 					'type'  => 'wysiwyg',
 					'default_value' => __( '<p>We approach each project with clarity, care, and respect for the character of its setting.</p>', 'alder-stone' ),
 				),
+				array(
+					'key'           => 'field_alder_stone_home_intro_image',
+					'label'         => __( 'About Image', 'alder-stone' ),
+					'name'          => 'home_intro_image',
+					'type'          => 'image',
+					'return_format' => 'id',
+				),
 
 				// Services.
+				array(
+					'key'       => 'field_alder_stone_home_tab_services',
+					'label'     => __( 'Services', 'alder-stone' ),
+					'type'      => 'tab',
+					'placement' => 'left',
+				),
 				array(
 					'key'   => 'field_alder_stone_home_services_eyebrow',
 					'label' => __( 'Services Eyebrow', 'alder-stone' ),
@@ -147,6 +172,12 @@ function alder_stone_register_home_acf_fields() {
 
 				// Featured Projects.
 				array(
+					'key'       => 'field_alder_stone_home_tab_projects',
+					'label'     => __( 'Featured Projects', 'alder-stone' ),
+					'type'      => 'tab',
+					'placement' => 'left',
+				),
+				array(
 					'key'   => 'field_alder_stone_home_projects_eyebrow',
 					'label' => __( 'Featured Projects Eyebrow', 'alder-stone' ),
 					'name'  => 'home_projects_eyebrow',
@@ -186,6 +217,12 @@ function alder_stone_register_home_acf_fields() {
 				),
 
 				// Statistics.
+				array(
+					'key'       => 'field_alder_stone_home_tab_statistics',
+					'label'     => __( 'Statistics', 'alder-stone' ),
+					'type'      => 'tab',
+					'placement' => 'left',
+				),
 				array(
 					'key'   => 'field_alder_stone_home_stat_1_value',
 					'label' => __( 'Stat 1 Value', 'alder-stone' ),
@@ -230,6 +267,12 @@ function alder_stone_register_home_acf_fields() {
 				),
 
 				// Process.
+				array(
+					'key'       => 'field_alder_stone_home_tab_process',
+					'label'     => __( 'Process', 'alder-stone' ),
+					'type'      => 'tab',
+					'placement' => 'left',
+				),
 				array(
 					'key'   => 'field_alder_stone_home_process_eyebrow',
 					'label' => __( 'Process Eyebrow', 'alder-stone' ),
@@ -288,6 +331,12 @@ function alder_stone_register_home_acf_fields() {
 				),
 
 				// Call to action.
+				array(
+					'key'       => 'field_alder_stone_home_tab_cta',
+					'label'     => __( 'Call to Action', 'alder-stone' ),
+					'type'      => 'tab',
+					'placement' => 'left',
+				),
 				array(
 					'key'   => 'field_alder_stone_home_cta_title',
 					'label' => __( 'CTA Title', 'alder-stone' ),
