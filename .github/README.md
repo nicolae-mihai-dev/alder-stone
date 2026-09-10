@@ -1,18 +1,45 @@
-# Alder Stone
+# Alder Stone — WordPress + ACF Portfolio Theme
 
-Custom WordPress child theme for Alder & Stone, built with the [Understrap parent theme](https://github.com/understrap/understrap).
+![Alder Stone theme preview](../screenshot.png)
+
+A custom WordPress child theme built as a portfolio case study for an architecture studio. It combines a restrained editorial design system with Advanced Custom Fields (ACF), reusable page templates and a secure custom inquiry flow.
+
+## What this project demonstrates
+
+- Custom Understrap child-theme development with a tailored Sass design system.
+- ACF field groups registered in PHP, so content structure is version-controlled.
+- Flexible Home, Services, About and Contact pages managed through ACF.
+- A `project` custom post type with archive and long-form case-study templates.
+- Project fields for scope, scale, challenge, response, outcome, gallery and testimonial.
+- Accessible, server-validated contact form with nonce protection and a honeypot.
+- Responsive layouts verified for desktop and mobile breakpoints.
+- Theme-owned title, description and Open Graph metadata, plus a custom 404 page.
+
+## Content editing
+
+After activating ACF, edit the corresponding WordPress page to manage its content. The Projects menu contains the case studies; their ACF tabs separate summary information, story, gallery and testimonial fields.
+
+## Local setup
+
+1. Install WordPress and the Understrap parent theme.
+2. Copy this theme into `wp-content/themes/` and activate **Alder Stone**.
+3. Install and activate **Advanced Custom Fields**.
+4. Create pages with the slugs `services`, `about` and `contact`; assign a static front page.
+5. Create Projects from the WordPress admin and add a featured image and ACF fields.
 
 ## Development
 
-The theme uses Bootstrap 5 source files and the existing Sass, PostCSS, and Rollup build configuration. The Understrap parent theme must remain installed and active as this theme's parent.
+```bash
+npm install
+npm run dist
+```
 
-## License and credits
+The build creates the standard child-theme assets plus page-scoped stylesheets for Contact, Projects and the 404 page. The Understrap parent theme must remain installed.
 
-Custom project copyright 2026 Nicolae Mihai. This project is distributed under the GNU GPL; see `LICENSE` for the full license text.
+## Stack
 
-It includes or derives from third-party components under their respective licenses:
+WordPress · PHP · ACF · Understrap / Bootstrap 5 · Sass · PostCSS · Rollup
 
-- Understrap: GNU GPL v2 or later
-- Font Awesome 4.7.0: font SIL OFL 1.1; CSS MIT
-- Bootstrap: MIT
-- WP Bootstrap Navwalker by Edward McIntyre and William Patton: GNU GPL v3
+## License
+
+GPL-3.0. See [LICENSE](../LICENSE).

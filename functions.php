@@ -15,6 +15,7 @@ require_once get_stylesheet_directory() . '/inc/acf-services.php';
 require_once get_stylesheet_directory() . '/inc/acf-about.php';
 require_once get_stylesheet_directory() . '/inc/acf-contact.php';
 require_once get_stylesheet_directory() . '/inc/contact-form.php';
+require_once get_stylesheet_directory() . '/inc/seo.php';
 
 
 
@@ -72,6 +73,15 @@ function alder_stone_enqueue_assets() {
 		}
 	}
 
+	if ( is_404() ) {
+		$not_found_styles      = "/css/not-found{$suffix}.css";
+		$not_found_styles_path = get_stylesheet_directory() . $not_found_styles;
+
+		if ( file_exists( $not_found_styles_path ) ) {
+			wp_enqueue_style( 'alder-stone-not-found', get_stylesheet_directory_uri() . $not_found_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $not_found_styles_path ) );
+		}
+	}
+
 	wp_enqueue_script( 'jquery' );
 	
 	$js_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_scripts );
@@ -92,6 +102,16 @@ function alder_stone_load_textdomain() {
 	load_child_theme_textdomain( 'alder-stone', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'alder_stone_load_textdomain' );
+
+/**
+ * Adds child-theme supports that improve WordPress and search-engine integration.
+ *
+ * @return void
+ */
+function alder_stone_theme_setup() {
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'alder_stone_theme_setup', 20 );
 
 
 

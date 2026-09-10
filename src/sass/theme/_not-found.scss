@@ -1,0 +1,11 @@
+.not-found-page { background:$alder-canvas-light; color:$alder-forest; min-height:calc(100vh - 11rem); padding:clamp(4rem,10vw,10rem) 0;
+  .container { max-width:$alder-content-width; }
+}
+.not-found-page + .alder-stone-footer { margin-top:0; }
+.not-found-page__inner { border-top:1px solid $alder-rule; display:grid; gap:clamp(2rem,7vw,8rem); grid-template-columns:minmax(0,1fr) minmax(14rem,.6fr); padding-top:$alder-space-md; }
+.not-found-page__code { color:$alder-mineral; font-family:$alder-display; font-size:clamp(6rem,16vw,13rem); letter-spacing:-.08em; line-height:.72; margin:0; }
+.not-found-page__eyebrow { @include alder-eyebrow; color:$alder-mineral; margin:0 0 $alder-space-eyebrow-to-heading; }
+.not-found-page__title { @include alder-section-title; max-width:10ch; }
+.not-found-page__text { @include alder-body-copy; color:$alder-stone; margin:$alder-space-heading-to-copy 0 0; max-width:28rem; }
+.not-found-page__link { @include alder-action; background:$alder-forest; border:1px solid $alder-forest; color:$alder-canvas; margin-top:$alder-space-copy-to-action; &:hover { background:transparent; color:$alder-forest; } }
+@media (max-width:767.98px) { .not-found-page__inner { grid-template-columns:1fr; } .not-found-page__code { order:2; } }

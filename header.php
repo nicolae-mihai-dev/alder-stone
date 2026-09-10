@@ -16,6 +16,7 @@ $alder_stone_is_front_page = is_front_page();
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/alder-stone-mark.svg' ); ?>" type="image/svg+xml">
 	<?php wp_head(); ?>
 </head>
 
