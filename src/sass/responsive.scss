@@ -1,0 +1,16 @@
+// Small, independently compiled responsive fixes. Loaded after the main theme stylesheet.
+
+@media (max-width: 991.98px) {
+  .alder-stone-navbar .navbar-toggler {
+    align-items: center;
+    display: inline-flex;
+    height: 2.75rem;
+    justify-content: center;
+    padding: 0;
+    width: 2.75rem;
+  }
+
+  .alder-stone-navbar .nav-link {
+    padding: 0.5rem 0;
+  }
+}
