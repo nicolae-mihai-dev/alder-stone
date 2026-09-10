@@ -1,0 +1,441 @@
+// About is an editorial interior page using the shared Alder & Stone visual system.
+
+.about-page {
+  background: $alder-canvas;
+  color: $alder-forest;
+  overflow-x: clip;
+
+  .container {
+    max-width: $alder-content-width;
+  }
+}
+
+.about-page + .alder-stone-footer {
+  margin-top: 0;
+}
+
+.about-hero {
+  background: $alder-canvas-light;
+  padding: clamp(3.75rem, 6vw, 7rem) 0 clamp(4.5rem, 8vw, 8.5rem);
+
+  &__inner {
+    align-items: end;
+    border-top: 1px solid $alder-rule;
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 6.5rem);
+    grid-template-columns: minmax(0, 1.02fr) minmax(18rem, 0.78fr);
+    padding-top: $alder-space-md;
+  }
+
+  &__content {
+    padding-bottom: clamp(0rem, 3vw, 2.5rem);
+  }
+
+  &__eyebrow,
+  &__title,
+  &__text {
+    max-width: 39rem;
+  }
+
+  &__eyebrow,
+  .about-intro__eyebrow {
+    @include alder-eyebrow;
+
+    color: $alder-mineral;
+    margin: 0 0 $alder-space-eyebrow-to-heading;
+  }
+
+  &__title {
+    @include alder-hero-title;
+
+    color: $alder-forest;
+  }
+
+  &__text {
+    @include alder-hero-copy;
+
+    color: $alder-stone;
+    margin-top: $alder-space-heading-to-copy;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__media {
+    aspect-ratio: 0.8 / 1;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+// The About statement is deliberately unboxed: it reads as a single, generous editorial passage.
+.about-page .about-intro {
+  background: $alder-canvas;
+  padding: $alder-section-space 0;
+
+  &__inner {
+    border-top: 1px solid $alder-rule;
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    padding-top: $alder-space-md;
+  }
+
+  &__eyebrow {
+    @include alder-eyebrow;
+
+    color: $alder-mineral;
+    margin: 0;
+  }
+
+  &__title {
+    @include alder-section-title;
+
+    color: $alder-forest;
+    grid-column: 2;
+    max-width: 16ch;
+  }
+
+  &__text {
+    @include alder-body-copy;
+
+    color: $alder-stone;
+    grid-column: 2;
+    margin-top: $alder-space-heading-to-copy;
+    max-width: 42rem;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.about-values {
+  background: $alder-forest-deep;
+  color: $alder-canvas;
+  padding: $alder-section-space 0;
+
+  &__header {
+    border-top: 1px solid $alder-light-rule;
+    padding-top: $alder-space-md;
+  }
+
+  &__eyebrow {
+    @include alder-eyebrow;
+
+    color: $alder-mineral;
+    margin: 0 0 $alder-space-eyebrow-to-heading;
+  }
+
+  &__title {
+    @include alder-section-title;
+
+    color: $alder-canvas;
+    max-width: 16ch;
+  }
+
+  &__grid {
+    border-bottom: 1px solid $alder-light-rule;
+    border-top: 1px solid $alder-light-rule;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: clamp(3rem, 6vw, 5.5rem);
+  }
+
+  &__item {
+    border-left: 1px solid $alder-light-rule;
+    min-width: 0;
+    padding: clamp(2rem, 3.5vw, 3.5rem);
+
+    &:first-child {
+      border-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__number {
+    color: $alder-mineral;
+    font-family: $alder-display;
+    font-size: clamp(3rem, 5vw, 5.75rem);
+    font-variant-numeric: tabular-nums;
+    font-weight: 400;
+    letter-spacing: -0.065em;
+    line-height: 0.8;
+    margin: 0;
+  }
+
+  &__item-title {
+    @include alder-item-title;
+
+    color: $alder-canvas;
+    margin-top: $alder-space-lg;
+  }
+
+  &__item-text {
+    @include alder-body-copy;
+
+    color: $alder-light-text;
+    margin-top: $alder-space-sm;
+    max-width: 20rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Studio reverses the hero's hierarchy: image leads while the content stays deliberately compact.
+.about-studio {
+  background: $alder-canvas-light;
+  padding: $alder-section-space 0;
+
+  &__inner {
+    align-items: center;
+    display: grid;
+    gap: clamp(2.5rem, 7vw, 8rem);
+    grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.75fr);
+  }
+
+  &__content {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  &__eyebrow {
+    @include alder-eyebrow;
+
+    color: $alder-mineral;
+    margin: 0 0 $alder-space-eyebrow-to-heading;
+  }
+
+  &__title {
+    @include alder-section-title;
+
+    color: $alder-forest;
+    max-width: 12ch;
+  }
+
+  &__text {
+    @include alder-body-copy;
+
+    color: $alder-stone;
+    margin-top: $alder-space-heading-to-copy;
+    max-width: 31rem;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__media {
+    aspect-ratio: 1.1 / 1;
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.about-cta {
+  align-items: center;
+  background: $alder-forest;
+  color: $alder-canvas;
+  display: flex;
+  min-height: clamp(28rem, 40vw, 38rem);
+  padding: clamp(4.5rem, 7vw, 7rem) 0;
+
+  .container {
+    width: 100%;
+  }
+
+  &__content {
+    border-top: 1px solid $alder-light-rule;
+    margin: 0 auto;
+    max-width: 47rem;
+    padding-top: $alder-space-md;
+    text-align: center;
+  }
+
+  &__title {
+    @include alder-section-title;
+
+    color: $alder-canvas;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 16ch;
+  }
+
+  &__text {
+    @include alder-body-copy;
+
+    color: $alder-light-text;
+    margin: $alder-space-heading-to-copy auto 0;
+    max-width: 34rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    @include alder-action;
+
+    background: $alder-mineral;
+    border: 1px solid $alder-mineral;
+    color: $alder-forest;
+    margin: $alder-space-copy-to-action auto 0;
+    max-width: 100%;
+
+    &::after {
+      content: "\2192";
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    &:hover {
+      background: transparent;
+      border-color: $alder-canvas;
+      color: $alder-canvas;
+    }
+
+    &:focus-visible {
+      outline: 3px solid $alder-mineral;
+      outline-offset: 0.35rem;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .about-hero__inner {
+    gap: clamp(2.5rem, 5vw, 4rem);
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.72fr);
+  }
+
+  .about-studio__inner {
+    gap: clamp(2.5rem, 5vw, 4rem);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-hero {
+    padding: 3.5rem 0 5rem;
+
+    &__inner {
+      align-items: start;
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      padding-bottom: 0;
+    }
+
+    &__media {
+      aspect-ratio: 4 / 5;
+    }
+  }
+
+  .about-page .about-intro {
+    padding: 5.5rem 0;
+
+    &__inner {
+      display: block;
+    }
+
+    &__title {
+      margin-top: $alder-space-eyebrow-to-heading;
+    }
+  }
+
+  .about-values {
+    padding: 5.5rem 0;
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      border-left: 0;
+      border-top: 1px solid $alder-light-rule;
+      padding: 2.5rem 0;
+
+      &:first-child {
+        border-top: 0;
+        padding-top: 2.5rem;
+      }
+    }
+  }
+
+  .about-studio {
+    padding: 5.5rem 0;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__content,
+    &__media {
+      width: 100%;
+    }
+
+    &__media {
+      aspect-ratio: 4 / 5;
+      order: -1;
+    }
+  }
+
+  .about-cta {
+    min-height: 32rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-page .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .about-hero__title {
+    font-size: $alder-hero-title-size-mobile;
+  }
+
+  .about-page .about-intro__title,
+  .about-values__title,
+  .about-studio__title,
+  .about-cta__title {
+    font-size: $alder-section-title-size-mobile;
+  }
+
+  .about-values__number {
+    font-size: 4.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-cta__button {
+    transition: none;
+  }
+}

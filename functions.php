@@ -12,6 +12,7 @@ require_once get_stylesheet_directory() . '/inc/post-types.php';
 require_once get_stylesheet_directory() . '/inc/acf-fields.php';
 require_once get_stylesheet_directory() . '/inc/acf-home.php';
 require_once get_stylesheet_directory() . '/inc/acf-services.php';
+require_once get_stylesheet_directory() . '/inc/acf-about.php';
 
 
 
