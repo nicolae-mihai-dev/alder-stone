@@ -6,6 +6,15 @@ body {
   font-family: $alder-sans;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid $alder-mineral;
+  outline-offset: 0.25rem;
+}
+
 .alder-stone-navbar {
   padding: 1.5rem 0;
 }

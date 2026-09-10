@@ -1,0 +1,10 @@
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #b8ae9f;
+  outline-offset: 0.25rem;
+}
+
+/*# sourceMappingURL=accessibility.css.map */
