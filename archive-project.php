@@ -5,83 +5,64 @@
  * @package AlderStone
  */
 
-// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="project-archive-wrapper">
+<main class="site-main projects-archive" id="content" tabindex="-1">
+	<section class="projects-archive__hero">
+		<div class="container">
+			<div class="projects-archive__hero-inner">
+				<p class="projects-eyebrow"><?php esc_html_e( 'Selected Work', 'alder-stone' ); ?></p>
+				<h1 class="projects-archive__title"><?php esc_html_e( 'Spaces made for the life around them.', 'alder-stone' ); ?></h1>
+				<p class="projects-archive__intro"><?php esc_html_e( 'A selection of homes and workplaces shaped by context, material and the people who use them every day.', 'alder-stone' ); ?></p>
+			</div>
+		</div>
+	</section>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
-		<main class="site-main" id="main">
-
-			<header class="page-header">
-				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
-			</header>
-
+	<section class="projects-archive__collection" aria-label="<?php esc_attr_e( 'Project collection', 'alder-stone' ); ?>">
+		<div class="container">
 			<?php if ( have_posts() ) : ?>
-				<div class="row">
-					<?php
-					while ( have_posts() ) :
+				<div class="projects-grid">
+					<?php while ( have_posts() ) : ?>
+						<?php
 						the_post();
-
 						$project_id       = get_the_ID();
 						$project_location = function_exists( 'get_field' ) ? get_field( 'project_location', $project_id ) : get_post_meta( $project_id, 'project_location', true );
 						$project_year     = function_exists( 'get_field' ) ? get_field( 'project_year', $project_id ) : get_post_meta( $project_id, 'project_year', true );
+						$project_type     = function_exists( 'get_field' ) ? get_field( 'project_type', $project_id ) : get_post_meta( $project_id, 'project_type', true );
 						?>
+						<article <?php post_class( 'project-card' ); ?> id="post-<?php the_ID(); ?>">
+							<a class="project-card__link" href="<?php echo esc_url( get_permalink() ); ?>">
+								<?php if ( has_post_thumbnail() ) : ?>
+									<figure class="project-card__media">
+										<?php the_post_thumbnail( 'large', array( 'class' => 'project-card__image', 'sizes' => '(min-width: 992px) 50vw, 100vw' ) ); ?>
+									</figure>
+								<?php else : ?>
+									<div class="project-card__placeholder" aria-hidden="true"><span><?php echo esc_html( $project_type ? $project_type : __( 'Alder & Stone', 'alder-stone' ) ); ?></span></div>
+								<?php endif; ?>
 
-						<article <?php post_class( 'col-md-6 mb-4' ); ?> id="post-<?php the_ID(); ?>">
-							<?php if ( has_post_thumbnail() ) : ?>
-								<a class="d-block mb-3" href="<?php echo esc_url( get_permalink() ); ?>">
-									<?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid' ) ); ?>
-								</a>
-							<?php endif; ?>
-
-							<header class="entry-header">
-								<h2 class="entry-title h3">
-									<a href="<?php echo esc_url( get_permalink() ); ?>">
-										<?php echo esc_html( get_the_title() ); ?>
-									</a>
-								</h2>
-							</header>
-
-							<?php if ( has_excerpt() ) : ?>
-								<div class="entry-summary">
-									<?php the_excerpt(); ?>
+								<div class="project-card__content">
+									<p class="project-card__index"><?php echo esc_html( sprintf( '%02d', $wp_query->current_post + 1 ) ); ?></p>
+									<h2 class="project-card__title"><?php the_title(); ?></h2>
+									<p class="project-card__meta">
+										<?php echo esc_html( $project_type ? $project_type : __( 'Architecture', 'alder-stone' ) ); ?>
+										<?php if ( $project_location || $project_year ) : ?><span aria-hidden="true">·</span><?php endif; ?>
+										<?php echo esc_html( $project_location ? $project_location : $project_year ); ?>
+									</p>
 								</div>
-							<?php endif; ?>
-
-							<?php if ( ! empty( $project_location ) || '' !== (string) $project_year ) : ?>
-								<div class="project-meta">
-									<?php if ( ! empty( $project_location ) ) : ?>
-										<p class="mb-1"><strong><?php esc_html_e( 'Location:', 'alder-stone' ); ?></strong> <?php echo esc_html( $project_location ); ?></p>
-									<?php endif; ?>
-
-									<?php if ( '' !== (string) $project_year ) : ?>
-										<p class="mb-0"><strong><?php esc_html_e( 'Year:', 'alder-stone' ); ?></strong> <?php echo esc_html( $project_year ); ?></p>
-									<?php endif; ?>
-								</div>
-							<?php endif; ?>
+							</a>
 						</article>
-
 					<?php endwhile; ?>
 				</div>
 
 				<?php the_posts_pagination(); ?>
-
 			<?php else : ?>
-				<p><?php esc_html_e( 'No projects found.', 'alder-stone' ); ?></p>
+				<p class="projects-archive__empty"><?php esc_html_e( 'New case studies are being prepared. Please check back soon.', 'alder-stone' ); ?></p>
 			<?php endif; ?>
+		</div>
+	</section>
+</main>
 
-		</main>
-
-	</div>
-
-</div>
-
-<?php
-get_footer();
+<?php get_footer(); ?>

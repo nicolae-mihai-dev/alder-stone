@@ -61,6 +61,17 @@ function alder_stone_enqueue_assets() {
 		}
 	}
 
+	if ( is_post_type_archive( 'project' ) || is_singular( 'project' ) ) {
+		$projects_styles      = "/css/projects{$suffix}.css";
+		$projects_styles_path = get_stylesheet_directory() . $projects_styles;
+
+		if ( file_exists( $projects_styles_path ) ) {
+			$projects_css_version = $theme_version . '.' . filemtime( $projects_styles_path );
+
+			wp_enqueue_style( 'alder-stone-projects', get_stylesheet_directory_uri() . $projects_styles, array( 'alder-stone-styles' ), $projects_css_version );
+		}
+	}
+
 	wp_enqueue_script( 'jquery' );
 	
 	$js_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_scripts );
