@@ -1,0 +1,321 @@
+// Contact is intentionally direct: one clear invitation, useful details and a quiet form.
+
+.contact-page {
+  background: $alder-canvas;
+  color: $alder-forest;
+  overflow-x: clip;
+
+  .container {
+    max-width: $alder-content-width;
+  }
+}
+
+.contact-page + .alder-stone-footer {
+  margin-top: 0;
+}
+
+.contact-eyebrow {
+  @include alder-eyebrow;
+
+  color: $alder-mineral;
+  margin: 0 0 $alder-space-eyebrow-to-heading;
+}
+
+.contact-hero {
+  background: $alder-canvas-light;
+  padding: clamp(3.75rem, 6vw, 7rem) 0 clamp(4.5rem, 8vw, 8.5rem);
+
+  &__inner {
+    align-items: end;
+    border-top: 1px solid $alder-rule;
+    display: grid;
+    gap: clamp(3rem, 8vw, 10rem);
+    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.55fr);
+    padding-top: $alder-space-md;
+  }
+
+  &__title {
+    @include alder-hero-title;
+
+    color: $alder-forest;
+    max-width: 12ch;
+  }
+
+  &__text {
+    @include alder-hero-copy;
+
+    color: $alder-stone;
+    margin-top: $alder-space-heading-to-copy;
+    max-width: 39rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.contact-details {
+  border-bottom: 1px solid $alder-rule;
+  margin: 0;
+
+  &__item {
+    border-top: 1px solid $alder-rule;
+    display: grid;
+    gap: $alder-space-sm;
+    grid-template-columns: minmax(5.5rem, 0.7fr) minmax(0, 1fr);
+    padding: 1rem 0;
+  }
+
+  dt {
+    @include alder-eyebrow;
+
+    color: $alder-stone;
+  }
+
+  dd {
+    color: $alder-forest;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-color: $alder-mineral;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+
+    &:hover,
+    &:focus {
+      color: $alder-mineral;
+    }
+  }
+}
+
+.contact-inquiry {
+  background: $alder-forest-deep;
+  color: $alder-canvas;
+  padding: $alder-section-space 0;
+
+  &__inner {
+    display: grid;
+    gap: clamp(3.5rem, 8vw, 10rem);
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  }
+
+  &__intro {
+    border-top: 1px solid $alder-light-rule;
+    padding-top: $alder-space-md;
+  }
+
+  &__title {
+    @include alder-section-title;
+
+    color: $alder-canvas;
+    max-width: 12ch;
+  }
+
+  &__text {
+    @include alder-body-copy;
+
+    color: $alder-light-text;
+    margin-top: $alder-space-heading-to-copy;
+    max-width: 28rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__privacy {
+    color: $alder-sand;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    margin: $alder-space-xl 0 0;
+    max-width: 23rem;
+  }
+
+  &__form-wrap {
+    min-width: 0;
+  }
+}
+
+.contact-form-notice {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.15rem;
+
+  &--success {
+    background: rgba(184, 174, 159, 0.16);
+    border-left: 3px solid $alder-mineral;
+    color: $alder-canvas;
+  }
+
+  &--error {
+    background: rgba(242, 238, 230, 0.1);
+    border-left: 3px solid #df8e78;
+    color: $alder-canvas;
+  }
+}
+
+.contact-form {
+  border-top: 1px solid $alder-light-rule;
+  padding-top: $alder-space-md;
+
+  &__grid {
+    display: grid;
+    gap: 1.5rem clamp(1.25rem, 3vw, 2rem);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__field {
+    margin: 0;
+
+    &--full {
+      margin-top: 1.5rem;
+    }
+  }
+
+  label {
+    @include alder-eyebrow;
+
+    color: $alder-light-text;
+    display: block;
+    margin-bottom: 0.625rem;
+  }
+
+  input,
+  select,
+  textarea {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $alder-light-rule;
+    border-radius: 0;
+    box-shadow: none;
+    color: $alder-canvas;
+    font-family: $alder-sans;
+    font-size: 1rem;
+    line-height: 1.45;
+    outline: 0;
+    padding: 0.75rem 0;
+    transition: border-color 180ms ease;
+    width: 100%;
+
+    &:focus {
+      border-color: $alder-mineral;
+    }
+
+    &::placeholder {
+      color: $alder-sand;
+      opacity: 0.8;
+    }
+  }
+
+  select {
+    background-image: linear-gradient(45deg, transparent 50%, $alder-sand 50%), linear-gradient(135deg, $alder-sand 50%, transparent 50%);
+    background-position: calc(100% - 0.65rem) 50%, calc(100% - 0.35rem) 50%;
+    background-repeat: no-repeat;
+    background-size: 0.3rem 0.3rem, 0.3rem 0.3rem;
+    cursor: pointer;
+    padding-right: 1.5rem;
+
+    option {
+      background: $alder-forest-deep;
+      color: $alder-canvas;
+    }
+  }
+
+  textarea {
+    min-height: 9rem;
+    resize: vertical;
+  }
+
+  &__honeypot {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+  }
+
+  &__submit {
+    @include alder-action;
+
+    background: $alder-mineral;
+    border: 1px solid $alder-mineral;
+    color: $alder-forest;
+    cursor: pointer;
+    margin-top: $alder-space-lg;
+    width: 100%;
+
+    span {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    &:hover {
+      background: transparent;
+      border-color: $alder-canvas;
+      color: $alder-canvas;
+    }
+
+    &:focus-visible {
+      outline: 3px solid $alder-mineral;
+      outline-offset: 0.3rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-hero {
+    padding: 3.5rem 0 5rem;
+
+    &__inner {
+      align-items: start;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-inquiry {
+    padding: 5.5rem 0;
+
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-form__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .contact-page .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .contact-hero__title,
+  .contact-inquiry__title {
+    font-size: $alder-hero-title-size-mobile;
+  }
+
+  .contact-details__item {
+    display: block;
+
+    dd {
+      margin-top: 0.35rem;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form__submit {
+    transition: none;
+  }
+}

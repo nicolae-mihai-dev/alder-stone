@@ -13,6 +13,8 @@ require_once get_stylesheet_directory() . '/inc/acf-fields.php';
 require_once get_stylesheet_directory() . '/inc/acf-home.php';
 require_once get_stylesheet_directory() . '/inc/acf-services.php';
 require_once get_stylesheet_directory() . '/inc/acf-about.php';
+require_once get_stylesheet_directory() . '/inc/acf-contact.php';
+require_once get_stylesheet_directory() . '/inc/contact-form.php';
 
 
 
@@ -47,6 +49,18 @@ function alder_stone_enqueue_assets() {
 	$css_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_styles );
 
 	wp_enqueue_style( 'alder-stone-styles', get_stylesheet_directory_uri() . $theme_styles, array(), $css_version );
+
+	if ( is_page( 'contact' ) ) {
+		$contact_styles      = "/css/contact{$suffix}.css";
+		$contact_styles_path = get_stylesheet_directory() . $contact_styles;
+
+		if ( file_exists( $contact_styles_path ) ) {
+			$contact_css_version = $theme_version . '.' . filemtime( $contact_styles_path );
+
+			wp_enqueue_style( 'alder-stone-contact', get_stylesheet_directory_uri() . $contact_styles, array( 'alder-stone-styles' ), $contact_css_version );
+		}
+	}
+
 	wp_enqueue_script( 'jquery' );
 	
 	$js_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_scripts );
