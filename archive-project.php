@@ -32,6 +32,7 @@ get_header();
 						$project_location = function_exists( 'get_field' ) ? get_field( 'project_location', $project_id ) : get_post_meta( $project_id, 'project_location', true );
 						$project_year     = function_exists( 'get_field' ) ? get_field( 'project_year', $project_id ) : get_post_meta( $project_id, 'project_year', true );
 						$project_type     = function_exists( 'get_field' ) ? get_field( 'project_type', $project_id ) : get_post_meta( $project_id, 'project_type', true );
+						$card_location    = preg_replace( '/,\\s*USA$/i', '', (string) $project_location );
 						?>
 						<article <?php post_class( 'project-card' ); ?> id="post-<?php the_ID(); ?>">
 							<a class="project-card__link" href="<?php echo esc_url( get_permalink() ); ?>">
@@ -47,9 +48,8 @@ get_header();
 									<p class="project-card__index"><?php echo esc_html( sprintf( '%02d', $wp_query->current_post + 1 ) ); ?></p>
 									<h2 class="project-card__title"><?php the_title(); ?></h2>
 									<p class="project-card__meta">
-										<?php echo esc_html( $project_type ? $project_type : __( 'Architecture', 'alder-stone' ) ); ?>
-										<?php if ( $project_location || $project_year ) : ?><span aria-hidden="true">·</span><?php endif; ?>
-										<?php echo esc_html( $project_location ? $project_location : $project_year ); ?>
+										<span class="project-card__discipline"><?php echo esc_html( $project_type ? $project_type : __( 'Architecture', 'alder-stone' ) ); ?></span>
+										<span class="project-card__location"><?php echo esc_html( $card_location ? $card_location : $project_year ); ?></span>
 									</p>
 								</div>
 							</a>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .projects-archive,
 .project-case-study {
   background: #f2eee6;
@@ -163,13 +164,22 @@
 
 .project-card__meta {
   color: #77766e;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 0.8125rem;
+  gap: 0.35rem 0.7rem;
   letter-spacing: 0.04em;
   margin: 0.75rem 0 0;
 }
 
-.project-card__meta span {
-  margin: 0 0.35rem;
+.project-card__discipline {
+  color: #1b2721;
+}
+
+.project-card__location::before {
+  color: #b98959;
+  content: "•";
+  margin-right: 0.7rem;
 }
 
 .project-card__link:hover .project-card__image {
