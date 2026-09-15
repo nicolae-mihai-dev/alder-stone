@@ -104,7 +104,7 @@
 }
 .contact-inquiry__title {
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-size: clamp(2.5rem, 4.2vw, 4.65rem);
+  font-size: clamp(2.5rem, 4.2vw, 3.2rem);
   font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 0.93;
@@ -201,15 +201,16 @@
 }
 .contact-form input::-moz-placeholder, .contact-form select::-moz-placeholder, .contact-form textarea::-moz-placeholder {
   color: #b8ae9f;
-  opacity: 0.8;
+  opacity: 1;
 }
 .contact-form input::placeholder,
 .contact-form select::placeholder,
 .contact-form textarea::placeholder {
   color: #b8ae9f;
-  opacity: 0.8;
+  opacity: 1;
 }
 .contact-form select {
+  color: #b8ae9f;
   background-image: linear-gradient(45deg, transparent 50%, #b8ae9f 50%), linear-gradient(135deg, #b8ae9f 50%, transparent 50%);
   background-position: calc(100% - 1.15rem) 50%, calc(100% - 0.85rem) 50%;
   background-repeat: no-repeat;
@@ -219,6 +220,9 @@
 }
 .contact-form select option {
   background: #27372e;
+  color: #f2eee6;
+}
+.contact-form select:has(option:checked:not([value=""])) {
   color: #f2eee6;
 }
 .contact-form textarea {
