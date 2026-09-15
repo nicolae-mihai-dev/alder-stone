@@ -1,4 +1,8 @@
 // Page-specific refinements loaded after the main theme stylesheet.
+.services-intro__content {
+	border-top: 0;
+	padding-top: 0;
+}
 
 .services-hero__text {
 	max-width: 39rem;

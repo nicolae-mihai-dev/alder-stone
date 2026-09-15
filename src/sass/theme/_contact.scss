@@ -104,15 +104,17 @@
   }
 
   &__intro {
-    border-top: 1px solid $alder-light-rule;
-    padding-top: $alder-space-md;
   }
 
   &__title {
-    @include alder-section-title;
-
+    font-family: $alder-display;
+    font-size: $alder-section-title-size;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.93;
+    margin: 0;
+    padding: 0;
     color: $alder-canvas;
-    max-width: 12ch;
   }
 
   &__text {

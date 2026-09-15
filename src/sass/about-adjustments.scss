@@ -1,4 +1,9 @@
 // Page-specific overrides kept separate while the main minified bundle is locked by the local server.
+.about-values__header {
+  border-top: 0;
+  padding-top: 0;
+}
+
 .about-values__title {
   max-width: none;
 }

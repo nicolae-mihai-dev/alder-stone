@@ -1,3 +1,8 @@
+.about-values__header {
+  border-top: 0;
+  padding-top: 0;
+}
+
 .about-values__title {
   max-width: none;
 }
