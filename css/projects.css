@@ -96,11 +96,18 @@
   overflow: hidden;
 }
 
+.project-card__media {
+  position: relative;
+}
+
 .project-card__image {
   display: block;
   height: 100%;
+  left: 0;
   -o-object-fit: cover;
   object-fit: cover;
+  position: absolute;
+  top: 0;
   transition: transform 500ms ease;
   width: 100%;
 }

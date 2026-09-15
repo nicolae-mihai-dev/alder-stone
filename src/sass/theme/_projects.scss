@@ -28,7 +28,8 @@
 }
 .project-card__media,
 .project-card__placeholder { aspect-ratio: 1.18 / 1; margin: 0; overflow: hidden; }
-.project-card__image { display: block; height: 100%; object-fit: cover; transition: transform 500ms ease; width: 100%; }
+.project-card__media { position: relative; }
+.project-card__image { display: block; height: 100%; left: 0; object-fit: cover; position: absolute; top: 0; transition: transform 500ms ease; width: 100%; }
 .project-card__placeholder { align-items: flex-end; background: $alder-forest-deep; color: $alder-light-text; display: flex; padding: clamp(1.5rem, 3vw, 2.5rem);
   span { @include alder-eyebrow; }
 }
