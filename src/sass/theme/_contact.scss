@@ -26,19 +26,16 @@
   padding: clamp(3.75rem, 6vw, 7rem) 0 clamp(4.5rem, 8vw, 8.5rem);
 
   &__inner {
-    align-items: end;
-    border-top: 1px solid $alder-rule;
+    align-items: center;
     display: grid;
     gap: clamp(3rem, 8vw, 10rem);
     grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.55fr);
-    padding-top: $alder-space-md;
   }
 
   &__title {
     @include alder-hero-title;
 
     color: $alder-forest;
-    max-width: 12ch;
   }
 
   &__text {
@@ -62,7 +59,7 @@
     border-top: 1px solid $alder-rule;
     display: grid;
     gap: $alder-space-sm;
-    grid-template-columns: minmax(5.5rem, 0.7fr) minmax(0, 1fr);
+    grid-template-columns: minmax(5.5rem, 0.4fr) minmax(0, 1fr);
     padding: 1rem 0;
   }
 
