@@ -240,7 +240,7 @@
   border-top: 1px solid rgba(27, 39, 33, 0.18);
   display: grid;
   gap: 3rem clamp(2rem, 7vw, 8rem);
-  grid-template-columns: minmax(9rem, 0.4fr) minmax(0, 1fr);
+  grid-template-columns: minmax(9rem, 0.2fr) minmax(0, 1fr);
   padding-top: 1.5rem;
 }
 
