@@ -135,7 +135,7 @@
 .project-card__content {
   border-top: 1px solid rgba(27, 39, 33, 0.18);
   display: grid;
-  grid-template-columns: 3.25rem minmax(0, 1fr);
+  grid-template-columns: 2.25rem minmax(0, 1fr);
   margin-top: 1.25rem;
   padding-top: 1rem;
 }
