@@ -92,6 +92,8 @@
     @include alder-section-title;
 
     color: $alder-forest;
+    margin: auto;
+    max-width: 46.8125rem;
   }
 
   &__text {

@@ -7,6 +7,11 @@
   max-width: 39rem;
 }
 
+.services-intro__title {
+  margin: auto;
+  max-width: 46.8125rem;
+}
+
 .services-hero__link {
   --button-background: #1b2721;
   --button-border: #1b2721;
