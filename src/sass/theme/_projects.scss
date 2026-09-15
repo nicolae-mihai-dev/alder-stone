@@ -41,7 +41,7 @@
 .project-card__content { border-top: 1px solid $alder-rule; display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); margin-top: 1.25rem; padding-top: 1rem; }
 .project-card__index { color: $alder-mineral; font-size: .75rem; letter-spacing: .1em; margin: .3rem 0 0; }
 .project-card__title { @include alder-item-title; font-size: clamp(1.75rem, 3vw, 3rem); transition: color 180ms ease; }
-.project-card__meta { color: $alder-stone; display: flex; flex-wrap: wrap; font-size: .8125rem; gap: .35rem .7rem; letter-spacing: .04em; margin: .75rem 0 0; }
+.project-card__meta { color: $alder-stone; display: flex; flex-wrap: wrap; font-size: .8125rem; gap: .35rem .7rem; grid-column: 2; letter-spacing: .04em; margin: .75rem 0 0; }
 .project-card__discipline { color: $alder-forest; }
 .project-card__location::before { color: $alder-mineral; content: "•"; margin-right: .7rem; }
 .project-card__link:hover .project-card__image { transform: scale(1.035); }
