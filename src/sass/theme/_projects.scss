@@ -71,11 +71,12 @@
 .project-gallery { background:$alder-canvas-light; padding:$alder-section-space 0; }
 .project-gallery__grid { display:grid; gap:1rem; grid-template-columns:repeat(2,minmax(0,1fr));
   figure { aspect-ratio:1.2 / 1; margin:0; overflow:hidden; } img { display:block; height:100%; object-fit:cover; width:100%; }
-  figure:first-child { grid-column:span 2; }
 }
 .project-outcome { background:$alder-canvas; padding:$alder-section-space 0; }
 .project-outcome__inner { border-top:1px solid $alder-rule; display:grid; gap:clamp(3rem,8vw,10rem); grid-template-columns:minmax(0,1.1fr) minmax(15rem,.7fr); padding-top:$alder-space-md; }
 .project-outcome h2 { @include alder-section-title; max-width:16ch; }
+.project-outcome__inner > div:only-child { grid-column:1 / -1; max-width:54rem; }
+.project-outcome__inner > div:only-child h2 { max-width:24ch; }
 .project-outcome blockquote { border-left:1px solid $alder-rule; margin:0; padding-left:clamp(1.5rem,3vw,3rem);
   p { font-family:$alder-display; font-size:clamp(1.5rem,2.2vw,2.2rem); letter-spacing:-.03em; line-height:1.1; margin:0; }
   cite { color:$alder-stone; display:block; font-size:.8125rem; font-style:normal; margin-top:1.5rem; }
@@ -86,6 +87,7 @@
   .projects-grid { grid-template-columns:1fr; } .project-card:nth-child(even) { margin-top:0; }
   .project-hero { padding-top:3.5rem; } .project-hero__header { padding-bottom:4rem; } .project-hero__media { aspect-ratio:1 / 1; }
   .project-overview__grid { display:block; } .project-overview__content { margin-top:2rem; } .project-facts { margin-top:2.5rem; }
+  .project-gallery__grid { grid-template-columns:1fr; }
   .project-story__grid, .project-outcome__inner { grid-template-columns:1fr; }
 }
 @media (max-width:575.98px) {
