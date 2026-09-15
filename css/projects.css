@@ -96,19 +96,22 @@
 }
 
 .project-card__media {
+  aspect-ratio: auto;
+  height: 0;
+  padding-top: 84.7458%;
   position: relative;
 }
 
 .project-card__image {
   display: block;
-  height: 100%;
-  left: 0;
+  height: 100% !important;
+  inset: 0;
+  max-width: none;
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  top: 0;
   transition: transform 500ms ease;
-  width: 100%;
+  width: 100% !important;
 }
 
 .project-card__placeholder {

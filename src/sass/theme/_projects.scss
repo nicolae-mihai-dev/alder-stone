@@ -28,8 +28,13 @@
 }
 .project-card__media,
 .project-card__placeholder { aspect-ratio: 1.18 / 1; margin: 0; overflow: hidden; }
-.project-card__media { position: relative; }
-.project-card__image { display: block; height: 100%; left: 0; object-fit: cover; position: absolute; top: 0; transition: transform 500ms ease; width: 100%; }
+.project-card__media {
+  aspect-ratio: auto;
+  height: 0;
+  padding-top: 84.7458%;
+  position: relative;
+}
+.project-card__image { display: block; height: 100% !important; inset: 0; max-width: none; object-fit: cover; position: absolute; transition: transform 500ms ease; width: 100% !important; }
 .project-card__placeholder { align-items: flex-end; background: $alder-forest-deep; color: $alder-light-text; display: flex; padding: clamp(1.5rem, 3vw, 2.5rem);
   span { @include alder-eyebrow; }
 }
