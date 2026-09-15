@@ -160,23 +160,23 @@ get_header();
 							<div class="contact-form__grid">
 								<p class="contact-form__field">
 									<label for="contact-name"><?php esc_html_e( 'Your name', 'alder-stone' ); ?> <span aria-hidden="true">*</span></label>
-									<input id="contact-name" name="name" type="text" autocomplete="name" required>
+									<input id="contact-name" name="name" type="text" autocomplete="name" placeholder="e.g. Alex Morgan" required>
 								</p>
 
 								<p class="contact-form__field">
 									<label for="contact-email"><?php esc_html_e( 'Email address', 'alder-stone' ); ?> <span aria-hidden="true">*</span></label>
-									<input id="contact-email" name="email" type="email" autocomplete="email" required>
+									<input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
 								</p>
 
 								<p class="contact-form__field">
 									<label for="contact-organisation"><?php esc_html_e( 'Organisation', 'alder-stone' ); ?></label>
-									<input id="contact-organisation" name="organisation" type="text" autocomplete="organization">
+									<input id="contact-organisation" name="organisation" type="text" autocomplete="organization" placeholder="Studio or company name">
 								</p>
 
 								<p class="contact-form__field">
 									<label for="contact-project-type"><?php esc_html_e( 'Project type', 'alder-stone' ); ?></label>
 									<select id="contact-project-type" name="project_type">
-										<option value=""><?php esc_html_e( 'Select an option', 'alder-stone' ); ?></option>
+										<option value="" selected><?php esc_html_e( 'Choose a project type', 'alder-stone' ); ?></option>
 										<option value="New build"><?php esc_html_e( 'New build', 'alder-stone' ); ?></option>
 										<option value="Renovation or extension"><?php esc_html_e( 'Renovation or extension', 'alder-stone' ); ?></option>
 										<option value="Interior or workplace"><?php esc_html_e( 'Interior or workplace', 'alder-stone' ); ?></option>
@@ -187,7 +187,7 @@ get_header();
 								<p class="contact-form__field">
 									<label for="contact-budget"><?php esc_html_e( 'Indicative budget', 'alder-stone' ); ?></label>
 									<select id="contact-budget" name="budget">
-										<option value=""><?php esc_html_e( 'Select an option', 'alder-stone' ); ?></option>
+										<option value="" selected><?php esc_html_e( 'Choose a budget range', 'alder-stone' ); ?></option>
 										<option value="Under €150k"><?php esc_html_e( 'Under €150k', 'alder-stone' ); ?></option>
 										<option value="€150k–€350k"><?php esc_html_e( '€150k–€350k', 'alder-stone' ); ?></option>
 										<option value="€350k–€750k"><?php esc_html_e( '€350k–€750k', 'alder-stone' ); ?></option>
@@ -204,7 +204,7 @@ get_header();
 
 							<p class="contact-form__field contact-form__field--full">
 								<label for="contact-message"><?php esc_html_e( 'Tell us a little about the project', 'alder-stone' ); ?> <span aria-hidden="true">*</span></label>
-								<textarea id="contact-message" name="message" rows="6" required></textarea>
+								<textarea id="contact-message" name="message" rows="6" placeholder="Tell us about the site, scope, priorities and ideal timeline." required></textarea>
 							</p>
 
 							<button class="contact-form__submit" type="submit">
