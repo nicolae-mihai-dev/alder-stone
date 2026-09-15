@@ -85,6 +85,15 @@ function alder_stone_enqueue_assets() {
 		}
 	}
 
+	if ( is_page( 'about' ) ) {
+		$about_adjustments      = "/css/about-adjustments{$suffix}.css";
+		$about_adjustments_path = get_stylesheet_directory() . $about_adjustments;
+
+		if ( file_exists( $about_adjustments_path ) ) {
+			wp_enqueue_style( 'alder-stone-about-adjustments', get_stylesheet_directory_uri() . $about_adjustments, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $about_adjustments_path ) );
+		}
+	}
+
 	if ( is_post_type_archive( 'project' ) || is_singular( 'project' ) ) {
 		$projects_styles      = "/css/projects{$suffix}.css";
 		$projects_styles_path = get_stylesheet_directory() . $projects_styles;

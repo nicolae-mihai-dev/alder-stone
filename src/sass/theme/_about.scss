@@ -142,7 +142,6 @@
     @include alder-section-title;
 
     color: $alder-canvas;
-    max-width: 16ch;
   }
 
   &__grid {
@@ -161,6 +160,17 @@
     &:first-child {
       border-left: 0;
       padding-left: 0;
+    }
+
+    &:nth-child(2) {
+      background: #b98959;
+      color: #27372e;
+
+      .about-values__number,
+      .about-values__item-title,
+      .about-values__item-text {
+        color: #27372e;
+      }
     }
   }
 

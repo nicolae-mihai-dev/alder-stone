@@ -1,0 +1,15 @@
+// Page-specific overrides kept separate while the main minified bundle is locked by the local server.
+.about-values__title {
+  max-width: none;
+}
+
+.about-values__item:nth-child(2) {
+  background: #b98959;
+  color: #27372e;
+}
+
+.about-values__item:nth-child(2) .about-values__number,
+.about-values__item:nth-child(2) .about-values__item-title,
+.about-values__item:nth-child(2) .about-values__item-text {
+  color: #27372e;
+}
