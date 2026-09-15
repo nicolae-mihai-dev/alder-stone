@@ -86,23 +86,3 @@ $alder-item-title-size: clamp(1.7rem, 2.45vw, 2.85rem);
   font-size: clamp(1rem, 1.35vw, 1.25rem);
   line-height: 1.65;
 }
-
-@mixin alder-action {
-  align-items: center;
-  border-radius: 0;
-  display: inline-flex;
-  font-family: $alder-sans;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  justify-content: space-between;
-  letter-spacing: 0.14em;
-  line-height: 1.2;
-  padding: 1rem 1.2rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition:
-    background-color 180ms ease,
-    border-color 180ms ease,
-    color 180ms ease;
-  width: 210px;
-}

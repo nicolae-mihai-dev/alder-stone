@@ -1,0 +1,50 @@
+// Shared button system. Page styles only provide contextual variables and placement.
+.alder-button {
+  --button-background: #{$alder-mineral};
+  --button-border: #{$alder-mineral};
+  --button-color: #{$alder-forest};
+  --button-hover-background: transparent;
+  --button-hover-border: #{$alder-canvas};
+  --button-hover-color: #{$alder-canvas};
+
+  align-items: center;
+  background: var(--button-background);
+  border: 1px solid var(--button-border);
+  border-radius: 0;
+  color: var(--button-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $alder-sans;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  justify-content: space-between;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+  width: 210px;
+
+  &::after {
+    content: "→";
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-left: 1.2rem;
+  }
+
+  &:hover {
+    background: var(--button-hover-background);
+    border-color: var(--button-hover-border);
+    color: var(--button-hover-color);
+  }
+
+  &:focus-visible {
+    outline: 3px solid $alder-mineral;
+    outline-offset: 0.35rem;
+  }
+}

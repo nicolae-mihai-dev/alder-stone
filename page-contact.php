@@ -207,9 +207,8 @@ get_header();
 								<textarea id="contact-message" name="message" rows="6" placeholder="Tell us about the site, scope, priorities and ideal timeline." required></textarea>
 							</p>
 
-							<button class="contact-form__submit" type="submit">
+							<button class="alder-button contact-form__submit" type="submit">
 								<?php esc_html_e( 'Send inquiry', 'alder-stone' ); ?>
-								<span aria-hidden="true">→</span>
 							</button>
 						</form>
 					</div>

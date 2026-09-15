@@ -131,31 +131,20 @@
 
 .home-text-link,
 .home-cta__link {
-  @include alder-action;
-
   margin-top: $alder-space-copy-to-action;
 }
 
 .home-text-link {
-  background: $alder-mineral;
-  border: 1px solid $alder-mineral;
-  color: $alder-forest;
+  --button-hover-border: #{$alder-canvas};
+  --button-hover-color: #{$alder-canvas};
 }
 
-.home-text-link:hover {
-  background: transparent;
-  border-color: $alder-canvas;
-  color: $alder-canvas;
+.about-intro__link {
+  --button-hover-background: #{$alder-forest};
+  --button-hover-border: #{$alder-forest};
+  --button-hover-color: #{$alder-canvas};
 }
 
-.about-intro__link:hover {
-  background: $alder-forest;
-  border-color: $alder-forest;
-  color: $alder-canvas;
-}
-
-.home-text-link::after,
-.home-cta__link::after,
 .home-section-link span {
   content: "→";
   font-size: 1rem;
@@ -631,22 +620,13 @@
   }
 
   &__link {
-    background: $alder-mineral;
-    border: 1px solid $alder-mineral;
-    color: $alder-forest;
-
-    &:hover {
-      background: transparent;
-      border-color: $alder-canvas;
-      color: $alder-canvas;
-    }
+    --button-hover-border: #{$alder-canvas};
+    --button-hover-color: #{$alder-canvas};
   }
 }
 
-.home-text-link:focus-visible,
 .home-section-link:focus-visible,
-.home-project__link:focus-visible,
-.home-cta__link:focus-visible {
+.home-project__link:focus-visible {
   outline: 3px solid $alder-mineral;
   outline-offset: 0.35rem;
 }

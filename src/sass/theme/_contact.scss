@@ -245,31 +245,8 @@
   }
 
   &__submit {
-    @include alder-action;
-
-    background: $alder-mineral;
-    border: 1px solid $alder-mineral;
-    color: $alder-forest;
-    cursor: pointer;
     margin-top: $alder-space-lg;
     width: 100%;
-
-    span {
-      font-size: 1rem;
-      font-weight: 400;
-      letter-spacing: 0;
-    }
-
-    &:hover {
-      background: transparent;
-      border-color: $alder-canvas;
-      color: $alder-canvas;
-    }
-
-    &:focus-visible {
-      outline: 3px solid $alder-mineral;
-      outline-offset: 0.3rem;
-    }
   }
 }
 

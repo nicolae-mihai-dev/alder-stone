@@ -178,7 +178,7 @@ get_header();
 							$hero_button_target = ! empty( $hero_button['target'] ) ? $hero_button['target'] : '_self';
 							$hero_button_rel    = '_blank' === $hero_button_target ? 'noopener noreferrer' : '';
 							?>
-							<a class="home-text-link" href="<?php echo esc_url( $hero_button['url'] ); ?>" target="<?php echo esc_attr( $hero_button_target ); ?>"<?php echo $hero_button_rel ? ' rel="' . esc_attr( $hero_button_rel ) . '"' : ''; ?>>
+							<a class="alder-button home-text-link" href="<?php echo esc_url( $hero_button['url'] ); ?>" target="<?php echo esc_attr( $hero_button_target ); ?>"<?php echo $hero_button_rel ? ' rel="' . esc_attr( $hero_button_rel ) . '"' : ''; ?>>
 								<?php echo esc_html( $hero_button['title'] ); ?>
 							</a>
 						<?php endif; ?>
@@ -209,7 +209,7 @@ get_header();
 						<?php endif; ?>
 
 						<?php if ( $about_url ) : ?>
-							<a class="home-text-link about-intro__link" href="<?php echo esc_url( $about_url ); ?>">
+							<a class="alder-button home-text-link about-intro__link" href="<?php echo esc_url( $about_url ); ?>">
 								<?php esc_html_e( 'Our Story', 'alder-stone' ); ?>
 							</a>
 						<?php endif; ?>
@@ -279,7 +279,7 @@ get_header();
 
 				<?php if ( $services_url ) : ?>
 					<div class="home-services__cta">
-						<a class="home-text-link" href="<?php echo esc_url( $services_url ); ?>">
+						<a class="alder-button home-text-link" href="<?php echo esc_url( $services_url ); ?>">
 							<?php esc_html_e( 'Explore Services', 'alder-stone' ); ?>
 						</a>
 					</div>
@@ -457,7 +457,7 @@ get_header();
 							$cta_button_target = ! empty( $cta_button['target'] ) ? $cta_button['target'] : '_self';
 							$cta_button_rel    = '_blank' === $cta_button_target ? 'noopener noreferrer' : '';
 							?>
-							<a class="home-cta__link" href="<?php echo esc_url( $cta_button['url'] ); ?>" target="<?php echo esc_attr( $cta_button_target ); ?>"<?php echo $cta_button_rel ? ' rel="' . esc_attr( $cta_button_rel ) . '"' : ''; ?>>
+							<a class="alder-button home-cta__link" href="<?php echo esc_url( $cta_button['url'] ); ?>" target="<?php echo esc_attr( $cta_button_target ); ?>"<?php echo $cta_button_rel ? ' rel="' . esc_attr( $cta_button_rel ) . '"' : ''; ?>>
 								<?php echo esc_html( $cta_button['title'] ); ?>
 							</a>
 						<?php endif; ?>

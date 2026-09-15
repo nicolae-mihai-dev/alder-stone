@@ -94,7 +94,7 @@ get_header();
 								<div class="services-hero__text"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
 							<?php endif; ?>
 
-							<a class="services-hero__link" href="#services">
+							<a class="alder-button services-hero__link" href="#services">
 								<?php esc_html_e( 'Explore services', 'alder-stone' ); ?>
 							</a>
 						</div>
@@ -234,7 +234,7 @@ get_header();
 							$cta_button_target = ! empty( $cta_button['target'] ) ? $cta_button['target'] : '_self';
 							$cta_button_rel    = '_blank' === $cta_button_target ? 'noopener noreferrer' : '';
 							?>
-							<a class="services-cta__button" href="<?php echo esc_url( $cta_button['url'] ); ?>" target="<?php echo esc_attr( $cta_button_target ); ?>"<?php echo $cta_button_rel ? ' rel="' . esc_attr( $cta_button_rel ) . '"' : ''; ?>>
+							<a class="alder-button services-cta__button" href="<?php echo esc_url( $cta_button['url'] ); ?>" target="<?php echo esc_attr( $cta_button_target ); ?>"<?php echo $cta_button_rel ? ' rel="' . esc_attr( $cta_button_rel ) . '"' : ''; ?>>
 								<?php echo esc_html( $cta_button['title'] ); ?>
 							</a>
 						<?php endif; ?>
