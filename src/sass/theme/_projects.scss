@@ -14,7 +14,7 @@
 
 .projects-archive__hero { background: $alder-canvas-light; padding: clamp(3.75rem, 6vw, 7rem) 0 clamp(4.5rem, 8vw, 8.5rem); }
 .projects-archive__hero-inner { border-top: 1px solid $alder-rule; padding-top: $alder-space-md; }
-.projects-archive__title { @include alder-hero-title; max-width: 12ch; }
+.projects-archive__title { @include alder-hero-title; }
 .projects-archive__intro { @include alder-hero-copy; color: $alder-stone; margin: $alder-space-heading-to-copy 0 0; max-width: 39rem; }
 .projects-archive__collection { padding: $alder-section-space 0; }
 .projects-archive__empty { @include alder-body-copy; margin: 0; }
@@ -43,7 +43,7 @@
 
 .project-hero { background: $alder-canvas-light; padding: clamp(3.75rem, 6vw, 7rem) 0 0; }
 .project-hero__header { border-top: 1px solid $alder-rule; padding: $alder-space-md 0 clamp(3.5rem, 7vw, 7rem); }
-.project-hero__title { @include alder-hero-title; max-width: 12ch; }
+.project-hero__title { @include alder-hero-title; }
 .project-hero__meta { color: $alder-stone; font-size: .9375rem; margin: $alder-space-lg 0 0; }
 .project-hero__media { aspect-ratio: 2 / 1; margin: 0; overflow: hidden; }
 .project-hero__image { display:block; height:100%; object-fit:cover; width:100%; }

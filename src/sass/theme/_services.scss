@@ -47,6 +47,7 @@
 
     color: $alder-stone;
     margin-top: $alder-space-heading-to-copy;
+    max-width: 39rem;
 
     p {
       margin-bottom: 0;
@@ -316,13 +317,14 @@
     color: $alder-forest;
     margin-left: auto;
     margin-right: auto;
-    margin-top: $alder-space-copy-to-action;
-    max-width: 100%;
+    margin-top: 2.5rem;
+    max-width: 14.375rem;
 
     &::after {
       content: "\2192";
       font-size: 1rem;
       font-weight: 400;
+      height: 22px;
       letter-spacing: 0;
     }
 

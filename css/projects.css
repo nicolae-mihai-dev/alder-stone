@@ -45,7 +45,6 @@
   padding: 0;
   text-wrap: balance;
   font-size: clamp(2.75rem, 4.6vw, 5rem);
-  max-width: 12ch;
 }
 
 .projects-archive__intro {
@@ -197,7 +196,6 @@
   padding: 0;
   text-wrap: balance;
   font-size: clamp(2.75rem, 4.6vw, 5rem);
-  max-width: 12ch;
 }
 
 .project-hero__meta {
