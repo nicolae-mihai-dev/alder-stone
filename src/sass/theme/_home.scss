@@ -148,6 +148,12 @@
   color: $alder-canvas;
 }
 
+.about-intro__link:hover {
+  background: $alder-forest;
+  border-color: $alder-forest;
+  color: $alder-canvas;
+}
+
 .home-text-link::after,
 .home-cta__link::after,
 .home-section-link span {
