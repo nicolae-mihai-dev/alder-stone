@@ -29,7 +29,7 @@
     align-items: center;
     display: grid;
     gap: clamp(3rem, 8vw, 10rem);
-    grid-template-columns: minmax(0, 0.55fr) minmax(16rem, 1.15fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.55fr);
   }
 
   &__title {
@@ -97,7 +97,7 @@
   &__inner {
     display: grid;
     gap: clamp(3.5rem, 8vw, 10rem);
-    grid-template-columns: minmax(16rem, 0.55fr) minmax(0, 1.15fr);
+    grid-template-columns: minmax(0, 0.55fr) minmax(16rem, 1.15fr);
   }
 
   &__intro {
