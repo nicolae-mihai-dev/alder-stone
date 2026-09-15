@@ -97,7 +97,7 @@
   &__inner {
     display: grid;
     gap: clamp(3.5rem, 8vw, 10rem);
-    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.55fr);
   }
 
   &__intro {
