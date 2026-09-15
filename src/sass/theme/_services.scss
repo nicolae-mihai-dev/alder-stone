@@ -252,7 +252,7 @@
 // CTA uses one compact message block, not an empty counterpart column.
 .services-cta {
   align-items: center;
-  background: $alder-forest;
+  background: $alder-forest-deep;
   color: $alder-canvas;
   display: flex;
   padding: clamp(4rem, 6vw, 6.5rem) 0;
@@ -273,7 +273,7 @@
     color: $alder-canvas;
     margin-left: auto;
     margin-right: auto;
-    max-width: 17ch;
+    max-width: 47rem;
   }
 
   &__text {
