@@ -54,7 +54,13 @@ get_header();
 		$response  = $get_project_field( 'project_response' );
 		$outcome   = $get_project_field( 'project_outcome' );
 		$outcome_image = $get_project_field( 'project_outcome_image' );
-		$gallery   = $get_project_field( 'project_gallery' );
+		$gallery   = array_filter(
+			array(
+				$get_project_field( 'project_gallery_image_1' ),
+				$get_project_field( 'project_gallery_image_2' ),
+				$get_project_field( 'project_gallery_image_3' ),
+			)
+		);
 		$quote     = $get_project_field( 'project_quote' );
 		$quote_by  = $get_project_field( 'project_quote_attribution' );
 		$facts     = array_filter( array( __( 'Location', 'alder-stone' ) => $location, __( 'Year', 'alder-stone' ) => $year, __( 'Client', 'alder-stone' ) => $client, __( 'Type', 'alder-stone' ) => $type, __( 'Scope', 'alder-stone' ) => $scope, __( 'Scale', 'alder-stone' ) => $area ) );
@@ -84,7 +90,7 @@ get_header();
 				<?php if ( $response ) : ?><div><p class="projects-eyebrow"><?php esc_html_e( 'Our Response', 'alder-stone' ); ?></p><p><?php echo esc_html( $response ); ?></p></div><?php endif; ?>
 			</div></div></section><?php endif; ?>
 
-			<?php if ( is_array( $gallery ) && $gallery ) : ?><section class="project-gallery"><div class="container"><div class="project-gallery__grid">
+			<?php if ( $gallery ) : ?><section class="project-gallery"><div class="container"><div class="project-gallery__grid">
 				<?php foreach ( $gallery as $image_id ) : ?><figure><?php echo wp_get_attachment_image( absint( $image_id ), 'large', false, array( 'loading' => 'lazy' ) ); ?></figure><?php endforeach; ?>
 			</div></div></section><?php endif; ?>
 
