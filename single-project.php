@@ -70,7 +70,7 @@ get_header();
 				<div class="container">
 					<div class="project-hero__header">
 						<p class="projects-eyebrow"><?php echo esc_html( $type ? $type : __( 'Selected Project', 'alder-stone' ) ); ?></p>
-						<h1 class="project-hero__title"><?php the_title(); ?></h1>
+						<h1 class="alder-heading project-hero__title"><?php the_title(); ?></h1>
 						<?php if ( $location || $year ) : ?><p class="project-hero__meta"><?php echo esc_html( trim( $location . ( $location && $year ? ' · ' : '' ) . $year ) ); ?></p><?php endif; ?>
 					</div>
 					<?php if ( has_post_thumbnail() ) : ?><figure class="project-hero__media"><?php the_post_thumbnail( 'full', array( 'class' => 'project-hero__image', 'fetchpriority' => 'high', 'loading' => 'eager', 'sizes' => '100vw' ) ); ?></figure><?php endif; ?>

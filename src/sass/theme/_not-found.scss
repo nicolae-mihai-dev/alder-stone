@@ -5,7 +5,7 @@
 .not-found-page__inner { border-top:1px solid $alder-rule; display:grid; gap:clamp(2rem,7vw,8rem); grid-template-columns:minmax(0,1fr) minmax(14rem,.6fr); padding-top:$alder-space-md; }
 .not-found-page__code { color:$alder-mineral; font-family:$alder-display; font-size:clamp(6rem,16vw,13rem); letter-spacing:-.08em; line-height:.72; margin:0; }
 .not-found-page__eyebrow { @include alder-eyebrow; color:$alder-mineral; margin:0 0 $alder-space-eyebrow-to-heading; }
-.not-found-page__title { @include alder-section-title; max-width:10ch; }
+.not-found-page__title { font-size:$alder-section-title-size; max-width:10ch; }
 .not-found-page__text { @include alder-body-copy; color:$alder-stone; margin:$alder-space-heading-to-copy 0 0; max-width:28rem; }
 .not-found-page__link { --button-background:#{$alder-forest}; --button-border:#{$alder-forest}; --button-color:#{$alder-canvas}; --button-hover-border:#{$alder-forest}; --button-hover-color:#{$alder-forest}; margin-top:$alder-space-copy-to-action; }
 @media (max-width:767.98px) { .not-found-page__inner { grid-template-columns:1fr; } .not-found-page__code { order:2; } }

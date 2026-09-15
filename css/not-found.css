@@ -42,13 +42,6 @@
 }
 
 .not-found-page__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
   font-size: clamp(2.5rem, 4.2vw, 4.5rem);
   max-width: 10ch;
 }

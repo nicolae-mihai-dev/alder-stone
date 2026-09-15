@@ -15601,15 +15601,8 @@ textarea:focus-visible {
   color: #b98959;
 }
 .home-hero__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.75rem, 4.6vw, 5rem);
   color: #f2eee6;
+  font-size: clamp(2.75rem, 4.6vw, 5rem);
   margin-top: 0;
 }
 .home-hero__text {
@@ -15632,7 +15625,6 @@ textarea:focus-visible {
   width: 100%;
 }
 
-.home-hero__title,
 .home-section-title,
 .home-cta__title,
 .about-intro__title {
@@ -16331,15 +16323,8 @@ textarea:focus-visible {
   color: #b98959;
 }
 .services-hero__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.75rem, 4.6vw, 5rem);
   color: #1b2721;
+  font-size: clamp(2.75rem, 4.6vw, 5rem);
 }
 .services-hero__text {
   font-size: clamp(1rem, 1.35vw, 1.25rem);
@@ -16360,6 +16345,11 @@ textarea:focus-visible {
   --button-hover-color: #1b2721;
   margin-top: 2rem;
   max-width: 100%;
+}
+.services-hero__link:hover {
+  background: #b98959;
+  border-color: #b98959;
+  color: #1b2721;
 }
 .services-hero__media {
   aspect-ratio: 1.85/1;
@@ -16392,6 +16382,8 @@ textarea:focus-visible {
   text-wrap: balance;
   font-size: clamp(2.5rem, 4.2vw, 4.5rem);
   color: #1b2721;
+  margin: auto;
+  max-width: 46.8125rem;
 }
 .services-intro__text {
   font-size: clamp(1rem, 1.25vw, 1.2rem);
@@ -16548,7 +16540,7 @@ textarea:focus-visible {
 
 .services-cta {
   align-items: center;
-  background: #1b2721;
+  background: #27372e;
   color: #f2eee6;
   display: flex;
   padding: clamp(4rem, 6vw, 6.5rem) 0;
@@ -16573,7 +16565,7 @@ textarea:focus-visible {
   color: #f2eee6;
   margin-left: auto;
   margin-right: auto;
-  max-width: 17ch;
+  max-width: 47rem;
 }
 .services-cta__text {
   font-size: clamp(1rem, 1.25vw, 1.2rem);
@@ -16688,15 +16680,8 @@ textarea:focus-visible {
   margin: 0 0 1.5rem;
 }
 .about-hero__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.75rem, 4.6vw, 5rem);
   color: #1b2721;
+  font-size: clamp(2.75rem, 4.6vw, 5rem);
 }
 .about-hero__text {
   font-size: clamp(1rem, 1.35vw, 1.25rem);

@@ -33,9 +33,8 @@
   }
 
   &__title {
-    @include alder-hero-title;
-
     color: $alder-forest;
+    font-size: $alder-hero-title-size;
   }
 
   &__text {

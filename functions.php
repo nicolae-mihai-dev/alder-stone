@@ -72,6 +72,13 @@ function alder_stone_enqueue_assets() {
 		wp_enqueue_style( 'alder-stone-typography-adjustments', get_stylesheet_directory_uri() . $typography_adjustments, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $typography_adjustments_path ) );
 	}
 
+	$heading_styles      = "/css/headings{$suffix}.css";
+	$heading_styles_path = get_stylesheet_directory() . $heading_styles;
+
+	if ( file_exists( $heading_styles_path ) ) {
+		wp_enqueue_style( 'alder-stone-headings', get_stylesheet_directory_uri() . $heading_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $heading_styles_path ) );
+	}
+
 	$button_styles      = "/css/buttons{$suffix}.css";
 	$button_styles_path = get_stylesheet_directory() . $button_styles;
 

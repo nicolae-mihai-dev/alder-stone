@@ -15,7 +15,7 @@ get_header();
 		<div class="container">
 			<div class="projects-archive__hero-inner">
 				<p class="projects-eyebrow"><?php esc_html_e( 'Selected Work', 'alder-stone' ); ?></p>
-				<h1 class="projects-archive__title"><?php esc_html_e( 'Spaces made for the life around them.', 'alder-stone' ); ?></h1>
+				<h1 class="alder-heading projects-archive__title"><?php esc_html_e( 'Spaces made for the life around them.', 'alder-stone' ); ?></h1>
 				<p class="projects-archive__intro"><?php esc_html_e( 'A selection of homes and workplaces shaped by context, material and the people who use them every day.', 'alder-stone' ); ?></p>
 			</div>
 		</div>

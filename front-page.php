@@ -164,7 +164,7 @@ get_header();
 						<?php endif; ?>
 
 						<?php if ( $has_value( $hero_title ) ) : ?>
-							<h1 class="home-hero__title"><?php echo esc_html( $hero_title ); ?></h1>
+							<h1 class="alder-heading home-hero__title"><?php echo esc_html( $hero_title ); ?></h1>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $hero_text ) ) : ?>

@@ -87,7 +87,7 @@ get_header();
 							<?php endif; ?>
 
 							<?php if ( $has_value( $hero_title ) ) : ?>
-								<h1 class="services-hero__title"><?php echo esc_html( $hero_title ); ?></h1>
+								<h1 class="alder-heading services-hero__title"><?php echo esc_html( $hero_title ); ?></h1>
 							<?php endif; ?>
 
 							<?php if ( $has_value( $hero_text ) ) : ?>
