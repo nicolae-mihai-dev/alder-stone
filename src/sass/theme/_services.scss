@@ -63,6 +63,12 @@
     --button-hover-color: #{$alder-forest};
     margin-top: $alder-space-copy-to-action;
     max-width: 100%;
+
+    &:hover {
+      background: $alder-mineral;
+      border-color: $alder-mineral;
+      color: $alder-forest;
+    }
   }
 
   &__media {

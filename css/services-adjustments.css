@@ -21,6 +21,12 @@
   --button-hover-color: #1b2721;
 }
 
+.services-hero__link:hover {
+  background: #b98959;
+  border-color: #b98959;
+  color: #1b2721;
+}
+
 .services-cta {
   background: #27372e;
 }
