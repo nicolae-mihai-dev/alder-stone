@@ -8,7 +8,7 @@
 .services-intro__title,
 .services-process__title,
 .services-cta__title {
-  font-size: clamp(2.5rem, 4.2vw, 3.5rem);
+  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
 }
 
 /*# sourceMappingURL=typography-adjustments.css.map */
