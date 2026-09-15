@@ -352,6 +352,14 @@ function alder_stone_register_home_acf_fields() {
 					'default_value' => __( 'Tell us about your site, your ambitions, and the space you want to create.', 'alder-stone' ),
 				),
 				array(
+					'key'           => 'field_alder_stone_home_cta_image',
+					'label'         => __( 'CTA Background Image', 'alder-stone' ),
+					'name'          => 'home_cta_image',
+					'type'          => 'image',
+					'instructions'  => __( 'A dedicated background image for this section. Recommended: 1920 × 1080 px.', 'alder-stone' ),
+					'return_format' => 'id',
+				),
+				array(
 					'key'   => 'field_alder_stone_home_cta_button',
 					'label' => __( 'CTA Button', 'alder-stone' ),
 					'name'  => 'home_cta_button',

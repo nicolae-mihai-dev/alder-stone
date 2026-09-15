@@ -97,7 +97,6 @@ foreach ( $featured_project_ids as $featured_project_id ) {
 }
 
 $projects_archive_url     = get_post_type_archive_link( 'project' );
-$cta_background_image_id = isset( $featured_projects[2] ) ? get_post_thumbnail_id( $featured_projects[2]->ID ) : 0;
 
 // Statistics fields.
 $statistics = array(
@@ -136,7 +135,13 @@ $process_steps   = array(
 // CTA fields.
 $cta_title  = $get_home_field( 'home_cta_title' );
 $cta_text   = $get_home_field( 'home_cta_text' );
+$cta_image_id = $get_home_field( 'home_cta_image' );
 $cta_button = $get_home_field( 'home_cta_button' );
+
+// Preserve the current visual until a dedicated CTA image is selected in ACF.
+if ( ! $cta_image_id && isset( $featured_projects[2] ) ) {
+	$cta_image_id = get_post_thumbnail_id( $featured_projects[2]->ID );
+}
 
 get_header();
 ?>
@@ -427,10 +432,10 @@ get_header();
 	<?php endif; ?>
 
 	<?php if ( $has_value( $cta_title ) || $has_value( $cta_text ) || ! empty( $cta_button ) ) : ?>
-		<section class="home-cta<?php echo esc_attr( $cta_background_image_id ? ' home-cta--with-media' : '' ); ?>">
-			<?php if ( $cta_background_image_id ) : ?>
+		<section class="home-cta<?php echo esc_attr( $cta_image_id ? ' home-cta--with-media' : '' ); ?>">
+			<?php if ( $cta_image_id ) : ?>
 				<figure class="home-cta__media" aria-hidden="true">
-					<?php echo wp_get_attachment_image( $cta_background_image_id, 'full', false, array( 'class' => 'home-cta__image', 'alt' => '' ) ); ?>
+					<?php echo wp_get_attachment_image( $cta_image_id, 'full', false, array( 'class' => 'home-cta__image', 'alt' => '' ) ); ?>
 				</figure>
 			<?php endif; ?>
 
