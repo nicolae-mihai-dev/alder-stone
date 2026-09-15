@@ -39,38 +39,6 @@ get_header();
 			),
 		);
 		$project_defaults = $defaults[ get_post_field( 'post_name', $project_id ) ] ?? array();
-		$gallery_fallbacks = array(
-			'northline-offices' => array(
-				array(
-					'src' => 'assets/images/case-studies/northline-workplace.png',
-					'alt' => __( 'Northline Offices workspace with concrete structure, oak desks and Seattle skyline views.', 'alder-stone' ),
-				),
-				array(
-					'src' => 'assets/images/case-studies/northline-facade.png',
-					'alt' => __( 'Northline Offices facade in concrete, glass and dark metal.', 'alder-stone' ),
-				),
-			),
-			'courtyard-residence' => array(
-				array(
-					'src' => 'assets/images/case-studies/courtyard-living.png',
-					'alt' => __( 'Living room opening onto the planted courtyard at Courtyard Residence.', 'alder-stone' ),
-				),
-				array(
-					'src' => 'assets/images/case-studies/courtyard-exterior.png',
-					'alt' => __( 'Brick entrance and native planting at Courtyard Residence.', 'alder-stone' ),
-				),
-			),
-			'stone-house' => array(
-				array(
-					'src' => 'assets/images/case-studies/stone-house-exterior.png',
-					'alt' => __( 'Stone House set into an alpine slope at blue hour.', 'alder-stone' ),
-				),
-				array(
-					'src' => 'assets/images/case-studies/stone-house-interior.png',
-					'alt' => __( 'Stone House living room with fireplace and mountain view.', 'alder-stone' ),
-				),
-			),
-		);
 		$get_project_field = static function( $field_name ) use ( $project_id, $project_defaults ) {
 			$value = function_exists( 'get_field' ) ? get_field( $field_name, $project_id ) : get_post_meta( $project_id, $field_name, true );
 
@@ -85,8 +53,8 @@ get_header();
 		$challenge = $get_project_field( 'project_challenge' );
 		$response  = $get_project_field( 'project_response' );
 		$outcome   = $get_project_field( 'project_outcome' );
+		$outcome_image = $get_project_field( 'project_outcome_image' );
 		$gallery   = $get_project_field( 'project_gallery' );
-		$static_gallery = $gallery_fallbacks[ get_post_field( 'post_name', $project_id ) ] ?? array();
 		$quote     = $get_project_field( 'project_quote' );
 		$quote_by  = $get_project_field( 'project_quote_attribution' );
 		$facts     = array_filter( array( __( 'Location', 'alder-stone' ) => $location, __( 'Year', 'alder-stone' ) => $year, __( 'Client', 'alder-stone' ) => $client, __( 'Type', 'alder-stone' ) => $type, __( 'Scope', 'alder-stone' ) => $scope, __( 'Scale', 'alder-stone' ) => $area ) );
@@ -116,18 +84,17 @@ get_header();
 				<?php if ( $response ) : ?><div><p class="projects-eyebrow"><?php esc_html_e( 'Our Response', 'alder-stone' ); ?></p><p><?php echo esc_html( $response ); ?></p></div><?php endif; ?>
 			</div></div></section><?php endif; ?>
 
-			<?php if ( ( is_array( $gallery ) && $gallery ) || $static_gallery ) : ?><section class="project-gallery"><div class="container"><div class="project-gallery__grid">
-				<?php if ( is_array( $gallery ) && $gallery ) : ?>
-					<?php foreach ( $gallery as $image_id ) : ?><figure><?php echo wp_get_attachment_image( absint( $image_id ), 'large', false, array( 'loading' => 'lazy' ) ); ?></figure><?php endforeach; ?>
-				<?php else : ?>
-					<?php foreach ( $static_gallery as $image ) : ?><figure><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/' . $image['src'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" loading="lazy" /></figure><?php endforeach; ?>
-				<?php endif; ?>
+			<?php if ( is_array( $gallery ) && $gallery ) : ?><section class="project-gallery"><div class="container"><div class="project-gallery__grid">
+				<?php foreach ( $gallery as $image_id ) : ?><figure><?php echo wp_get_attachment_image( absint( $image_id ), 'large', false, array( 'loading' => 'lazy' ) ); ?></figure><?php endforeach; ?>
 			</div></div></section><?php endif; ?>
 
-			<?php if ( $outcome || $quote ) : ?><section class="project-outcome"><div class="container"><div class="project-outcome__inner">
+			<?php if ( $outcome || $quote ) : ?><section class="project-outcome<?php echo esc_attr( $outcome_image ? ' project-outcome--with-media' : '' ); ?>">
+				<?php if ( $outcome_image ) : ?><figure class="project-outcome__media" aria-hidden="true"><?php echo wp_get_attachment_image( absint( $outcome_image ), 'full', false, array( 'class' => 'project-outcome__image', 'alt' => '' ) ); ?></figure><?php endif; ?>
+				<div class="container"><div class="project-outcome__inner">
 				<?php if ( $outcome ) : ?><div><p class="projects-eyebrow"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></p><h2><?php echo esc_html( $outcome ); ?></h2></div><?php endif; ?>
 				<?php if ( $quote ) : ?><blockquote><p>“<?php echo esc_html( $quote ); ?>”</p><?php if ( $quote_by ) : ?><cite><?php echo esc_html( $quote_by ); ?></cite><?php endif; ?></blockquote><?php endif; ?>
-			</div></div></section><?php endif; ?>
+				</div></div>
+			</section><?php endif; ?>
 		</article>
 	<?php endwhile; ?>
 </main>

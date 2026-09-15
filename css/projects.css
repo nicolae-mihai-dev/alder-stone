@@ -332,7 +332,25 @@
 
 .project-outcome {
   background: #f2eee6;
+  isolation: isolate;
+  overflow: hidden;
   padding: clamp(5rem, 8vw, 8rem) 0;
+  position: relative;
+}
+
+.project-outcome__media {
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  z-index: -2;
+}
+
+.project-outcome__image {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
 }
 
 .project-outcome__inner {
@@ -382,6 +400,32 @@
   font-size: 0.8125rem;
   font-style: normal;
   margin-top: 1.5rem;
+}
+
+.project-outcome--with-media {
+  color: #f2eee6;
+}
+.project-outcome--with-media::before {
+  background: linear-gradient(90deg, rgba(27, 39, 33, 0.9), rgba(27, 39, 33, 0.7));
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+.project-outcome--with-media .project-outcome__inner {
+  border-color: rgba(242, 238, 230, 0.26);
+}
+.project-outcome--with-media .projects-eyebrow {
+  color: #b98959;
+}
+.project-outcome--with-media h2, .project-outcome--with-media .project-outcome blockquote p {
+  color: #f2eee6;
+}
+.project-outcome--with-media .project-outcome blockquote {
+  border-color: rgba(242, 238, 230, 0.26);
+}
+.project-outcome--with-media .project-outcome blockquote cite {
+  color: #b8ae9f;
 }
 
 @media (max-width: 767.98px) {
