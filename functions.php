@@ -101,6 +101,15 @@ function alder_stone_enqueue_assets() {
 		}
 	}
 
+	if ( is_front_page() ) {
+		$home_adjustments      = "/css/home-adjustments{$suffix}.css";
+		$home_adjustments_path = get_stylesheet_directory() . $home_adjustments;
+
+		if ( file_exists( $home_adjustments_path ) ) {
+			wp_enqueue_style( 'alder-stone-home-adjustments', get_stylesheet_directory_uri() . $home_adjustments, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $home_adjustments_path ) );
+		}
+	}
+
 	if ( is_post_type_archive( 'project' ) || is_singular( 'project' ) ) {
 		$projects_styles      = "/css/projects{$suffix}.css";
 		$projects_styles_path = get_stylesheet_directory() . $projects_styles;

@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\src\\sass\\home-adjustments.scss"],"names":[],"mappings":"AACA,cACE,sBAAA,KAAA,gBAAA","sourcesContent":["// Page-specific overrides loaded after the main theme stylesheet.\n.home-service {\n  grid-template-columns: 4rem minmax(0, 0.3fr) minmax(15rem, 1fr);\n}\n"]}

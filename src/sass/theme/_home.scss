@@ -335,7 +335,7 @@
   border-top: 1px solid $alder-light-rule;
   display: grid;
   gap: clamp(1.5rem, 4vw, 5rem);
-  grid-template-columns: 4rem minmax(0, 0.8fr) minmax(15rem, 1fr);
+  grid-template-columns: 4rem minmax(0, 0.3fr) minmax(15rem, 1fr);
   padding: clamp(2rem, 3.8vw, 3.75rem) 0;
 
   &__number {

@@ -1,0 +1,4 @@
+// Page-specific overrides loaded after the main theme stylesheet.
+.home-service {
+  grid-template-columns: 4rem minmax(0, 0.3fr) minmax(15rem, 1fr);
+}
