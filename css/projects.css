@@ -369,7 +369,7 @@
   margin: 0;
   padding: 0;
   text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.65rem);
+  font-size: clamp(2.5rem, 4.2vw, 3.5rem);
   max-width: 16ch;
 }
 
