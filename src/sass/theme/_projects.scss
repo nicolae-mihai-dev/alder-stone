@@ -75,7 +75,7 @@
 }
 
 .project-testimonial { background:$alder-canvas; padding:$alder-section-space 0; }
-.project-testimonial__inner { background:$alder-mineral; padding:clamp(2rem, 5vw, 5rem); }
+.project-testimonial__inner { background:$alder-mineral; margin:auto; max-width:71rem; padding:clamp(2rem, 5vw, 5rem); }
 .project-testimonial__inner > .alder-eyebrow { --alder-eyebrow-space-after:clamp(2rem, 4vw, 3.5rem); color:$alder-forest; }
 .project-testimonial blockquote { border-top:0; margin:0; max-width:62rem; padding-top:0; }
 .project-testimonial__quote {

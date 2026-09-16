@@ -290,6 +290,8 @@
 
 .project-testimonial__inner {
   background: #b98959;
+  margin: auto;
+  max-width: 71rem;
   padding: clamp(2rem, 5vw, 5rem);
 }
 
