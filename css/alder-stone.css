@@ -15480,9 +15480,11 @@ textarea:focus-visible {
 }
 
 .alder-stone-footer-brand {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  color: #f2eee6;
+  margin-bottom: 1rem;
+}
+.alder-stone-footer-brand:hover, .alder-stone-footer-brand:focus {
+  color: #f2eee6;
 }
 
 .alder-stone-footer-intro,

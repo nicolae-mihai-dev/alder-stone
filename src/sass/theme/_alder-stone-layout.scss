@@ -98,9 +98,11 @@ textarea:focus-visible {
 }
 
 .alder-stone-footer-brand {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  color: $alder-canvas;
+  margin-bottom: 1rem;
+
+  &:hover,
+  &:focus { color: $alder-canvas; }
 }
 
 .alder-stone-footer-intro,
