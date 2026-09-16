@@ -16279,7 +16279,8 @@ textarea:focus-visible {
   --button-hover-color: #1b2721;
   max-width: 100%;
 }
-.services-hero__link:hover {
+.services-hero .alder-button.services-hero__link:hover,
+.services-hero .alder-button.services-hero__link:focus {
   background: #b98959;
   border-color: #b98959;
   color: #1b2721;

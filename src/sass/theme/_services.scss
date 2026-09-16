@@ -55,11 +55,13 @@
     --button-hover-color: #{$alder-forest};
     max-width: 100%;
 
-    &:hover {
-      background: $alder-mineral;
-      border-color: $alder-mineral;
-      color: $alder-forest;
-    }
+  }
+
+  .alder-button.services-hero__link:hover,
+  .alder-button.services-hero__link:focus {
+    background: $alder-mineral;
+    border-color: $alder-mineral;
+    color: $alder-forest;
   }
 
   &__media {
