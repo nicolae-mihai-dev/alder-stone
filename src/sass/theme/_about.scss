@@ -70,11 +70,12 @@
 // The About statement is deliberately unboxed: it reads as a single, generous editorial passage.
 .about-page .about-intro {
   background: $alder-canvas;
-  padding: $alder-section-space 0;
+  padding: clamp(4rem, 5vw, 5.5rem) 0;
 
   &__inner {
     border-top: 1px solid $alder-rule;
     display: grid;
+    gap: 0;
     grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
     padding-top: $alder-space-md;
   }
@@ -84,6 +85,7 @@
   }
 
   &__title {
+    --alder-heading-section-size: clamp(2.5rem, 3.4vw, 3.5rem);
     color: $alder-forest;
     grid-column: 2;
     max-width: 16ch;
@@ -92,6 +94,7 @@
   &__text {
     color: $alder-stone;
     grid-column: 2;
+    margin-top: 1.25rem;
     max-width: 42rem;
 
     > :first-child {
@@ -302,7 +305,7 @@
   }
 
   .about-page .about-intro {
-    padding: $alder-section-space-mobile 0;
+    padding: 4rem 0;
 
     &__inner {
       display: block;

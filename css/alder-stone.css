@@ -15652,7 +15652,7 @@ textarea:focus-visible {
   --button-hover-color: #f2eee6;
 }
 
-.about-intro__link {
+.home-page .about-intro__link {
   --button-hover-background: #1b2721;
   --button-hover-border: #1b2721;
   --button-hover-color: #f2eee6;
@@ -15671,42 +15671,42 @@ textarea:focus-visible {
   padding: clamp(5rem, 8vw, 8rem) 0;
 }
 
-.about-intro {
+.home-page .about-intro {
   background: #f8f5ef;
   color: #1b2721;
   padding: clamp(5rem, 8vw, 8rem) 0;
 }
-.about-intro__inner {
+.home-page .about-intro__inner {
   align-items: start;
   display: grid;
   gap: clamp(3.75rem, 7vw, 7.5rem);
   grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.15fr);
 }
-.about-intro__content, .about-intro__visual {
+.home-page .about-intro__content, .home-page .about-intro__visual {
   min-width: 0;
 }
-.about-intro:not(.about-intro--with-visual) .about-intro__content {
+.home-page .about-intro:not(.home-page .about-intro--with-visual) .home-page .about-intro__content {
   grid-column: 1/-1;
   max-width: 40rem;
 }
-.about-intro__eyebrow {
+.home-page .about-intro__eyebrow {
   color: #b98959;
 }
-.about-intro__title {
+.home-page .about-intro__title {
   color: #1b2721;
   max-width: 40rem;
 }
-.about-intro__copy {
+.home-page .about-intro__copy {
   color: #77766e;
   max-width: 31.25rem;
 }
-.about-intro__copy p {
+.home-page .about-intro__copy p {
   margin: 0;
 }
-.about-intro__copy p + p {
+.home-page .about-intro__copy p + p {
   margin-top: 0.5rem;
 }
-.about-intro__principles {
+.home-page .about-intro__principles {
   display: grid;
   gap: clamp(1rem, 2vw, 2rem);
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -15714,11 +15714,11 @@ textarea:focus-visible {
   margin: 3rem 0 0;
   padding: 0;
 }
-.about-intro__principle {
+.home-page .about-intro__principle {
   display: grid;
   gap: 0.65rem;
 }
-.about-intro__principle-number {
+.home-page .about-intro__principle-number {
   color: #b98959;
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   font-size: clamp(1.5rem, 2vw, 2.1rem);
@@ -15726,7 +15726,7 @@ textarea:focus-visible {
   letter-spacing: -0.04em;
   line-height: 1;
 }
-.about-intro__principle-label {
+.home-page .about-intro__principle-label {
   color: #1b2721;
   font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.625rem;
@@ -15736,18 +15736,18 @@ textarea:focus-visible {
   max-width: 8rem;
   text-transform: uppercase;
 }
-.about-intro__visual {
+.home-page .about-intro__visual {
   margin: 0;
 }
-.about-intro__image-wrap {
+.home-page .about-intro__image-wrap {
   aspect-ratio: 1.22/1;
   overflow: hidden;
   width: 100%;
 }
-.about-intro__image-wrap:hover .about-intro__image {
+.home-page .about-intro__image-wrap:hover .about-intro__image {
   transform: scale(1.015);
 }
-.about-intro__image {
+.home-page .about-intro__image {
   display: block;
   height: 100%;
   -o-object-fit: cover;
@@ -15758,7 +15758,7 @@ textarea:focus-visible {
   width: 100%;
 }
 
-.about-intro__copy > :last-child,
+.home-page .about-intro__copy > :last-child,
 .home-service__text > :last-child,
 .home-process__text > :last-child,
 .home-cta__text > :last-child {
@@ -16097,7 +16097,7 @@ textarea:focus-visible {
   }
 }
 @media (max-width: 1100px) {
-  .about-intro__inner {
+  .home-page .about-intro__inner {
     gap: 3.75rem;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
   }
@@ -16149,24 +16149,24 @@ textarea:focus-visible {
   .home-cta__grid {
     max-width: none;
   }
-  .about-intro,
+  .home-page .about-intro,
   .home-services,
   .home-featured-projects,
   .home-process {
     padding: 5.5rem 0;
   }
-  .about-intro__inner {
+  .home-page .about-intro__inner {
     display: flex;
     flex-direction: column;
     gap: 4rem;
   }
-  .about-intro__copy {
+  .home-page .about-intro__copy {
     max-width: 32.5rem;
   }
-  .about-intro__visual {
+  .home-page .about-intro__visual {
     width: 100%;
   }
-  .about-intro__image-wrap {
+  .home-page .about-intro__image-wrap {
     aspect-ratio: 4/5;
   }
   .home-section-header {
@@ -16572,11 +16572,12 @@ textarea:focus-visible {
 
 .about-page .about-intro {
   background: #f2eee6;
-  padding: clamp(5rem, 8vw, 8rem) 0;
+  padding: clamp(4rem, 5vw, 5.5rem) 0;
 }
 .about-page .about-intro__inner {
   border-top: 1px solid rgba(27, 39, 33, 0.18);
   display: grid;
+  gap: 0;
   grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
   padding-top: 1.5rem;
 }
@@ -16584,6 +16585,7 @@ textarea:focus-visible {
   color: #b98959;
 }
 .about-page .about-intro__title {
+  --alder-heading-section-size: clamp(2.5rem, 3.4vw, 3.5rem);
   color: #1b2721;
   grid-column: 2;
   max-width: 16ch;
@@ -16591,6 +16593,7 @@ textarea:focus-visible {
 .about-page .about-intro__text {
   color: #77766e;
   grid-column: 2;
+  margin-top: 1.25rem;
   max-width: 42rem;
 }
 .about-page .about-intro__text > :first-child {
@@ -16763,7 +16766,7 @@ textarea:focus-visible {
     aspect-ratio: 4/5;
   }
   .about-page .about-intro {
-    padding: 5.5rem 0;
+    padding: 4rem 0;
   }
   .about-page .about-intro__inner {
     display: block;
