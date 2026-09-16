@@ -118,7 +118,7 @@ get_header();
 						<?php if ( $outcome ) : ?>
 							<div class="project-story__outcome">
 								<p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></p>
-								<h2 class="alder-heading-section"><?php echo esc_html( $outcome ); ?></h2>
+								<p class="project-story__outcome-statement"><?php echo esc_html( $outcome ); ?></p>
 							</div>
 						<?php endif; ?>
 					</div>

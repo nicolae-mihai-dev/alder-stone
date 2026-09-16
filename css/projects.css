@@ -274,13 +274,27 @@
 
 .project-story__outcome {
   border-top: 1px solid rgba(242, 238, 230, 0.26);
+  display: grid;
+  gap: 3rem clamp(2rem, 7vw, 8rem);
+  grid-template-columns: minmax(9rem, 0.2fr) minmax(0, 1fr);
   margin-top: clamp(3rem, 6vw, 6rem);
-  max-width: 64rem;
   padding-top: 1.5rem;
 }
-.project-story__outcome .alder-heading-section {
+
+.project-story__outcome .alder-eyebrow {
+  --alder-eyebrow-space-after:0;
+}
+
+.project-story__outcome-statement {
   color: #f2eee6;
-  max-width: 18ch;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.5rem, 2.1vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  margin: 0;
+  max-width: 40rem;
+  text-wrap: balance;
 }
 
 .project-testimonial {
@@ -375,7 +389,7 @@
   .project-facts {
     margin-top: 2.5rem;
   }
-  .project-story__grid {
+  .project-story__grid, .project-story__outcome {
     grid-template-columns: 1fr;
   }
 }
