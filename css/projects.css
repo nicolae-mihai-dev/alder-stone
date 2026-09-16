@@ -154,7 +154,7 @@
 
 .project-hero__header {
   border-top: 1px solid rgba(27, 39, 33, 0.18);
-  padding: 1.5rem 0 clamp(4.5rem, 8vw, 8.5rem);
+  padding: 1.5rem 0;
 }
 
 .project-hero__meta {
@@ -342,9 +342,6 @@
   }
   .project-hero {
     padding-top: 3.5rem;
-  }
-  .project-hero__header {
-    padding-bottom: 5rem;
   }
   .project-hero__media {
     aspect-ratio: 1/1;

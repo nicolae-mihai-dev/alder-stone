@@ -45,7 +45,7 @@
 .project-card__link:hover .project-card__title { color: $alder-mineral; }
 
 .project-hero { background: $alder-canvas-light; padding: clamp(5rem, 8vw, 8rem) 0; }
-.project-hero__header { border-top: 1px solid $alder-rule; padding: $alder-space-md 0 $alder-page-hero-space-bottom; }
+.project-hero__header { border-top: 1px solid $alder-rule; padding: 1.5rem 0; }
 .project-hero__meta { color: $alder-stone; font-size: .9375rem; margin: 1.5rem 0 0; }
 .project-hero__media { aspect-ratio: 2 / 1; margin: 0; overflow: hidden; }
 .project-hero__image { display:block; height:100%; object-fit:cover; width:100%; }
@@ -97,7 +97,7 @@
 
   .projects-archive__hero { padding:$alder-page-hero-padding-mobile; }
   .projects-grid { grid-template-columns:1fr; } .project-card:nth-child(even) { margin-top:0; }
-  .project-hero { padding-top:$alder-page-hero-space-top-mobile; } .project-hero__header { padding-bottom:$alder-page-hero-space-bottom-mobile; } .project-hero__media { aspect-ratio:1 / 1; }
+  .project-hero { padding-top:$alder-page-hero-space-top-mobile; } .project-hero__media { aspect-ratio:1 / 1; }
   .project-overview__grid { display:block; } .project-overview__content { --alder-copy-space-before:#{$alder-space-heading-to-copy}; } .project-facts { margin-top:2.5rem; }
   .project-story__grid, .project-testimonial__inner { grid-template-columns:1fr; }
 }
