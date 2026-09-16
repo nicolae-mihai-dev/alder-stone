@@ -91,13 +91,21 @@
     margin-top:0;
 
     &::before {
-      color:$alder-forest;
+      align-items:center;
+      background:$alder-forest;
+      border-radius:48% 52% 45% 55%;
       content:"“";
+      color:$alder-canvas;
+      display:inline-flex;
       font-family:$alder-display;
-      font-size:clamp(4.5rem, 7vw, 7.5rem);
-      line-height:0;
-      margin-right:.08em;
-      vertical-align:-.34em;
+      font-size:clamp(3.5rem, 5vw, 5.5rem);
+      height:clamp(4rem, 5.5vw, 5.75rem);
+      justify-content:center;
+      line-height:.8;
+      margin-right:.35em;
+      padding:0 .06em .16em 0;
+      vertical-align:-.58em;
+      width:clamp(4rem, 5.5vw, 5.75rem);
     }
   }
   > :last-child { margin-bottom:0; }
