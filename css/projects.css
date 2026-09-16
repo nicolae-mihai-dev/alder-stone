@@ -290,46 +290,23 @@
 
 .project-testimonial__inner {
   background: #b98959;
-  display: grid;
-  gap: 3rem clamp(2rem, 7vw, 8rem);
-  grid-template-columns: minmax(9rem, 0.2fr) minmax(0, 1fr);
-  min-height: clamp(25rem, 38vw, 34rem);
-  overflow: hidden;
   padding: clamp(2rem, 5vw, 5rem);
-  position: relative;
-}
-.project-testimonial__inner::after {
-  color: rgba(27, 39, 33, 0.14);
-  content: "“";
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-size: clamp(15rem, 27vw, 30rem);
-  font-weight: 400;
-  line-height: 0.7;
-  pointer-events: none;
-  position: absolute;
-  right: clamp(1rem, 4vw, 4rem);
-  top: clamp(1rem, 3vw, 3rem);
-}
-.project-testimonial__inner > * {
-  position: relative;
-  z-index: 1;
 }
 
 .project-testimonial__inner > .alder-eyebrow {
-  --alder-eyebrow-space-after:0;
+  --alder-eyebrow-space-after:clamp(2rem, 4vw, 3.5rem);
   color: #1b2721;
 }
 
 .project-testimonial blockquote {
-  align-self: center;
   margin: 0;
-  max-width: 52rem;
+  max-width: 62rem;
 }
 
 .project-testimonial__quote {
   color: #1b2721;
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-size: clamp(2.25rem, 3.8vw, 4.25rem);
+  font-size: clamp(2.25rem, 3.5vw, 3.9rem);
   letter-spacing: -0.04em;
   line-height: 0.98;
   text-wrap: balance;
@@ -384,7 +361,7 @@
   .project-facts {
     margin-top: 2.5rem;
   }
-  .project-story__grid, .project-testimonial__inner {
+  .project-story__grid {
     grid-template-columns: 1fr;
   }
 }
