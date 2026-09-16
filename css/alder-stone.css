@@ -15476,7 +15476,7 @@ textarea:focus-visible {
   background-color: #1b2721;
   color: #f2eee6;
   margin-top: 4rem;
-  padding: 4rem 0 1.5rem;
+  padding: 4rem 0;
 }
 
 .alder-stone-footer-brand {
