@@ -82,7 +82,7 @@ get_header();
 					<div class="about-hero__inner">
 						<div class="about-hero__content">
 							<?php if ( $has_value( $hero_eyebrow ) ) : ?>
-								<p class="about-hero__eyebrow"><?php echo esc_html( $hero_eyebrow ); ?></p>
+								<p class="alder-eyebrow about-hero__eyebrow"><?php echo esc_html( $hero_eyebrow ); ?></p>
 							<?php endif; ?>
 
 							<?php if ( $has_value( $hero_title ) ) : ?>
@@ -90,7 +90,7 @@ get_header();
 							<?php endif; ?>
 
 							<?php if ( $has_value( $hero_text ) ) : ?>
-								<div class="about-hero__text"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
+								<div class="alder-copy about-hero__text"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
 							<?php endif; ?>
 						</div>
 
@@ -121,15 +121,15 @@ get_header();
 				<div class="container">
 					<div class="about-intro__inner">
 						<?php if ( $has_value( $intro_eyebrow ) ) : ?>
-							<p class="about-intro__eyebrow"><?php echo esc_html( $intro_eyebrow ); ?></p>
+							<p class="alder-eyebrow about-intro__eyebrow"><?php echo esc_html( $intro_eyebrow ); ?></p>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $intro_title ) ) : ?>
-							<h2 class="about-intro__title"><?php echo esc_html( $intro_title ); ?></h2>
+							<h2 class="alder-heading-section about-intro__title"><?php echo esc_html( $intro_title ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $intro_text ) ) : ?>
-							<div class="about-intro__text entry-content">
+							<div class="alder-copy about-intro__text entry-content">
 								<?php echo wp_kses_post( apply_filters( 'the_content', $intro_text ) ); ?>
 							</div>
 						<?php endif; ?>
@@ -153,11 +153,11 @@ get_header();
 				<div class="container">
 					<header class="about-values__header">
 						<?php if ( $has_value( $values_eyebrow ) ) : ?>
-							<p class="about-values__eyebrow"><?php echo esc_html( $values_eyebrow ); ?></p>
+							<p class="alder-eyebrow about-values__eyebrow"><?php echo esc_html( $values_eyebrow ); ?></p>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $values_title ) ) : ?>
-							<h2 class="about-values__title"><?php echo esc_html( $values_title ); ?></h2>
+							<h2 class="alder-heading-section about-values__title"><?php echo esc_html( $values_title ); ?></h2>
 						<?php endif; ?>
 					</header>
 
@@ -168,11 +168,11 @@ get_header();
 									<p class="about-values__number"><?php echo esc_html( sprintf( '%02d', $value_item_index + 1 ) ); ?></p>
 
 									<?php if ( $has_value( $value_item['title'] ) ) : ?>
-										<h3 class="about-values__item-title"><?php echo esc_html( $value_item['title'] ); ?></h3>
+										<h3 class="alder-heading-item about-values__item-title"><?php echo esc_html( $value_item['title'] ); ?></h3>
 									<?php endif; ?>
 
 									<?php if ( $has_value( $value_item['text'] ) ) : ?>
-										<div class="about-values__item-text"><?php echo wp_kses_post( wpautop( esc_html( $value_item['text'] ) ) ); ?></div>
+										<div class="alder-copy about-values__item-text"><?php echo wp_kses_post( wpautop( esc_html( $value_item['text'] ) ) ); ?></div>
 									<?php endif; ?>
 								</article>
 							<?php endforeach; ?>
@@ -188,15 +188,15 @@ get_header();
 					<div class="about-studio__inner">
 						<div class="about-studio__content">
 							<?php if ( $has_value( $studio_eyebrow ) ) : ?>
-								<p class="about-studio__eyebrow"><?php echo esc_html( $studio_eyebrow ); ?></p>
+								<p class="alder-eyebrow about-studio__eyebrow"><?php echo esc_html( $studio_eyebrow ); ?></p>
 							<?php endif; ?>
 
 							<?php if ( $has_value( $studio_title ) ) : ?>
-								<h2 class="about-studio__title"><?php echo esc_html( $studio_title ); ?></h2>
+								<h2 class="alder-heading-section about-studio__title"><?php echo esc_html( $studio_title ); ?></h2>
 							<?php endif; ?>
 
 							<?php if ( $has_value( $studio_text ) ) : ?>
-								<div class="about-studio__text entry-content">
+								<div class="alder-copy about-studio__text entry-content">
 									<?php echo wp_kses_post( apply_filters( 'the_content', $studio_text ) ); ?>
 								</div>
 							<?php endif; ?>
@@ -228,11 +228,11 @@ get_header();
 				<div class="container">
 					<div class="about-cta__content">
 						<?php if ( $has_value( $cta_title ) ) : ?>
-							<h2 class="about-cta__title"><?php echo esc_html( $cta_title ); ?></h2>
+							<h2 class="alder-heading-section about-cta__title"><?php echo esc_html( $cta_title ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $cta_text ) ) : ?>
-							<div class="about-cta__text"><?php echo wp_kses_post( wpautop( esc_html( $cta_text ) ) ); ?></div>
+							<div class="alder-copy about-cta__text"><?php echo wp_kses_post( wpautop( esc_html( $cta_text ) ) ); ?></div>
 						<?php endif; ?>
 
 						<?php if ( is_array( $cta_button ) && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) : ?>

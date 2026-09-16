@@ -15,8 +15,6 @@
 }
 
 .contact-eyebrow {
-  @include alder-eyebrow;
-
   color: $alder-mineral;
   margin: 0 0 $alder-space-eyebrow-to-heading;
 }
@@ -34,12 +32,9 @@
 
   &__title {
     color: $alder-forest;
-    font-size: $alder-hero-title-size;
   }
 
   &__text {
-    @include alder-hero-copy;
-
     color: $alder-stone;
     margin-top: $alder-space-heading-to-copy;
     max-width: 39rem;
@@ -63,8 +58,6 @@
   }
 
   dt {
-    @include alder-eyebrow;
-
     color: $alder-stone;
   }
 
@@ -103,19 +96,12 @@
   }
 
   &__title {
-    font-family: $alder-display;
-    font-size: clamp(2.5rem, 4.2vw, 3.2rem);
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    line-height: 0.93;
-    margin: 0;
-    padding: 0;
+    --alder-heading-section-size: clamp(2.5rem, 4.2vw, 3.2rem);
+    --alder-heading-section-mobile-size: clamp(2.25rem, 10vw, 3rem);
     color: $alder-canvas;
   }
 
   &__text {
-    @include alder-body-copy;
-
     color: $alder-light-text;
     margin-top: $alder-space-heading-to-copy;
     max-width: 28rem;
@@ -173,8 +159,6 @@
   }
 
   label {
-    @include alder-eyebrow;
-
     color: $alder-light-text;
     display: block;
     margin-bottom: 0.625rem;
@@ -276,11 +260,6 @@
   .contact-page .container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-
-  .contact-hero__title,
-  .contact-inquiry__title {
-    font-size: $alder-hero-title-size-mobile;
   }
 
   .contact-details__item {

@@ -12,13 +12,6 @@
 }
 
 .contact-eyebrow {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #b98959;
   margin: 0 0 1.5rem;
 }
@@ -35,11 +28,8 @@
 }
 .contact-hero__title {
   color: #1b2721;
-  font-size: clamp(2.75rem, 4.6vw, 5rem);
 }
 .contact-hero__text {
-  font-size: clamp(1rem, 1.35vw, 1.25rem);
-  line-height: 1.65;
   color: #77766e;
   margin-top: 2rem;
   max-width: 39rem;
@@ -60,13 +50,6 @@
   padding: 1rem 0;
 }
 .contact-details dt {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #77766e;
 }
 .contact-details dd {
@@ -96,18 +79,11 @@
   grid-template-columns: minmax(0, 0.55fr) minmax(16rem, 1.15fr);
 }
 .contact-inquiry__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-size: clamp(2.5rem, 4.2vw, 3.2rem);
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
+  --alder-heading-section-size: clamp(2.5rem, 4.2vw, 3.2rem);
+  --alder-heading-section-mobile-size: clamp(2.25rem, 10vw, 3rem);
   color: #f2eee6;
 }
 .contact-inquiry__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #d8d4cb;
   margin-top: 2rem;
   max-width: 28rem;
@@ -155,13 +131,6 @@
   margin-top: 1.5rem;
 }
 .contact-form label {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #d8d4cb;
   display: block;
   margin-bottom: 0.625rem;
@@ -255,10 +224,6 @@
   .contact-page .container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-  .contact-hero__title,
-  .contact-inquiry__title {
-    font-size: clamp(2.45rem, 11.5vw, 3.6rem);
   }
   .contact-details__item {
     display: block;

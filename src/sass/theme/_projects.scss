@@ -10,14 +10,13 @@
 .projects-archive + .alder-stone-footer,
 .project-case-study + .alder-stone-footer { margin-top: 0; }
 
-.projects-eyebrow { @include alder-eyebrow; color: $alder-mineral; margin: 0 0 $alder-space-eyebrow-to-heading; }
+.projects-eyebrow { color: $alder-mineral; margin: 0 0 $alder-space-eyebrow-to-heading; }
 
 .projects-archive__hero { background: $alder-canvas-light; padding: clamp(3.75rem, 6vw, 7rem) 0 clamp(4.5rem, 8vw, 8.5rem); }
 .projects-archive__hero-inner { border-top: 1px solid $alder-rule; padding-top: $alder-space-md; }
-.projects-archive__title { font-size:$alder-hero-title-size; }
-.projects-archive__intro { @include alder-hero-copy; color: $alder-stone; margin: $alder-space-heading-to-copy 0 0; max-width: 39rem; }
+.projects-archive__intro { color: $alder-stone; margin: $alder-space-heading-to-copy 0 0; max-width: 39rem; }
 .projects-archive__collection { padding: $alder-section-space 0; }
-.projects-archive__empty { @include alder-body-copy; margin: 0; }
+.projects-archive__empty { margin: 0; }
 
 .projects-grid { display: grid; gap: clamp(3rem, 6vw, 6rem) clamp(1.5rem, 4vw, 4rem); grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .project-card { min-width: 0;
@@ -35,12 +34,10 @@
   position: relative;
 }
 .project-card__image { display: block; height: 100% !important; inset: 0; max-width: none; object-fit: cover; position: absolute; transition: transform 500ms ease; width: 100% !important; }
-.project-card__placeholder { align-items: flex-end; background: $alder-forest-deep; color: $alder-light-text; display: flex; padding: clamp(1.5rem, 3vw, 2.5rem);
-  span { @include alder-eyebrow; }
-}
+.project-card__placeholder { align-items: flex-end; background: $alder-forest-deep; color: $alder-light-text; display: flex; padding: clamp(1.5rem, 3vw, 2.5rem); }
 .project-card__content { border-top: 1px solid $alder-rule; display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); margin-top: 1.25rem; padding-top: 1rem; }
 .project-card__index { color: $alder-mineral; font-size: .75rem; letter-spacing: .1em; margin: .3rem 0 0; }
-.project-card__title { @include alder-item-title; font-size: clamp(1.75rem, 3vw, 3rem); transition: color 180ms ease; }
+.project-card__title { transition: color 180ms ease; }
 .project-card__meta { color: $alder-stone; display: flex; flex-wrap: wrap; font-size: .8125rem; gap: .35rem .7rem; grid-column: 2; letter-spacing: .04em; margin: .75rem 0 0; }
 .project-card__discipline { color: $alder-forest; }
 .project-card__location::before { color: $alder-mineral; content: "•"; margin-right: .7rem; }
@@ -49,24 +46,23 @@
 
 .project-hero { background: $alder-canvas-light; padding: clamp(3.75rem, 6vw, 7rem) 0 0; }
 .project-hero__header { border-top: 1px solid $alder-rule; padding: $alder-space-md 0 clamp(3.5rem, 7vw, 7rem); }
-.project-hero__title { font-size:$alder-hero-title-size; }
 .project-hero__meta { color: $alder-stone; font-size: .9375rem; margin: $alder-space-lg 0 0; }
 .project-hero__media { aspect-ratio: 2 / 1; margin: 0; overflow: hidden; }
 .project-hero__image { display:block; height:100%; object-fit:cover; width:100%; }
 
 .project-overview { padding: $alder-section-space 0; }
 .project-overview__grid { border-top:1px solid $alder-rule; display:grid; gap: $alder-space-xl clamp(2rem, 7vw, 8rem); grid-template-columns: minmax(9rem,.2fr) minmax(0,1fr); padding-top:$alder-space-md; }
-.project-overview__content { @include alder-body-copy; color:$alder-stone; grid-column:2; max-width:44rem;
+.project-overview__content { color:$alder-stone; grid-column:2; max-width:44rem;
   > :first-child { margin-top:0; } > :last-child { margin-bottom:0; }
 }
 .project-facts { border-bottom:1px solid $alder-rule; grid-column:2; margin:0; max-width:44rem;
   div { border-top:1px solid $alder-rule; display:grid; gap:1rem; grid-template-columns:minmax(8rem,.45fr) minmax(0,1fr); padding:.9rem 0; }
-  dt { @include alder-eyebrow; color:$alder-stone; } dd { margin:0; font-size:.9375rem; }
+  dt { color:$alder-stone; } dd { margin:0; font-size:.9375rem; }
 }
 
 .project-story { background:$alder-forest-deep; color:$alder-canvas; padding:$alder-section-space 0; }
 .project-story__grid { border-top:1px solid $alder-light-rule; display:grid; gap:clamp(2.5rem, 7vw, 8rem); grid-template-columns:repeat(2,minmax(0,1fr)); padding-top:$alder-space-md;
-  > div > p:last-child { color:$alder-light-text; font-size:clamp(1.25rem,2vw,1.8rem); line-height:1.42; margin:0; max-width:31rem; }
+  > div > p:last-child { color:$alder-light-text; margin:0; max-width:31rem; }
 }
 .project-gallery { background:$alder-canvas-light; padding:$alder-section-space 0; }
 .project-gallery__grid { display:grid; gap:1rem; grid-template-columns:repeat(2,minmax(0,1fr));
@@ -76,9 +72,9 @@
 .project-outcome__media { inset:0; margin:0; position:absolute; z-index:-2; }
 .project-outcome__image { display:block; height:100%; object-fit:cover; width:100%; }
 .project-outcome__inner { border-top:1px solid $alder-rule; display:grid; gap:clamp(3rem,8vw,10rem); grid-template-columns:minmax(0,1.1fr) minmax(15rem,.7fr); padding-top:$alder-space-md; }
-.project-outcome h2 { @include alder-section-title; max-width:16ch; }
+.project-outcome .alder-heading-section { max-width:16ch; }
 .project-outcome__inner > div:only-child { grid-column:1 / -1; max-width:54rem; }
-.project-outcome__inner > div:only-child h2 { max-width:24ch; }
+.project-outcome__inner > div:only-child .alder-heading-section { max-width:24ch; }
 .project-outcome blockquote { border-left:1px solid $alder-rule; margin:0; padding-left:clamp(1.5rem,3vw,3rem);
   p { font-family:$alder-display; font-size:clamp(1.5rem,2.2vw,2.2rem); letter-spacing:-.03em; line-height:1.1; margin:0; }
   cite { color:$alder-stone; display:block; font-size:.8125rem; font-style:normal; margin-top:1.5rem; }
@@ -87,7 +83,7 @@
   &::before { background:linear-gradient(90deg,rgba(27,39,33,.9),rgba(27,39,33,.7)); content:""; inset:0; position:absolute; z-index:-1; }
   .project-outcome__inner { border-color:$alder-light-rule; }
   .projects-eyebrow { color:$alder-mineral; }
-  h2, .project-outcome blockquote p { color:$alder-canvas; }
+  .alder-heading-section, .project-outcome blockquote p { color:$alder-canvas; }
   .project-outcome blockquote { border-color:$alder-light-rule; }
   .project-outcome blockquote cite { color:$alder-sand; }
 }
@@ -102,8 +98,6 @@
 }
 @media (max-width:575.98px) {
   .projects-archive .container, .project-case-study .container { padding-left:1.25rem; padding-right:1.25rem; }
-  .projects-archive__title, .project-hero__title { font-size:$alder-hero-title-size-mobile; }
-  .project-outcome h2 { font-size:$alder-section-title-size-mobile; }
   .project-card__content { grid-template-columns:2.5rem minmax(0,1fr); }
 }
 @media (prefers-reduced-motion: reduce) { .project-card__image, .project-card__title { transition:none; } }

@@ -14,9 +14,9 @@ get_header();
 	<section class="projects-archive__hero">
 		<div class="container">
 			<div class="projects-archive__hero-inner">
-				<p class="projects-eyebrow"><?php esc_html_e( 'Selected Work', 'alder-stone' ); ?></p>
+				<p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'Selected Work', 'alder-stone' ); ?></p>
 				<h1 class="alder-heading projects-archive__title"><?php esc_html_e( 'Spaces made for the life around them.', 'alder-stone' ); ?></h1>
-				<p class="projects-archive__intro"><?php esc_html_e( 'A selection of homes and workplaces shaped by context, material and the people who use them every day.', 'alder-stone' ); ?></p>
+				<p class="alder-copy projects-archive__intro"><?php esc_html_e( 'A selection of homes and workplaces shaped by context, material and the people who use them every day.', 'alder-stone' ); ?></p>
 			</div>
 		</div>
 	</section>
@@ -41,12 +41,12 @@ get_header();
 										<?php the_post_thumbnail( 'large', array( 'class' => 'project-card__image', 'sizes' => '(min-width: 992px) 50vw, 100vw' ) ); ?>
 									</figure>
 								<?php else : ?>
-									<div class="project-card__placeholder" aria-hidden="true"><span><?php echo esc_html( $project_type ? $project_type : __( 'Alder & Stone', 'alder-stone' ) ); ?></span></div>
+									<div class="project-card__placeholder" aria-hidden="true"><span class="alder-eyebrow"><?php echo esc_html( $project_type ? $project_type : __( 'Alder & Stone', 'alder-stone' ) ); ?></span></div>
 								<?php endif; ?>
 
 								<div class="project-card__content">
 									<p class="project-card__index"><?php echo esc_html( sprintf( '%02d', $wp_query->current_post + 1 ) ); ?></p>
-									<h2 class="project-card__title"><?php the_title(); ?></h2>
+									<h2 class="alder-heading-item project-card__title"><?php the_title(); ?></h2>
 									<p class="project-card__meta">
 										<span class="project-card__discipline"><?php echo esc_html( $project_type ? $project_type : __( 'Architecture', 'alder-stone' ) ); ?></span>
 										<span class="project-card__location"><?php echo esc_html( $card_location ? $card_location : $project_year ); ?></span>
@@ -59,7 +59,7 @@ get_header();
 
 				<?php the_posts_pagination(); ?>
 			<?php else : ?>
-				<p class="projects-archive__empty"><?php esc_html_e( 'New case studies are being prepared. Please check back soon.', 'alder-stone' ); ?></p>
+				<p class="alder-copy projects-archive__empty"><?php esc_html_e( 'New case studies are being prepared. Please check back soon.', 'alder-stone' ); ?></p>
 			<?php endif; ?>
 		</div>
 	</section>

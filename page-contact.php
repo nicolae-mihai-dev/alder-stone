@@ -82,7 +82,7 @@ get_header();
 				<div class="contact-hero__inner">
 					<div class="contact-hero__content">
 						<?php if ( $has_value( $hero_eyebrow ) ) : ?>
-							<p class="contact-eyebrow"><?php echo esc_html( $hero_eyebrow ); ?></p>
+							<p class="alder-eyebrow contact-eyebrow"><?php echo esc_html( $hero_eyebrow ); ?></p>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $hero_title ) ) : ?>
@@ -90,7 +90,7 @@ get_header();
 						<?php endif; ?>
 
 						<?php if ( $has_value( $hero_text ) ) : ?>
-							<div class="contact-hero__text"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
+							<div class="alder-copy contact-hero__text"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
 						<?php endif; ?>
 					</div>
 
@@ -98,7 +98,7 @@ get_header();
 						<dl class="contact-details">
 							<?php foreach ( $contact_details as $contact_detail ) : ?>
 								<div class="contact-details__item">
-									<dt><?php echo esc_html( $contact_detail['label'] ); ?></dt>
+									<dt class="alder-eyebrow"><?php echo esc_html( $contact_detail['label'] ); ?></dt>
 									<dd>
 										<?php if ( $contact_detail['href'] ) : ?>
 											<a href="<?php echo esc_url( $contact_detail['href'] ); ?>"><?php echo esc_html( $contact_detail['value'] ); ?></a>
@@ -119,15 +119,15 @@ get_header();
 				<div class="contact-inquiry__inner">
 					<div class="contact-inquiry__intro">
 						<?php if ( $has_value( $form_eyebrow ) ) : ?>
-							<p class="contact-eyebrow"><?php echo esc_html( $form_eyebrow ); ?></p>
+							<p class="alder-eyebrow contact-eyebrow"><?php echo esc_html( $form_eyebrow ); ?></p>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $form_title ) ) : ?>
-							<h2 class="contact-inquiry__title" id="contact-inquiry-title"><?php echo esc_html( $form_title ); ?></h2>
+							<h2 class="alder-heading-section contact-inquiry__title" id="contact-inquiry-title"><?php echo esc_html( $form_title ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $form_text ) ) : ?>
-							<div class="contact-inquiry__text"><?php echo wp_kses_post( wpautop( esc_html( $form_text ) ) ); ?></div>
+							<div class="alder-copy contact-inquiry__text"><?php echo wp_kses_post( wpautop( esc_html( $form_text ) ) ); ?></div>
 						<?php endif; ?>
 
 						<p class="contact-inquiry__privacy"><?php esc_html_e( 'Your details are used only to respond to this inquiry.', 'alder-stone' ); ?></p>
@@ -153,28 +153,28 @@ get_header();
 							<?php wp_nonce_field( 'alder_stone_contact_inquiry', 'alder_stone_contact_nonce' ); ?>
 
 							<div class="contact-form__honeypot" aria-hidden="true">
-								<label for="company-website"><?php esc_html_e( 'Company website', 'alder-stone' ); ?></label>
+								<label class="alder-eyebrow" for="company-website"><?php esc_html_e( 'Company website', 'alder-stone' ); ?></label>
 								<input id="company-website" type="text" name="company_website" tabindex="-1" autocomplete="off">
 							</div>
 
 							<div class="contact-form__grid">
 								<p class="contact-form__field">
-									<label for="contact-name"><?php esc_html_e( 'Your name', 'alder-stone' ); ?> <span aria-hidden="true">*</span></label>
+									<label class="alder-eyebrow" for="contact-name"><?php esc_html_e( 'Your name', 'alder-stone' ); ?> <span aria-hidden="true">*</span></label>
 									<input id="contact-name" name="name" type="text" autocomplete="name" placeholder="e.g. Alex Morgan" required>
 								</p>
 
 								<p class="contact-form__field">
-									<label for="contact-email"><?php esc_html_e( 'Email address', 'alder-stone' ); ?> <span aria-hidden="true">*</span></label>
+									<label class="alder-eyebrow" for="contact-email"><?php esc_html_e( 'Email address', 'alder-stone' ); ?> <span aria-hidden="true">*</span></label>
 									<input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
 								</p>
 
 								<p class="contact-form__field">
-									<label for="contact-organisation"><?php esc_html_e( 'Organisation', 'alder-stone' ); ?></label>
+									<label class="alder-eyebrow" for="contact-organisation"><?php esc_html_e( 'Organisation', 'alder-stone' ); ?></label>
 									<input id="contact-organisation" name="organisation" type="text" autocomplete="organization" placeholder="Studio or company name">
 								</p>
 
 								<p class="contact-form__field">
-									<label for="contact-project-type"><?php esc_html_e( 'Project type', 'alder-stone' ); ?></label>
+									<label class="alder-eyebrow" for="contact-project-type"><?php esc_html_e( 'Project type', 'alder-stone' ); ?></label>
 									<select id="contact-project-type" name="project_type">
 										<option value="" selected><?php esc_html_e( 'Choose a project type', 'alder-stone' ); ?></option>
 										<option value="New build"><?php esc_html_e( 'New build', 'alder-stone' ); ?></option>
@@ -185,7 +185,7 @@ get_header();
 								</p>
 
 								<p class="contact-form__field">
-									<label for="contact-budget"><?php esc_html_e( 'Indicative budget', 'alder-stone' ); ?></label>
+									<label class="alder-eyebrow" for="contact-budget"><?php esc_html_e( 'Indicative budget', 'alder-stone' ); ?></label>
 									<select id="contact-budget" name="budget">
 										<option value="" selected><?php esc_html_e( 'Choose a budget range', 'alder-stone' ); ?></option>
 										<option value="Under €150k"><?php esc_html_e( 'Under €150k', 'alder-stone' ); ?></option>
@@ -197,13 +197,13 @@ get_header();
 								</p>
 
 								<p class="contact-form__field">
-									<label for="contact-timeline"><?php esc_html_e( 'Preferred timeline', 'alder-stone' ); ?></label>
+									<label class="alder-eyebrow" for="contact-timeline"><?php esc_html_e( 'Preferred timeline', 'alder-stone' ); ?></label>
 									<input id="contact-timeline" name="timeline" type="text" placeholder="e.g. planning this autumn">
 								</p>
 							</div>
 
 							<p class="contact-form__field contact-form__field--full">
-								<label for="contact-message"><?php esc_html_e( 'Tell us a little about the project', 'alder-stone' ); ?> <span aria-hidden="true">*</span></label>
+								<label class="alder-eyebrow" for="contact-message"><?php esc_html_e( 'Tell us a little about the project', 'alder-stone' ); ?> <span aria-hidden="true">*</span></label>
 								<textarea id="contact-message" name="message" rows="6" placeholder="Tell us about the site, scope, priorities and ideal timeline." required></textarea>
 							</p>
 

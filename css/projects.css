@@ -16,13 +16,6 @@
 }
 
 .projects-eyebrow {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #b98959;
   margin: 0 0 1.5rem;
 }
@@ -37,13 +30,7 @@
   padding-top: 1.5rem;
 }
 
-.projects-archive__title {
-  font-size: clamp(2.75rem, 4.6vw, 5rem);
-}
-
 .projects-archive__intro {
-  font-size: clamp(1rem, 1.35vw, 1.25rem);
-  line-height: 1.65;
   color: #77766e;
   margin: 2rem 0 0;
   max-width: 39rem;
@@ -54,8 +41,6 @@
 }
 
 .projects-archive__empty {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   margin: 0;
 }
 
@@ -115,15 +100,6 @@
   display: flex;
   padding: clamp(1.5rem, 3vw, 2.5rem);
 }
-.project-card__placeholder span {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
-}
 
 .project-card__content {
   border-top: 1px solid rgba(27, 39, 33, 0.18);
@@ -141,17 +117,6 @@
 }
 
 .project-card__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(1.7rem, 2.45vw, 2.85rem);
-  letter-spacing: -0.035em;
-  line-height: 0.98;
-  font-size: clamp(1.75rem, 3vw, 3rem);
   transition: color 180ms ease;
 }
 
@@ -194,10 +159,6 @@
   padding: 1.5rem 0 clamp(3.5rem, 7vw, 7rem);
 }
 
-.project-hero__title {
-  font-size: clamp(2.75rem, 4.6vw, 5rem);
-}
-
 .project-hero__meta {
   color: #77766e;
   font-size: 0.9375rem;
@@ -231,8 +192,6 @@
 }
 
 .project-overview__content {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #77766e;
   grid-column: 2;
   max-width: 44rem;
@@ -258,13 +217,6 @@
   padding: 0.9rem 0;
 }
 .project-facts dt {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #77766e;
 }
 .project-facts dd {
@@ -287,8 +239,6 @@
 }
 .project-story__grid > div > p:last-child {
   color: #d8d4cb;
-  font-size: clamp(1.25rem, 2vw, 1.8rem);
-  line-height: 1.42;
   margin: 0;
   max-width: 31rem;
 }
@@ -347,15 +297,7 @@
   padding-top: 1.5rem;
 }
 
-.project-outcome h2 {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
+.project-outcome .alder-heading-section {
   max-width: 16ch;
 }
 
@@ -364,7 +306,7 @@
   max-width: 54rem;
 }
 
-.project-outcome__inner > div:only-child h2 {
+.project-outcome__inner > div:only-child .alder-heading-section {
   max-width: 24ch;
 }
 
@@ -404,7 +346,7 @@
 .project-outcome--with-media .projects-eyebrow {
   color: #b98959;
 }
-.project-outcome--with-media h2, .project-outcome--with-media .project-outcome blockquote p {
+.project-outcome--with-media .alder-heading-section, .project-outcome--with-media .project-outcome blockquote p {
   color: #f2eee6;
 }
 .project-outcome--with-media .project-outcome blockquote {
@@ -453,12 +395,6 @@
   .projects-archive .container, .project-case-study .container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-  .projects-archive__title, .project-hero__title {
-    font-size: clamp(2.45rem, 11.5vw, 3.6rem);
-  }
-  .project-outcome h2 {
-    font-size: clamp(2.3rem, 10.5vw, 3.35rem);
   }
   .project-card__content {
     grid-template-columns: 2.5rem minmax(0, 1fr);

@@ -15537,19 +15537,6 @@ textarea:focus-visible {
   color: #b98959;
 }
 
-.home-eyebrow,
-.about-intro__eyebrow,
-.home-section-link,
-.home-project__meta {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
-}
-
 .home-eyebrow {
   color: #77766e;
 }
@@ -15602,13 +15589,10 @@ textarea:focus-visible {
 }
 .home-hero__title {
   color: #f2eee6;
-  font-size: clamp(2.75rem, 4.6vw, 5rem);
   margin-top: 0;
 }
 .home-hero__text {
   color: #d8d4cb;
-  font-size: clamp(1rem, 1.35vw, 1.25rem);
-  line-height: 1.65;
   margin: 2rem 0 0;
   max-width: 29rem;
 }
@@ -15623,18 +15607,6 @@ textarea:focus-visible {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
-}
-
-.home-section-title,
-.home-cta__title,
-.about-intro__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
 }
 
 .home-text-link,
@@ -15693,8 +15665,6 @@ textarea:focus-visible {
 }
 .about-intro__copy {
   color: #77766e;
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   margin-top: 2rem;
   max-width: 31.25rem;
 }
@@ -15766,13 +15736,6 @@ textarea:focus-visible {
   margin-bottom: 0;
 }
 
-.home-service__text,
-.home-process__text,
-.home-cta__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
-}
-
 .home-services {
   background: #27372e;
   color: #f2eee6;
@@ -15803,19 +15766,6 @@ textarea:focus-visible {
   color: #1b2721;
 }
 
-.about-intro__title,
-.home-section-title,
-.home-cta__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
-}
-
 .home-service {
   align-items: center;
   border-top: 1px solid rgba(242, 238, 230, 0.26);
@@ -15835,21 +15785,6 @@ textarea:focus-visible {
 .home-service__text {
   color: #d4d0c7;
   text-wrap: balance;
-}
-
-.home-service__title,
-.home-process__title,
-.home-project__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(1.7rem, 2.45vw, 2.85rem);
-  letter-spacing: -0.035em;
-  line-height: 0.98;
 }
 
 .home-featured-projects {
@@ -15972,7 +15907,6 @@ textarea:focus-visible {
 }
 
 .home-project__meta {
-  line-height: 1.5;
   margin: 1rem 0 0;
 }
 
@@ -16264,20 +16198,9 @@ textarea:focus-visible {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
-  .home-hero__title {
-    font-size: clamp(2.45rem, 11.5vw, 3.6rem);
-  }
   .home-hero__content,
   .home-cta__grid {
     padding: 1.75rem;
-  }
-  .home-hero__text {
-    font-size: 1rem;
-  }
-  .home-section-title,
-  .about-intro__title,
-  .home-cta__title {
-    font-size: clamp(2.3rem, 10.5vw, 3.35rem);
   }
   .home-statistics {
     padding: 4.5rem 0;
@@ -16300,13 +16223,6 @@ textarea:focus-visible {
 }
 
 .services-eyebrow {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #b98959;
   margin-bottom: 1.5rem;
 }
@@ -16324,11 +16240,8 @@ textarea:focus-visible {
 }
 .services-hero__title {
   color: #1b2721;
-  font-size: clamp(2.75rem, 4.6vw, 5rem);
 }
 .services-hero__text {
-  font-size: clamp(1rem, 1.35vw, 1.25rem);
-  line-height: 1.65;
   color: #77766e;
   margin-top: 2rem;
   max-width: 39rem;
@@ -16373,21 +16286,11 @@ textarea:focus-visible {
   text-align: center;
 }
 .services-intro__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
   color: #1b2721;
   margin: auto;
   max-width: 46.8125rem;
 }
 .services-intro__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #77766e;
   margin: 2rem auto 0;
   max-width: 43rem;
@@ -16433,35 +16336,13 @@ textarea:focus-visible {
   border-bottom: 0;
 }
 .services-list__number {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
   color: #b98959;
-  font-size: clamp(2.25rem, 3.3vw, 3.75rem);
-  letter-spacing: -0.05em;
-  line-height: 0.85;
 }
 .services-list__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(1.7rem, 2.45vw, 2.85rem);
-  letter-spacing: -0.035em;
-  line-height: 0.98;
   color: #f2eee6;
   margin-top: 1rem;
 }
 .services-list__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #d8d4cb;
   margin-top: 1rem;
   max-width: 29rem;
@@ -16513,20 +16394,10 @@ textarea:focus-visible {
   padding: clamp(2rem, 4vw, 2rem);
 }
 .services-process__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
   color: #1b2721;
   max-width: 18ch;
 }
 .services-process__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #77766e;
   margin-top: 2rem;
   max-width: 34rem;
@@ -16554,22 +16425,12 @@ textarea:focus-visible {
   text-align: center;
 }
 .services-cta__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
   color: #f2eee6;
   margin-left: auto;
   margin-right: auto;
   max-width: 47rem;
 }
 .services-cta__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #d8d4cb;
   margin-left: auto;
   margin-right: auto;
@@ -16618,17 +16479,6 @@ textarea:focus-visible {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
-  .services-hero__title {
-    font-size: clamp(2.45rem, 11.5vw, 3.6rem);
-  }
-  .services-intro__title,
-  .services-process__title,
-  .services-cta__title {
-    font-size: clamp(2.3rem, 10.5vw, 3.35rem);
-  }
-  .services-list__number {
-    font-size: 2.75rem;
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   .services-hero__link,
@@ -16669,23 +16519,13 @@ textarea:focus-visible {
 }
 .about-hero__eyebrow,
 .about-hero .about-intro__eyebrow {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #b98959;
   margin: 0 0 1.5rem;
 }
 .about-hero__title {
   color: #1b2721;
-  font-size: clamp(2.75rem, 4.6vw, 5rem);
 }
 .about-hero__text {
-  font-size: clamp(1rem, 1.35vw, 1.25rem);
-  line-height: 1.65;
   color: #77766e;
   margin-top: 2rem;
 }
@@ -16716,32 +16556,15 @@ textarea:focus-visible {
   padding-top: 1.5rem;
 }
 .about-page .about-intro__eyebrow {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #b98959;
   margin: 0;
 }
 .about-page .about-intro__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
   color: #1b2721;
   grid-column: 2;
   max-width: 16ch;
 }
 .about-page .about-intro__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #77766e;
   grid-column: 2;
   margin-top: 2rem;
@@ -16760,25 +16583,10 @@ textarea:focus-visible {
   padding: clamp(5rem, 8vw, 8rem) 0;
 }
 .about-values__eyebrow {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #b98959;
   margin: 0 0 1.5rem;
 }
 .about-values__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
   color: #f2eee6;
 }
 .about-values__grid {
@@ -16817,22 +16625,10 @@ textarea:focus-visible {
   margin: 0;
 }
 .about-values__item-title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(1.7rem, 2.45vw, 2.85rem);
-  letter-spacing: -0.035em;
-  line-height: 0.98;
   color: #f2eee6;
   margin-top: 2rem;
 }
 .about-values__item-text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #d8d4cb;
   margin-top: 1rem;
   max-width: 20rem;
@@ -16856,31 +16652,14 @@ textarea:focus-visible {
   grid-row: 1;
 }
 .about-studio__eyebrow {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #b98959;
   margin: 0 0 1.5rem;
 }
 .about-studio__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
   color: #1b2721;
   max-width: 12ch;
 }
 .about-studio__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #77766e;
   margin-top: 2rem;
   max-width: 31rem;
@@ -16925,22 +16704,12 @@ textarea:focus-visible {
   text-align: center;
 }
 .about-cta__title {
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.93;
-  margin: 0;
-  padding: 0;
-  text-wrap: balance;
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
   color: #f2eee6;
   margin-left: auto;
   margin-right: auto;
   max-width: 16ch;
 }
 .about-cta__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #d8d4cb;
   margin: 2rem auto 0;
   max-width: 34rem;
@@ -17023,15 +16792,6 @@ textarea:focus-visible {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
-  .about-hero__title {
-    font-size: clamp(2.45rem, 11.5vw, 3.6rem);
-  }
-  .about-page .about-intro__title,
-  .about-values__title,
-  .about-studio__title,
-  .about-cta__title {
-    font-size: clamp(2.3rem, 10.5vw, 3.35rem);
-  }
   .about-values__number {
     font-size: 4.5rem;
   }
@@ -17042,4 +16802,4 @@ textarea:focus-visible {
   }
 }
 
-/*# sourceMappingURL=child-theme.css.map */
+/*# sourceMappingURL=alder-stone.css.map */

@@ -69,7 +69,7 @@ get_header();
 			<section class="project-hero">
 				<div class="container">
 					<div class="project-hero__header">
-						<p class="projects-eyebrow"><?php echo esc_html( $type ? $type : __( 'Selected Project', 'alder-stone' ) ); ?></p>
+						<p class="alder-eyebrow projects-eyebrow"><?php echo esc_html( $type ? $type : __( 'Selected Project', 'alder-stone' ) ); ?></p>
 						<h1 class="alder-heading project-hero__title"><?php the_title(); ?></h1>
 						<?php if ( $location || $year ) : ?><p class="project-hero__meta"><?php echo esc_html( trim( $location . ( $location && $year ? ' · ' : '' ) . $year ) ); ?></p><?php endif; ?>
 					</div>
@@ -79,15 +79,15 @@ get_header();
 
 			<section class="project-overview">
 				<div class="container"><div class="project-overview__grid">
-					<div><p class="projects-eyebrow"><?php esc_html_e( 'Project Overview', 'alder-stone' ); ?></p></div>
-					<div class="project-overview__content entry-content"><?php the_content(); ?></div>
-					<?php if ( $facts ) : ?><dl class="project-facts"><?php foreach ( $facts as $label => $value ) : ?><div><dt><?php echo esc_html( $label ); ?></dt><dd><?php echo esc_html( $value ); ?></dd></div><?php endforeach; ?></dl><?php endif; ?>
+					<div><p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'Project Overview', 'alder-stone' ); ?></p></div>
+					<div class="alder-copy project-overview__content entry-content"><?php the_content(); ?></div>
+					<?php if ( $facts ) : ?><dl class="project-facts"><?php foreach ( $facts as $label => $value ) : ?><div><dt class="alder-eyebrow"><?php echo esc_html( $label ); ?></dt><dd><?php echo esc_html( $value ); ?></dd></div><?php endforeach; ?></dl><?php endif; ?>
 				</div></div>
 			</section>
 
 			<?php if ( $challenge || $response ) : ?><section class="project-story"><div class="container"><div class="project-story__grid">
-				<?php if ( $challenge ) : ?><div><p class="projects-eyebrow"><?php esc_html_e( 'The Challenge', 'alder-stone' ); ?></p><p><?php echo esc_html( $challenge ); ?></p></div><?php endif; ?>
-				<?php if ( $response ) : ?><div><p class="projects-eyebrow"><?php esc_html_e( 'Our Response', 'alder-stone' ); ?></p><p><?php echo esc_html( $response ); ?></p></div><?php endif; ?>
+				<?php if ( $challenge ) : ?><div><p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'The Challenge', 'alder-stone' ); ?></p><p class="alder-copy"><?php echo esc_html( $challenge ); ?></p></div><?php endif; ?>
+				<?php if ( $response ) : ?><div><p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'Our Response', 'alder-stone' ); ?></p><p class="alder-copy"><?php echo esc_html( $response ); ?></p></div><?php endif; ?>
 			</div></div></section><?php endif; ?>
 
 			<?php if ( $gallery ) : ?><section class="project-gallery"><div class="container"><div class="project-gallery__grid">
@@ -97,7 +97,7 @@ get_header();
 			<?php if ( $outcome || $quote ) : ?><section class="project-outcome<?php echo esc_attr( $outcome_image ? ' project-outcome--with-media' : '' ); ?>">
 				<?php if ( $outcome_image ) : ?><figure class="project-outcome__media" aria-hidden="true"><?php echo wp_get_attachment_image( absint( $outcome_image ), 'full', false, array( 'class' => 'project-outcome__image', 'alt' => '' ) ); ?></figure><?php endif; ?>
 				<div class="container"><div class="project-outcome__inner">
-				<?php if ( $outcome ) : ?><div><p class="projects-eyebrow"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></p><h2><?php echo esc_html( $outcome ); ?></h2></div><?php endif; ?>
+				<?php if ( $outcome ) : ?><div><p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></p><h2 class="alder-heading-section"><?php echo esc_html( $outcome ); ?></h2></div><?php endif; ?>
 				<?php if ( $quote ) : ?><blockquote><p>“<?php echo esc_html( $quote ); ?>”</p><?php if ( $quote_by ) : ?><cite><?php echo esc_html( $quote_by ); ?></cite><?php endif; ?></blockquote><?php endif; ?>
 				</div></div>
 			</section><?php endif; ?>

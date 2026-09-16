@@ -30,25 +30,17 @@
 }
 
 .not-found-page__eyebrow {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.35;
-  margin: 0;
-  text-transform: uppercase;
   color: #b98959;
   margin: 0 0 1.5rem;
 }
 
 .not-found-page__title {
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
+  --alder-heading-size:clamp(2.5rem, 4.2vw, 4.5rem);
+  --alder-heading-mobile-size:clamp(2.3rem, 10.5vw, 3.35rem);
   max-width: 10ch;
 }
 
 .not-found-page__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
   color: #77766e;
   margin: 2rem 0 0;
   max-width: 28rem;

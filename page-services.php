@@ -83,7 +83,7 @@ get_header();
 					<div class="services-hero__inner">
 						<div class="services-hero__content">
 							<?php if ( $has_value( $hero_eyebrow ) ) : ?>
-								<p class="services-eyebrow"><?php echo esc_html( $hero_eyebrow ); ?></p>
+								<p class="alder-eyebrow services-eyebrow"><?php echo esc_html( $hero_eyebrow ); ?></p>
 							<?php endif; ?>
 
 							<?php if ( $has_value( $hero_title ) ) : ?>
@@ -91,7 +91,7 @@ get_header();
 							<?php endif; ?>
 
 							<?php if ( $has_value( $hero_text ) ) : ?>
-								<div class="services-hero__text"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
+								<div class="alder-copy services-hero__text"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
 							<?php endif; ?>
 
 							<a class="alder-button services-hero__link" href="#services">
@@ -127,11 +127,11 @@ get_header();
 				<div class="container">
 					<div class="services-intro__content">
 						<?php if ( $has_value( $intro_title ) ) : ?>
-							<h2 class="services-intro__title"><?php echo esc_html( $intro_title ); ?></h2>
+							<h2 class="alder-heading-section services-intro__title"><?php echo esc_html( $intro_title ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $intro_text ) ) : ?>
-							<div class="services-intro__text entry-content">
+							<div class="alder-copy services-intro__text entry-content">
 								<?php echo wp_kses_post( apply_filters( 'the_content', $intro_text ) ); ?>
 							</div>
 						<?php endif; ?>
@@ -160,15 +160,15 @@ get_header();
 						<?php foreach ( $available_service_items as $service_item_index => $service_item ) : ?>
 							<article class="services-list__item<?php echo esc_attr( $service_item_index >= $last_row_start_index ? ' services-list__item--last-row' : '' ); ?>">
 									<?php if ( $has_value( $service_item['number'] ) ) : ?>
-										<p class="services-list__number"><?php echo esc_html( $service_item['number'] ); ?></p>
+										<p class="alder-heading-feature services-list__number"><?php echo esc_html( $service_item['number'] ); ?></p>
 									<?php endif; ?>
 
 									<?php if ( $has_value( $service_item['title'] ) ) : ?>
-										<h2 class="services-list__title"><?php echo esc_html( $service_item['title'] ); ?></h2>
+										<h2 class="alder-heading-item services-list__title"><?php echo esc_html( $service_item['title'] ); ?></h2>
 									<?php endif; ?>
 
 									<?php if ( $has_value( $service_item['text'] ) ) : ?>
-										<div class="services-list__text"><?php echo wp_kses_post( wpautop( esc_html( $service_item['text'] ) ) ); ?></div>
+										<div class="alder-copy services-list__text"><?php echo wp_kses_post( wpautop( esc_html( $service_item['text'] ) ) ); ?></div>
 									<?php endif; ?>
 							</article>
 						<?php endforeach; ?>
@@ -200,15 +200,15 @@ get_header();
 				<div class="container">
 					<div class="services-process__content">
 						<?php if ( $has_value( $process_eyebrow ) ) : ?>
-							<p class="services-eyebrow"><?php echo esc_html( $process_eyebrow ); ?></p>
+							<p class="alder-eyebrow services-eyebrow"><?php echo esc_html( $process_eyebrow ); ?></p>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $process_title ) ) : ?>
-							<h2 class="services-process__title"><?php echo esc_html( $process_title ); ?></h2>
+							<h2 class="alder-heading-section services-process__title"><?php echo esc_html( $process_title ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $process_text ) ) : ?>
-							<div class="services-process__text entry-content">
+							<div class="alder-copy services-process__text entry-content">
 								<?php echo wp_kses_post( apply_filters( 'the_content', $process_text ) ); ?>
 							</div>
 						<?php endif; ?>
@@ -222,11 +222,11 @@ get_header();
 				<div class="container">
 					<div class="services-cta__content">
 						<?php if ( $has_value( $cta_title ) ) : ?>
-							<h2 class="services-cta__title"><?php echo esc_html( $cta_title ); ?></h2>
+							<h2 class="alder-heading-section services-cta__title"><?php echo esc_html( $cta_title ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $has_value( $cta_text ) ) : ?>
-							<div class="services-cta__text"><?php echo wp_kses_post( wpautop( esc_html( $cta_text ) ) ); ?></div>
+							<div class="alder-copy services-cta__text"><?php echo wp_kses_post( wpautop( esc_html( $cta_text ) ) ); ?></div>
 						<?php endif; ?>
 
 						<?php if ( is_array( $cta_button ) && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) : ?>

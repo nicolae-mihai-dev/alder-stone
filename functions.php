@@ -44,7 +44,7 @@ function alder_stone_enqueue_assets() {
 
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 	// Grab asset urls.
-	$theme_styles  = "/css/child-theme{$suffix}.css";
+	$theme_styles  = "/css/alder-stone{$suffix}.css";
 	$theme_scripts = "/js/child-theme{$suffix}.js";
 	
 	$css_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_styles );
@@ -63,20 +63,6 @@ function alder_stone_enqueue_assets() {
 
 	if ( file_exists( $accessibility_styles_path ) ) {
 		wp_enqueue_style( 'alder-stone-accessibility', get_stylesheet_directory_uri() . $accessibility_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $accessibility_styles_path ) );
-	}
-
-	$typography_adjustments      = "/css/typography-adjustments{$suffix}.css";
-	$typography_adjustments_path = get_stylesheet_directory() . $typography_adjustments;
-
-	if ( file_exists( $typography_adjustments_path ) ) {
-		wp_enqueue_style( 'alder-stone-typography-adjustments', get_stylesheet_directory_uri() . $typography_adjustments, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $typography_adjustments_path ) );
-	}
-
-	$heading_styles      = "/css/headings{$suffix}.css";
-	$heading_styles_path = get_stylesheet_directory() . $heading_styles;
-
-	if ( file_exists( $heading_styles_path ) ) {
-		wp_enqueue_style( 'alder-stone-headings', get_stylesheet_directory_uri() . $heading_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $heading_styles_path ) );
 	}
 
 	$button_styles      = "/css/buttons{$suffix}.css";
@@ -142,6 +128,14 @@ function alder_stone_enqueue_assets() {
 		if ( file_exists( $not_found_styles_path ) ) {
 			wp_enqueue_style( 'alder-stone-not-found', get_stylesheet_directory_uri() . $not_found_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $not_found_styles_path ) );
 		}
+	}
+
+	// Shared typography comes last so reusable roles override legacy page selectors.
+	$typography_styles      = "/css/typography{$suffix}.css";
+	$typography_styles_path = get_stylesheet_directory() . $typography_styles;
+
+	if ( file_exists( $typography_styles_path ) ) {
+		wp_enqueue_style( 'alder-stone-typography', get_stylesheet_directory_uri() . $typography_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $typography_styles_path ) );
 	}
 
 	wp_enqueue_script( 'jquery' );

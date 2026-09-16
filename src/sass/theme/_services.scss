@@ -16,8 +16,6 @@
 }
 
 .services-eyebrow {
-  @include alder-eyebrow;
-
   color: $alder-mineral;
   margin-bottom: $alder-space-eyebrow-to-heading;
 }
@@ -38,12 +36,9 @@
 
   &__title {
     color: $alder-forest;
-    font-size: $alder-hero-title-size;
   }
 
   &__text {
-    @include alder-hero-copy;
-
     color: $alder-stone;
     margin-top: $alder-space-heading-to-copy;
     max-width: 39rem;
@@ -94,16 +89,12 @@
   }
 
   &__title {
-    @include alder-section-title;
-
     color: $alder-forest;
     margin: auto;
     max-width: 46.8125rem;
   }
 
   &__text {
-    @include alder-body-copy;
-
     color: $alder-stone;
     margin: 2rem auto 0;
     max-width: 43rem;
@@ -158,24 +149,15 @@
   }
 
   &__number {
-    @include alder-display-title;
-
     color: $alder-mineral;
-    font-size: clamp(2.25rem, 3.3vw, 3.75rem);
-    letter-spacing: -0.05em;
-    line-height: 0.85;
   }
 
   &__title {
-    @include alder-item-title;
-
     color: $alder-canvas;
     margin-top: $alder-space-sm;
   }
 
   &__text {
-    @include alder-body-copy;
-
     color: $alder-light-text;
     margin-top: $alder-space-sm;
     max-width: 29rem;
@@ -233,15 +215,11 @@
   }
 
   &__title {
-    @include alder-section-title;
-
     color: $alder-forest;
     max-width: 18ch;
   }
 
   &__text {
-    @include alder-body-copy;
-
     color: $alder-stone;
     margin-top: $alder-space-heading-to-copy;
     max-width: 34rem;
@@ -275,8 +253,6 @@
   }
 
   &__title {
-    @include alder-section-title;
-
     color: $alder-canvas;
     margin-left: auto;
     margin-right: auto;
@@ -284,8 +260,6 @@
   }
 
   &__text {
-    @include alder-body-copy;
-
     color: $alder-light-text;
     margin-left: auto;
     margin-right: auto;
@@ -346,19 +320,6 @@
     padding-right: 1.25rem;
   }
 
-  .services-hero__title {
-    font-size: $alder-hero-title-size-mobile;
-  }
-
-  .services-intro__title,
-  .services-process__title,
-  .services-cta__title {
-    font-size: $alder-section-title-size-mobile;
-  }
-
-  .services-list__number {
-    font-size: 2.75rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

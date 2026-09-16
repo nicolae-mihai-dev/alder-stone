@@ -33,13 +33,6 @@
   }
 }
 
-.home-eyebrow,
-.about-intro__eyebrow,
-.home-section-link,
-.home-project__meta {
-  @include alder-eyebrow;
-}
-
 .home-eyebrow {
   color: $alder-stone;
 }
@@ -97,13 +90,11 @@
 
   &__title {
     color: $alder-canvas;
-    font-size: $alder-hero-title-size;
     margin-top: 0;
   }
 
   &__text {
     color: #d8d4cb;
-    @include alder-hero-copy;
     margin: $alder-space-lg 0 0;
     max-width: 29rem;
 
@@ -119,12 +110,6 @@
   height: 100%;
   object-fit: cover;
   width: 100%;
-}
-
-.home-section-title,
-.home-cta__title,
-.about-intro__title {
-  @include alder-display-title;
 }
 
 .home-text-link,
@@ -190,8 +175,6 @@
 
   &__copy {
     color: $alder-stone;
-    font-size: clamp(1rem, 1.25vw, 1.2rem);
-    line-height: 1.65;
     margin-top: $alder-space-heading-to-copy;
     max-width: 31.25rem;
 
@@ -273,13 +256,6 @@
   margin-bottom: 0;
 }
 
-.home-service__text,
-.home-process__text,
-.home-cta__text {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.65;
-}
-
 .home-services {
   background: $alder-forest-deep;
   color: $alder-canvas;
@@ -317,12 +293,6 @@
   color: $alder-forest;
 }
 
-.about-intro__title,
-.home-section-title,
-.home-cta__title {
-  @include alder-section-title;
-}
-
 .home-service {
   align-items: center;
   border-top: 1px solid $alder-light-rule;
@@ -344,12 +314,6 @@
     color: #d4d0c7;
     text-wrap: balance;
   }
-}
-
-.home-service__title,
-.home-process__title,
-.home-project__title {
-  @include alder-item-title;
 }
 
 .home-featured-projects {
@@ -476,7 +440,6 @@
 }
 
 .home-project__meta {
-  line-height: 1.5;
   margin: $alder-space-sm 0 0;
 }
 
@@ -810,23 +773,9 @@
     padding-right: 1.25rem;
   }
 
-  .home-hero__title {
-    font-size: $alder-hero-title-size-mobile;
-  }
-
   .home-hero__content,
   .home-cta__grid {
     padding: 1.75rem;
-  }
-
-  .home-hero__text {
-    font-size: 1rem;
-  }
-
-  .home-section-title,
-  .about-intro__title,
-  .home-cta__title {
-    font-size: $alder-section-title-size-mobile;
   }
 
   .home-statistics {

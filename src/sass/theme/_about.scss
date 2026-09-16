@@ -39,20 +39,15 @@
 
   &__eyebrow,
   .about-intro__eyebrow {
-    @include alder-eyebrow;
-
     color: $alder-mineral;
     margin: 0 0 $alder-space-eyebrow-to-heading;
   }
 
   &__title {
     color: $alder-forest;
-    font-size: $alder-hero-title-size;
   }
 
   &__text {
-    @include alder-hero-copy;
-
     color: $alder-stone;
     margin-top: $alder-space-heading-to-copy;
 
@@ -88,23 +83,17 @@
   }
 
   &__eyebrow {
-    @include alder-eyebrow;
-
     color: $alder-mineral;
     margin: 0;
   }
 
   &__title {
-    @include alder-section-title;
-
     color: $alder-forest;
     grid-column: 2;
     max-width: 16ch;
   }
 
   &__text {
-    @include alder-body-copy;
-
     color: $alder-stone;
     grid-column: 2;
     margin-top: $alder-space-heading-to-copy;
@@ -129,15 +118,11 @@
   }
 
   &__eyebrow {
-    @include alder-eyebrow;
-
     color: $alder-mineral;
     margin: 0 0 $alder-space-eyebrow-to-heading;
   }
 
   &__title {
-    @include alder-section-title;
-
     color: $alder-canvas;
   }
 
@@ -183,15 +168,11 @@
   }
 
   &__item-title {
-    @include alder-item-title;
-
     color: $alder-canvas;
     margin-top: $alder-space-lg;
   }
 
   &__item-text {
-    @include alder-body-copy;
-
     color: $alder-light-text;
     margin-top: $alder-space-sm;
     max-width: 20rem;
@@ -220,22 +201,16 @@
   }
 
   &__eyebrow {
-    @include alder-eyebrow;
-
     color: $alder-mineral;
     margin: 0 0 $alder-space-eyebrow-to-heading;
   }
 
   &__title {
-    @include alder-section-title;
-
     color: $alder-forest;
     max-width: 12ch;
   }
 
   &__text {
-    @include alder-body-copy;
-
     color: $alder-stone;
     margin-top: $alder-space-heading-to-copy;
     max-width: 31rem;
@@ -286,8 +261,6 @@
   }
 
   &__title {
-    @include alder-section-title;
-
     color: $alder-canvas;
     margin-left: auto;
     margin-right: auto;
@@ -295,8 +268,6 @@
   }
 
   &__text {
-    @include alder-body-copy;
-
     color: $alder-light-text;
     margin: $alder-space-heading-to-copy auto 0;
     max-width: 34rem;
@@ -400,17 +371,6 @@
   .about-page .container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-
-  .about-hero__title {
-    font-size: $alder-hero-title-size-mobile;
-  }
-
-  .about-page .about-intro__title,
-  .about-values__title,
-  .about-studio__title,
-  .about-cta__title {
-    font-size: $alder-section-title-size-mobile;
   }
 
   .about-values__number {

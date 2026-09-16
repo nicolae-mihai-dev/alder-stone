@@ -1,0 +1,88 @@
+// One visual source of truth for all reusable Alder & Stone type roles.
+// Semantic HTML levels remain meaningful; the class selects the visual role.
+
+.alder-heading,
+.alder-heading-section,
+.alder-heading-item,
+.alder-heading-feature,
+.alder-heading-4,
+.alder-heading-5,
+.alder-heading-6 {
+  font-family: $alder-display;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.93;
+  margin: 0;
+  padding: 0;
+  text-wrap: balance;
+}
+
+.alder-heading {
+  font-size: var(--alder-heading-size, #{$alder-hero-title-size});
+}
+
+.alder-heading-section {
+  font-size: var(--alder-heading-section-size, #{$alder-section-title-size});
+}
+
+.alder-heading-item {
+  font-size: var(--alder-heading-item-size, #{$alder-item-title-size});
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.alder-heading-feature {
+  font-size: clamp(2.25rem, 3.3vw, 3.75rem);
+  letter-spacing: -0.05em;
+  line-height: 0.85;
+}
+
+// Available for future content without reintroducing page-level heading CSS.
+.alder-heading-4 {
+  font-size: clamp(1.375rem, 1.8vw, 1.75rem);
+  line-height: 1.08;
+}
+
+.alder-heading-5 {
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.2;
+}
+
+.alder-heading-6 {
+  font-family: $alder-sans;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.alder-copy {
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.alder-eyebrow {
+  font-family: $alder-sans;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.35;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 575.98px) {
+  .alder-heading {
+    font-size: var(--alder-heading-mobile-size, #{$alder-hero-title-size-mobile});
+  }
+
+  .alder-heading-section {
+    font-size: var(--alder-heading-section-mobile-size, #{$alder-section-title-size-mobile});
+  }
+
+  .alder-heading-feature {
+    font-size: 2.75rem;
+  }
+}
