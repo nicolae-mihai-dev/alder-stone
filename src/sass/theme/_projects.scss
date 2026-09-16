@@ -11,6 +11,7 @@
 .project-case-study + .alder-stone-footer { margin-top: 0; }
 
 .projects-eyebrow { color: $alder-mineral; }
+.project-case-study .projects-eyebrow { margin-bottom:.375rem; }
 
 .projects-archive__hero { background: $alder-canvas-light; padding: $alder-page-hero-padding; }
 .projects-archive__hero-inner { border-top: 1px solid $alder-rule; padding-top: $alder-space-md; }
@@ -79,7 +80,7 @@
 
 .project-testimonial { background:$alder-canvas; padding:$alder-section-space 0; }
 .project-testimonial__inner { background:$alder-mineral; margin:auto; max-width:71rem; padding:clamp(2rem, 5vw, 5rem); }
-.project-testimonial__inner > .alder-eyebrow { --alder-eyebrow-space-after:clamp(2rem, 4vw, 3.5rem); color:$alder-forest; }
+.project-testimonial__inner > .alder-eyebrow { color:$alder-forest; }
 .project-testimonial blockquote { border-top:0; margin:0; max-width:62rem; padding-top:0; }
 .project-testimonial__quote {
   color:$alder-forest;

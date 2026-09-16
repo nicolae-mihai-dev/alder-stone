@@ -19,6 +19,10 @@
   color: #b98959;
 }
 
+.project-case-study .projects-eyebrow {
+  margin-bottom: 0.375rem;
+}
+
 .projects-archive__hero {
   background: #f8f5ef;
   padding: clamp(3.75rem, 6vw, 7rem) 0 clamp(4.5rem, 8vw, 8.5rem);
@@ -308,7 +312,6 @@
 }
 
 .project-testimonial__inner > .alder-eyebrow {
-  --alder-eyebrow-space-after:clamp(2rem, 4vw, 3.5rem);
   color: #1b2721;
 }
 
