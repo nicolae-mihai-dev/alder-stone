@@ -257,7 +257,7 @@
 
 .project-story__grid {
   display: grid;
-  gap: clamp(1.25rem, 2.5vw, 2rem);
+  gap: clamp(1.5rem, 2.5vw, 2rem);
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -265,18 +265,12 @@
   background: #27372e;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   min-height: clamp(20rem, 25vw, 25rem);
   padding: clamp(1.75rem, 4vw, 4rem);
 }
 .project-story__item .alder-heading-item {
   color: #f2eee6;
-}
-
-.project-story__number {
-  color: #b98959;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  margin: 0 0 auto;
 }
 
 .project-story__item .alder-copy {
@@ -295,14 +289,11 @@
   grid-column: 1/-1;
   justify-self: center;
   max-width: 42rem;
-  min-height: 0;
+  min-height: clamp(16rem, 18vw, 19rem);
   width: 100%;
 }
 .project-story__item--outcome .alder-heading-item, .project-story__item--outcome .alder-copy {
   color: #1b2721;
-}
-.project-story__item--outcome .project-story__number {
-  color: rgba(27, 39, 33, 0.7);
 }
 
 .project-testimonial {

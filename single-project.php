@@ -104,21 +104,18 @@ get_header();
 						<div class="project-story__grid">
 							<?php if ( $challenge ) : ?>
 								<article class="project-story__item">
-									<p class="project-story__number">01</p>
 									<h3 class="alder-heading-item"><?php esc_html_e( 'The Challenge', 'alder-stone' ); ?></h3>
 									<div class="alder-copy"><?php echo $format_project_copy( $challenge ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 								</article>
 							<?php endif; ?>
 							<?php if ( $response ) : ?>
 								<article class="project-story__item">
-									<p class="project-story__number">02</p>
 									<h3 class="alder-heading-item"><?php esc_html_e( 'Our Response', 'alder-stone' ); ?></h3>
 									<div class="alder-copy"><?php echo $format_project_copy( $response ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 								</article>
 							<?php endif; ?>
 							<?php if ( $outcome ) : ?>
 								<article class="project-story__item project-story__item--outcome">
-									<p class="project-story__number">03</p>
 									<h3 class="alder-heading-item"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></h3>
 									<div class="alder-copy"><?php echo $format_project_copy( $outcome ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 								</article>
