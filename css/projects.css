@@ -237,32 +237,16 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   padding-top: 1.5rem;
 }
-.project-story__grid > div > p:last-child {
+
+.project-story__chapter .alder-copy {
   color: #d8d4cb;
   max-width: 31rem;
 }
-
-.project-gallery {
-  background: #f8f5ef;
-  padding: clamp(5rem, 8vw, 8rem) 0;
+.project-story__chapter .alder-copy > :first-child {
+  margin-top: 0;
 }
-
-.project-gallery__grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.project-gallery__grid figure {
-  aspect-ratio: 1.2/1;
-  margin: 0;
-  overflow: hidden;
-}
-.project-gallery__grid img {
-  display: block;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
+.project-story__chapter .alder-copy > :last-child {
+  margin-bottom: 0;
 }
 
 .project-outcome {
@@ -290,43 +274,85 @@
 
 .project-outcome__inner {
   border-top: 1px solid rgba(27, 39, 33, 0.18);
-  display: grid;
-  gap: clamp(3rem, 8vw, 10rem);
-  grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.7fr);
+  max-width: 64rem;
   padding-top: 1.5rem;
 }
 
 .project-outcome .alder-heading-section {
-  max-width: 16ch;
+  max-width: 18ch;
 }
 
-.project-outcome__inner > div:only-child {
-  grid-column: 1/-1;
-  max-width: 54rem;
+.project-testimonial {
+  background: #f8f5ef;
+  padding: clamp(5rem, 8vw, 8rem) 0;
 }
 
-.project-outcome__inner > div:only-child .alder-heading-section {
-  max-width: 24ch;
+.project-testimonial__inner {
+  border-top: 1px solid rgba(27, 39, 33, 0.18);
+  display: grid;
+  gap: 3rem clamp(2rem, 7vw, 8rem);
+  grid-template-columns: minmax(9rem, 0.2fr) minmax(0, 1fr);
+  padding-top: 1.5rem;
 }
 
-.project-outcome blockquote {
-  border-left: 1px solid rgba(27, 39, 33, 0.18);
+.project-testimonial blockquote {
   margin: 0;
-  padding-left: clamp(1.5rem, 3vw, 3rem);
+  max-width: 52rem;
 }
-.project-outcome blockquote p {
+
+.project-testimonial__quote {
+  color: #1b2721;
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-size: clamp(1.5rem, 2.2vw, 2.2rem);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin: 0;
+  font-size: clamp(2rem, 3.4vw, 3.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1.03;
 }
-.project-outcome blockquote cite {
+.project-testimonial__quote > :first-child {
+  margin-top: 0;
+}
+.project-testimonial__quote > :last-child {
+  margin-bottom: 0;
+}
+
+.project-testimonial cite {
   color: #77766e;
   display: block;
   font-size: 0.8125rem;
   font-style: normal;
-  margin-top: 1.5rem;
+  letter-spacing: 0.04em;
+  margin-top: 2rem;
+}
+
+.project-gallery {
+  background: #f2eee6;
+  padding: clamp(5rem, 8vw, 8rem) 0;
+}
+
+.project-gallery__header {
+  margin-bottom: clamp(2.5rem, 5vw, 5rem);
+}
+
+.project-gallery__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.project-gallery__grid figure {
+  aspect-ratio: 4/3;
+  margin: 0;
+  overflow: hidden;
+}
+.project-gallery__grid figure:only-child,
+.project-gallery__grid figure:last-child:nth-child(odd) {
+  aspect-ratio: 1.75/1;
+  grid-column: 1/-1;
+}
+.project-gallery__grid img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
 }
 
 .project-outcome--with-media {
@@ -345,14 +371,8 @@
 .project-outcome--with-media .projects-eyebrow {
   color: #b98959;
 }
-.project-outcome--with-media .alder-heading-section, .project-outcome--with-media .project-outcome blockquote p {
+.project-outcome--with-media .alder-heading-section {
   color: #f2eee6;
-}
-.project-outcome--with-media .project-outcome blockquote {
-  border-color: rgba(242, 238, 230, 0.26);
-}
-.project-outcome--with-media .project-outcome blockquote cite {
-  color: #b8ae9f;
 }
 
 @media (max-width: 767.98px) {
@@ -360,7 +380,8 @@
   .project-overview,
   .project-story,
   .project-gallery,
-  .project-outcome {
+  .project-outcome,
+  .project-testimonial {
     padding: 5.5rem 0;
   }
   .projects-archive__hero {
@@ -393,8 +414,12 @@
   .project-gallery__grid {
     grid-template-columns: 1fr;
   }
-  .project-story__grid, .project-outcome__inner {
+  .project-story__grid, .project-testimonial__inner {
     grid-template-columns: 1fr;
+  }
+  .project-gallery__grid figure:only-child,
+  .project-gallery__grid figure:last-child:nth-child(odd) {
+    aspect-ratio: 4/3;
   }
 }
 @media (max-width: 575.98px) {

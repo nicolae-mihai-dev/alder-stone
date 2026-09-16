@@ -54,16 +54,26 @@ get_header();
 		$response  = $get_project_field( 'project_response' );
 		$outcome   = $get_project_field( 'project_outcome' );
 		$outcome_image = $get_project_field( 'project_outcome_image' );
-		$gallery   = array_filter(
-			array(
-				$get_project_field( 'project_gallery_image_1' ),
-				$get_project_field( 'project_gallery_image_2' ),
-				$get_project_field( 'project_gallery_image_3' ),
-			)
-		);
+		$gallery = $get_project_field( 'project_gallery' );
+
+		// Preserve galleries entered before the single, reorderable Gallery field was introduced.
+		if ( ! is_array( $gallery ) || ! $gallery ) {
+			$gallery = array_filter(
+				array(
+					$get_project_field( 'project_gallery_image_1' ),
+					$get_project_field( 'project_gallery_image_2' ),
+					$get_project_field( 'project_gallery_image_3' ),
+				)
+			);
+		}
+
+		$gallery = array_values( array_filter( array_map( 'absint', $gallery ) ) );
 		$quote     = $get_project_field( 'project_quote' );
 		$quote_by  = $get_project_field( 'project_quote_attribution' );
 		$facts     = array_filter( array( __( 'Location', 'alder-stone' ) => $location, __( 'Year', 'alder-stone' ) => $year, __( 'Client', 'alder-stone' ) => $client, __( 'Type', 'alder-stone' ) => $type, __( 'Scope', 'alder-stone' ) => $scope, __( 'Scale', 'alder-stone' ) => $area ) );
+		$format_project_copy = static function( $copy ) {
+			return wp_kses_post( wpautop( $copy ) );
+		};
 		?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<section class="project-hero">
@@ -77,30 +87,92 @@ get_header();
 				</div>
 			</section>
 
-			<section class="project-overview">
-				<div class="container"><div class="project-overview__grid">
-					<div><p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'Project Overview', 'alder-stone' ); ?></p></div>
-					<div class="alder-copy project-overview__content entry-content"><?php the_content(); ?></div>
-					<?php if ( $facts ) : ?><dl class="project-facts"><?php foreach ( $facts as $label => $value ) : ?><div><dt class="alder-eyebrow"><?php echo esc_html( $label ); ?></dt><dd><?php echo esc_html( $value ); ?></dd></div><?php endforeach; ?></dl><?php endif; ?>
-				</div></div>
+			<section class="project-overview" aria-labelledby="project-overview-title-<?php echo esc_attr( $project_id ); ?>">
+				<div class="container">
+					<div class="project-overview__grid">
+						<div>
+							<h2 class="alder-heading-item project-overview__title" id="project-overview-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Project Overview', 'alder-stone' ); ?></h2>
+						</div>
+						<div class="alder-copy project-overview__content entry-content"><?php the_content(); ?></div>
+						<?php if ( $facts ) : ?>
+							<dl class="project-facts">
+								<?php foreach ( $facts as $label => $value ) : ?>
+									<div>
+										<dt class="alder-eyebrow"><?php echo esc_html( $label ); ?></dt>
+										<dd><?php echo esc_html( $value ); ?></dd>
+									</div>
+								<?php endforeach; ?>
+							</dl>
+						<?php endif; ?>
+					</div>
+				</div>
 			</section>
 
-			<?php if ( $challenge || $response ) : ?><section class="project-story"><div class="container"><div class="project-story__grid">
-				<?php if ( $challenge ) : ?><div><p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'The Challenge', 'alder-stone' ); ?></p><p class="alder-copy"><?php echo esc_html( $challenge ); ?></p></div><?php endif; ?>
-				<?php if ( $response ) : ?><div><p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'Our Response', 'alder-stone' ); ?></p><p class="alder-copy"><?php echo esc_html( $response ); ?></p></div><?php endif; ?>
-			</div></div></section><?php endif; ?>
+			<?php if ( $challenge || $response ) : ?>
+				<section class="project-story" aria-labelledby="project-story-title-<?php echo esc_attr( $project_id ); ?>">
+					<div class="container">
+						<h2 class="visually-hidden" id="project-story-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Design Process', 'alder-stone' ); ?></h2>
+						<div class="project-story__grid">
+							<?php if ( $challenge ) : ?>
+								<div class="project-story__chapter">
+									<h3 class="alder-heading-item"><?php esc_html_e( 'The Challenge', 'alder-stone' ); ?></h3>
+									<div class="alder-copy"><?php echo $format_project_copy( $challenge ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+								</div>
+							<?php endif; ?>
+							<?php if ( $response ) : ?>
+								<div class="project-story__chapter">
+									<h3 class="alder-heading-item"><?php esc_html_e( 'Our Response', 'alder-stone' ); ?></h3>
+									<div class="alder-copy"><?php echo $format_project_copy( $response ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+								</div>
+							<?php endif; ?>
+						</div>
+					</div>
+				</section>
+			<?php endif; ?>
 
-			<?php if ( $gallery ) : ?><section class="project-gallery"><div class="container"><div class="project-gallery__grid">
-				<?php foreach ( $gallery as $image_id ) : ?><figure><?php echo wp_get_attachment_image( absint( $image_id ), 'large', false, array( 'loading' => 'lazy' ) ); ?></figure><?php endforeach; ?>
-			</div></div></section><?php endif; ?>
+			<?php if ( $outcome ) : ?>
+				<section class="project-outcome<?php echo esc_attr( $outcome_image ? ' project-outcome--with-media' : '' ); ?>" aria-labelledby="project-outcome-title-<?php echo esc_attr( $project_id ); ?>">
+					<?php if ( $outcome_image ) : ?>
+						<figure class="project-outcome__media" aria-hidden="true"><?php echo wp_get_attachment_image( absint( $outcome_image ), 'full', false, array( 'class' => 'project-outcome__image', 'alt' => '' ) ); ?></figure>
+					<?php endif; ?>
+					<div class="container">
+						<div class="project-outcome__inner">
+							<p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></p>
+							<h2 class="alder-heading-section" id="project-outcome-title-<?php echo esc_attr( $project_id ); ?>"><?php echo esc_html( $outcome ); ?></h2>
+						</div>
+					</div>
+				</section>
+			<?php endif; ?>
 
-			<?php if ( $outcome || $quote ) : ?><section class="project-outcome<?php echo esc_attr( $outcome_image ? ' project-outcome--with-media' : '' ); ?>">
-				<?php if ( $outcome_image ) : ?><figure class="project-outcome__media" aria-hidden="true"><?php echo wp_get_attachment_image( absint( $outcome_image ), 'full', false, array( 'class' => 'project-outcome__image', 'alt' => '' ) ); ?></figure><?php endif; ?>
-				<div class="container"><div class="project-outcome__inner">
-				<?php if ( $outcome ) : ?><div><p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></p><h2 class="alder-heading-section"><?php echo esc_html( $outcome ); ?></h2></div><?php endif; ?>
-				<?php if ( $quote ) : ?><blockquote><p>“<?php echo esc_html( $quote ); ?>”</p><?php if ( $quote_by ) : ?><cite><?php echo esc_html( $quote_by ); ?></cite><?php endif; ?></blockquote><?php endif; ?>
-				</div></div>
-			</section><?php endif; ?>
+			<?php if ( $quote ) : ?>
+				<section class="project-testimonial" aria-labelledby="project-testimonial-title-<?php echo esc_attr( $project_id ); ?>">
+					<div class="container">
+						<div class="project-testimonial__inner">
+							<h2 class="alder-eyebrow projects-eyebrow" id="project-testimonial-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Client Testimonial', 'alder-stone' ); ?></h2>
+							<blockquote>
+								<div class="project-testimonial__quote"><?php echo $format_project_copy( $quote ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+								<?php if ( $quote_by ) : ?><cite><?php echo esc_html( $quote_by ); ?></cite><?php endif; ?>
+							</blockquote>
+						</div>
+					</div>
+				</section>
+			<?php endif; ?>
+
+			<?php if ( $gallery ) : ?>
+				<section class="project-gallery" aria-labelledby="project-gallery-title-<?php echo esc_attr( $project_id ); ?>">
+					<div class="container">
+						<div class="project-gallery__header">
+							<p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'Selected Views', 'alder-stone' ); ?></p>
+							<h2 class="alder-heading-section" id="project-gallery-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Project Gallery', 'alder-stone' ); ?></h2>
+						</div>
+						<div class="project-gallery__grid">
+							<?php foreach ( $gallery as $image_id ) : ?>
+								<figure><?php echo wp_get_attachment_image( $image_id, 'large', false, array( 'loading' => 'lazy' ) ); ?></figure>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				</section>
+			<?php endif; ?>
 		</article>
 	<?php endwhile; ?>
 </main>
