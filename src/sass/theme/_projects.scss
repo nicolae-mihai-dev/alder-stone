@@ -80,13 +80,25 @@
 .project-testimonial blockquote { margin:0; max-width:62rem; }
 .project-testimonial__quote {
   color:$alder-forest;
-  font-family:$alder-display;
-  font-size:clamp(2.25rem, 3.5vw, 3.9rem);
-  letter-spacing:-.04em;
-  line-height:.98;
-  text-wrap:balance;
+  font-family:$alder-sans;
+  font-size:clamp(1.25rem, 1.65vw, 1.75rem);
+  font-weight:400;
+  letter-spacing:-.01em;
+  line-height:1.55;
 
-  > :first-child { margin-top:0; }
+  > :first-child {
+    margin-top:0;
+
+    &::before {
+      color:$alder-forest;
+      content:"“";
+      font-family:$alder-display;
+      font-size:clamp(4.5rem, 7vw, 7.5rem);
+      line-height:0;
+      margin-right:.08em;
+      vertical-align:-.34em;
+    }
+  }
   > :last-child { margin-bottom:0; }
 }
 .project-testimonial__attribution { border-top:1px solid rgba(27,39,33,.28); color:$alder-forest; display:block; font-size:.8125rem; font-style:normal; letter-spacing:.05em; margin-top:clamp(2rem, 4vw, 3.5rem); max-width:28rem; padding-top:$alder-space-md; }

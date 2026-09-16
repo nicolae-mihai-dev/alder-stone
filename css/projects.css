@@ -305,14 +305,23 @@
 
 .project-testimonial__quote {
   color: #1b2721;
-  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-size: clamp(2.25rem, 3.5vw, 3.9rem);
-  letter-spacing: -0.04em;
-  line-height: 0.98;
-  text-wrap: balance;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.25rem, 1.65vw, 1.75rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.55;
 }
 .project-testimonial__quote > :first-child {
   margin-top: 0;
+}
+.project-testimonial__quote > :first-child::before {
+  color: #1b2721;
+  content: "“";
+  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: clamp(4.5rem, 7vw, 7.5rem);
+  line-height: 0;
+  margin-right: 0.08em;
+  vertical-align: -0.34em;
 }
 .project-testimonial__quote > :last-child {
   margin-bottom: 0;
