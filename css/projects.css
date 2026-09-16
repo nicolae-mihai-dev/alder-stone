@@ -17,7 +17,6 @@
 
 .projects-eyebrow {
   color: #b98959;
-  margin: 0 0 1.5rem;
 }
 
 .projects-archive__hero {
@@ -32,7 +31,6 @@
 
 .projects-archive__intro {
   color: #77766e;
-  margin: 2rem 0 0;
   max-width: 39rem;
 }
 
@@ -156,7 +154,7 @@
 
 .project-hero__header {
   border-top: 1px solid rgba(27, 39, 33, 0.18);
-  padding: 1.5rem 0 clamp(3.5rem, 7vw, 7rem);
+  padding: 1.5rem 0 clamp(4.5rem, 8vw, 8.5rem);
 }
 
 .project-hero__meta {
@@ -192,6 +190,7 @@
 }
 
 .project-overview__content {
+  --alder-copy-space-before:0;
   color: #77766e;
   grid-column: 2;
   max-width: 44rem;
@@ -217,6 +216,7 @@
   padding: 0.9rem 0;
 }
 .project-facts dt {
+  --alder-eyebrow-space-after:0;
   color: #77766e;
 }
 .project-facts dd {
@@ -239,7 +239,6 @@
 }
 .project-story__grid > div > p:last-child {
   color: #d8d4cb;
-  margin: 0;
   max-width: 31rem;
 }
 
@@ -357,6 +356,13 @@
 }
 
 @media (max-width: 767.98px) {
+  .projects-archive__collection,
+  .project-overview,
+  .project-story,
+  .project-gallery,
+  .project-outcome {
+    padding: 5.5rem 0;
+  }
   .projects-archive__hero {
     padding: 3.5rem 0 5rem;
   }
@@ -370,7 +376,7 @@
     padding-top: 3.5rem;
   }
   .project-hero__header {
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
   }
   .project-hero__media {
     aspect-ratio: 1/1;
@@ -379,7 +385,7 @@
     display: block;
   }
   .project-overview__content {
-    margin-top: 2rem;
+    --alder-copy-space-before:2rem;
   }
   .project-facts {
     margin-top: 2.5rem;

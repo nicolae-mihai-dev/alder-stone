@@ -12,7 +12,8 @@
   font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 0.93;
-  margin: 0;
+  margin-block: var(--alder-heading-space-before, 0) var(--alder-heading-space-after, 0);
+  margin-inline: var(--alder-heading-margin-inline, 0);
   padding: 0;
   text-wrap: balance;
 }
@@ -60,7 +61,8 @@
 .alder-copy {
   font-size: clamp(1rem, 1.25vw, 1.2rem);
   line-height: 1.65;
-  margin: 0;
+  margin-block: var(--alder-copy-space-before, #{$alder-space-heading-to-copy}) var(--alder-copy-space-after, 0);
+  margin-inline: var(--alder-copy-margin-inline, 0);
 }
 
 .alder-eyebrow {
@@ -69,7 +71,8 @@
   font-weight: 700;
   letter-spacing: 0.15em;
   line-height: 1.35;
-  margin: 0;
+  margin-block: var(--alder-eyebrow-space-before, 0) var(--alder-eyebrow-space-after, #{$alder-space-eyebrow-to-heading});
+  margin-inline: var(--alder-eyebrow-margin-inline, 0);
   text-transform: uppercase;
 }
 

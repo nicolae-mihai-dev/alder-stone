@@ -13,7 +13,6 @@
 
 .contact-eyebrow {
   color: #b98959;
-  margin: 0 0 1.5rem;
 }
 
 .contact-hero {
@@ -31,7 +30,6 @@
 }
 .contact-hero__text {
   color: #77766e;
-  margin-top: 2rem;
   max-width: 39rem;
 }
 .contact-hero__text p {
@@ -50,6 +48,7 @@
   padding: 1rem 0;
 }
 .contact-details dt {
+  --alder-eyebrow-space-after: 0;
   color: #77766e;
 }
 .contact-details dd {
@@ -85,7 +84,6 @@
 }
 .contact-inquiry__text {
   color: #d8d4cb;
-  margin-top: 2rem;
   max-width: 28rem;
 }
 .contact-inquiry__text p {
@@ -131,9 +129,9 @@
   margin-top: 1.5rem;
 }
 .contact-form label {
+  --alder-eyebrow-space-after: 0.625rem;
   color: #d8d4cb;
   display: block;
-  margin-bottom: 0.625rem;
 }
 .contact-form input,
 .contact-form select,
@@ -198,7 +196,6 @@
   width: 0;
 }
 .contact-form__submit {
-  margin-top: 2rem;
   width: 100%;
 }
 

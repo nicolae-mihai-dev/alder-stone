@@ -16,7 +16,7 @@
 
 .about-hero {
   background: $alder-canvas-light;
-  padding: clamp(3.75rem, 6vw, 7rem) 0 clamp(4.5rem, 8vw, 8.5rem);
+  padding: $alder-page-hero-padding;
 
   &__inner {
     align-items: end;
@@ -40,7 +40,6 @@
   &__eyebrow,
   .about-intro__eyebrow {
     color: $alder-mineral;
-    margin: 0 0 $alder-space-eyebrow-to-heading;
   }
 
   &__title {
@@ -49,7 +48,6 @@
 
   &__text {
     color: $alder-stone;
-    margin-top: $alder-space-heading-to-copy;
 
     p {
       margin-bottom: 0;
@@ -84,7 +82,6 @@
 
   &__eyebrow {
     color: $alder-mineral;
-    margin: 0;
   }
 
   &__title {
@@ -96,7 +93,6 @@
   &__text {
     color: $alder-stone;
     grid-column: 2;
-    margin-top: $alder-space-heading-to-copy;
     max-width: 42rem;
 
     > :first-child {
@@ -119,7 +115,6 @@
 
   &__eyebrow {
     color: $alder-mineral;
-    margin: 0 0 $alder-space-eyebrow-to-heading;
   }
 
   &__title {
@@ -168,13 +163,12 @@
   }
 
   &__item-title {
+    --alder-heading-space-before: #{$alder-space-lg};
     color: $alder-canvas;
-    margin-top: $alder-space-lg;
   }
 
   &__item-text {
     color: $alder-light-text;
-    margin-top: $alder-space-sm;
     max-width: 20rem;
 
     p {
@@ -202,7 +196,6 @@
 
   &__eyebrow {
     color: $alder-mineral;
-    margin: 0 0 $alder-space-eyebrow-to-heading;
   }
 
   &__title {
@@ -212,7 +205,6 @@
 
   &__text {
     color: $alder-stone;
-    margin-top: $alder-space-heading-to-copy;
     max-width: 31rem;
 
     > :first-child {
@@ -246,7 +238,7 @@
   color: $alder-canvas;
   display: flex;
   min-height: clamp(28rem, 40vw, 38rem);
-  padding: clamp(4.5rem, 7vw, 7rem) 0;
+  padding: $alder-section-space 0;
 
   .container {
     width: 100%;
@@ -261,15 +253,14 @@
   }
 
   &__title {
+    --alder-heading-margin-inline: auto;
     color: $alder-canvas;
-    margin-left: auto;
-    margin-right: auto;
     max-width: 16ch;
   }
 
   &__text {
+    --alder-copy-margin-inline: auto;
     color: $alder-light-text;
-    margin: $alder-space-heading-to-copy auto 0;
     max-width: 34rem;
 
     p {
@@ -278,7 +269,6 @@
   }
 
   &__button {
-    margin: $alder-space-copy-to-action auto 0;
     max-width: 100%;
   }
 }
@@ -296,7 +286,7 @@
 
 @media (max-width: 767.98px) {
   .about-hero {
-    padding: 3.5rem 0 5rem;
+    padding: $alder-page-hero-padding-mobile;
 
     &__inner {
       align-items: start;
@@ -313,19 +303,16 @@
   }
 
   .about-page .about-intro {
-    padding: 5.5rem 0;
+    padding: $alder-section-space-mobile 0;
 
     &__inner {
       display: block;
     }
 
-    &__title {
-      margin-top: $alder-space-eyebrow-to-heading;
-    }
   }
 
   .about-values {
-    padding: 5.5rem 0;
+    padding: $alder-section-space-mobile 0;
 
     &__grid {
       grid-template-columns: 1fr;
@@ -344,7 +331,7 @@
   }
 
   .about-studio {
-    padding: 5.5rem 0;
+    padding: $alder-section-space-mobile 0;
 
     &__inner {
       display: flex;
@@ -364,6 +351,7 @@
 
   .about-cta {
     min-height: 32rem;
+    padding: $alder-section-space-mobile 0;
   }
 }
 

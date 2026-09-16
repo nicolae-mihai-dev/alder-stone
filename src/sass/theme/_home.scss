@@ -37,11 +37,6 @@
   color: $alder-stone;
 }
 
-.home-eyebrow,
-.about-intro__eyebrow {
-  margin: 0 0 $alder-space-eyebrow-to-heading;
-}
-
 .home-hero {
   background: $alder-forest;
   color: $alder-canvas;
@@ -90,12 +85,10 @@
 
   &__title {
     color: $alder-canvas;
-    margin-top: 0;
   }
 
   &__text {
     color: #d8d4cb;
-    margin: $alder-space-lg 0 0;
     max-width: 29rem;
 
     p {
@@ -110,11 +103,6 @@
   height: 100%;
   object-fit: cover;
   width: 100%;
-}
-
-.home-text-link,
-.home-cta__link {
-  margin-top: $alder-space-copy-to-action;
 }
 
 .home-text-link {
@@ -175,7 +163,6 @@
 
   &__copy {
     color: $alder-stone;
-    margin-top: $alder-space-heading-to-copy;
     max-width: 31.25rem;
 
     p {
@@ -185,10 +172,6 @@
         margin-top: $alder-space-xs;
       }
     }
-  }
-
-  &__link {
-    margin-top: $alder-space-copy-to-action;
   }
 
   &__principles {
@@ -311,6 +294,7 @@
   }
 
   &__text {
+    --alder-copy-space-before: 0;
     color: #d4d0c7;
     text-wrap: balance;
   }
@@ -336,6 +320,7 @@
 }
 
 .home-section-link {
+  --alder-eyebrow-space-after: 0;
   align-items: center;
   border-bottom: 1px solid currentcolor;
   color: $alder-canvas;
@@ -431,7 +416,7 @@
 }
 
 .home-project__title {
-  margin-top: $alder-space-md;
+  --alder-heading-space-before: #{$alder-space-md};
   transition: color 180ms ease;
 }
 
@@ -440,7 +425,8 @@
 }
 
 .home-project__meta {
-  margin: $alder-space-sm 0 0;
+  --alder-eyebrow-space-after: 0;
+  --alder-eyebrow-space-before: #{$alder-space-sm};
 }
 
 .home-project__meta-separator {
@@ -450,7 +436,7 @@
 .home-statistics {
   background: $alder-sand;
   color: $alder-forest;
-  padding: clamp(4.5rem, 8vw, 8rem) 0;
+  padding: $alder-section-space 0;
 }
 
 .home-statistics__grid {
@@ -536,7 +522,6 @@
 
 .home-process__text {
   color: $alder-stone;
-  margin-top: $alder-space-sm;
   max-width: 19rem;
 }
 
@@ -576,7 +561,6 @@
 
   &__text {
     color: #d5d1c8;
-    margin-top: $alder-space-heading-to-copy;
     max-width: 28rem;
   }
 
@@ -677,7 +661,7 @@
   .home-services,
   .home-featured-projects,
   .home-process {
-    padding: 5.5rem 0;
+    padding: $alder-section-space-mobile 0;
   }
 
   .about-intro__inner {
@@ -686,7 +670,6 @@
     gap: 4rem;
   }
   .about-intro__copy {
-    margin-top: $alder-space-heading-to-copy;
     max-width: 32.5rem;
   }
 
@@ -779,7 +762,7 @@
   }
 
   .home-statistics {
-    padding: 4.5rem 0;
+    padding: $alder-section-space-mobile 0;
   }
 
   .home-statistic__value {

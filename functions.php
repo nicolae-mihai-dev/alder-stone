@@ -83,33 +83,6 @@ function alder_stone_enqueue_assets() {
 		}
 	}
 
-	if ( is_page( 'services' ) ) {
-		$services_adjustments      = "/css/services-adjustments{$suffix}.css";
-		$services_adjustments_path = get_stylesheet_directory() . $services_adjustments;
-
-		if ( file_exists( $services_adjustments_path ) ) {
-			wp_enqueue_style( 'alder-stone-services-adjustments', get_stylesheet_directory_uri() . $services_adjustments, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $services_adjustments_path ) );
-		}
-	}
-
-	if ( is_page( 'about' ) ) {
-		$about_adjustments      = "/css/about-adjustments{$suffix}.css";
-		$about_adjustments_path = get_stylesheet_directory() . $about_adjustments;
-
-		if ( file_exists( $about_adjustments_path ) ) {
-			wp_enqueue_style( 'alder-stone-about-adjustments', get_stylesheet_directory_uri() . $about_adjustments, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $about_adjustments_path ) );
-		}
-	}
-
-	if ( is_front_page() ) {
-		$home_adjustments      = "/css/home-adjustments{$suffix}.css";
-		$home_adjustments_path = get_stylesheet_directory() . $home_adjustments;
-
-		if ( file_exists( $home_adjustments_path ) ) {
-			wp_enqueue_style( 'alder-stone-home-adjustments', get_stylesheet_directory_uri() . $home_adjustments, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $home_adjustments_path ) );
-		}
-	}
-
 	if ( is_post_type_archive( 'project' ) || is_singular( 'project' ) ) {
 		$projects_styles      = "/css/projects{$suffix}.css";
 		$projects_styles_path = get_stylesheet_directory() . $projects_styles;

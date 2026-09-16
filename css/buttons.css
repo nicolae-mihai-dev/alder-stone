@@ -19,6 +19,7 @@
   justify-content: space-between;
   letter-spacing: 0.14em;
   line-height: 1.2;
+  margin-top: var(--alder-button-space-before, 2rem);
   padding: 1rem 1.2rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -42,4 +43,5 @@
   outline: 3px solid #b98959;
   outline-offset: 0.35rem;
 }
+
 /*# sourceMappingURL=buttons.css.map */

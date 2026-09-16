@@ -31,7 +31,6 @@
 
 .not-found-page__eyebrow {
   color: #b98959;
-  margin: 0 0 1.5rem;
 }
 
 .not-found-page__title {
@@ -42,7 +41,6 @@
 
 .not-found-page__text {
   color: #77766e;
-  margin: 2rem 0 0;
   max-width: 28rem;
 }
 
@@ -52,7 +50,6 @@
   --button-color:#f2eee6;
   --button-hover-border:#1b2721;
   --button-hover-color:#1b2721;
-  margin-top: 2rem;
 }
 
 @media (max-width: 767.98px) {
