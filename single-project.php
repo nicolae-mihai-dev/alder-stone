@@ -54,21 +54,6 @@ get_header();
 		$response  = $get_project_field( 'project_response' );
 		$outcome   = $get_project_field( 'project_outcome' );
 		$outcome_image = $get_project_field( 'project_outcome_image' );
-		$gallery = array_values(
-			array_filter(
-				array_map(
-					'absint',
-					array(
-						$get_project_field( 'project_gallery_image_1' ),
-						$get_project_field( 'project_gallery_image_2' ),
-						$get_project_field( 'project_gallery_image_3' ),
-						$get_project_field( 'project_gallery_image_4' ),
-						$get_project_field( 'project_gallery_image_5' ),
-						$get_project_field( 'project_gallery_image_6' ),
-					)
-				)
-			)
-		);
 		$quote     = $get_project_field( 'project_quote' );
 		$quote_by  = $get_project_field( 'project_quote_attribution' );
 		$facts     = array_filter( array( __( 'Location', 'alder-stone' ) => $location, __( 'Year', 'alder-stone' ) => $year, __( 'Client', 'alder-stone' ) => $client, __( 'Type', 'alder-stone' ) => $type, __( 'Scope', 'alder-stone' ) => $scope, __( 'Scale', 'alder-stone' ) => $area ) );
@@ -159,21 +144,6 @@ get_header();
 				</section>
 			<?php endif; ?>
 
-			<?php if ( $gallery ) : ?>
-				<section class="project-gallery" aria-labelledby="project-gallery-title-<?php echo esc_attr( $project_id ); ?>">
-					<div class="container">
-						<div class="project-gallery__header">
-							<p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'Selected Views', 'alder-stone' ); ?></p>
-							<h2 class="alder-heading-section" id="project-gallery-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Project Gallery', 'alder-stone' ); ?></h2>
-						</div>
-						<div class="project-gallery__grid">
-							<?php foreach ( $gallery as $image_id ) : ?>
-								<figure><?php echo wp_get_attachment_image( $image_id, 'large', false, array( 'loading' => 'lazy' ) ); ?></figure>
-							<?php endforeach; ?>
-						</div>
-					</div>
-				</section>
-			<?php endif; ?>
 		</article>
 	<?php endwhile; ?>
 </main>

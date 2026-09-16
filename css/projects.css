@@ -323,38 +323,6 @@
   margin-top: 2rem;
 }
 
-.project-gallery {
-  background: #f2eee6;
-  padding: clamp(5rem, 8vw, 8rem) 0;
-}
-
-.project-gallery__header {
-  margin-bottom: clamp(2.5rem, 5vw, 5rem);
-}
-
-.project-gallery__grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.project-gallery__grid figure {
-  aspect-ratio: 4/3;
-  margin: 0;
-  overflow: hidden;
-}
-.project-gallery__grid figure:only-child,
-.project-gallery__grid figure:last-child:nth-child(odd) {
-  aspect-ratio: 1.75/1;
-  grid-column: 1/-1;
-}
-.project-gallery__grid img {
-  display: block;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-}
-
 .project-outcome--with-media {
   color: #f2eee6;
 }
@@ -379,7 +347,6 @@
   .projects-archive__collection,
   .project-overview,
   .project-story,
-  .project-gallery,
   .project-outcome,
   .project-testimonial {
     padding: 5.5rem 0;
@@ -411,15 +378,8 @@
   .project-facts {
     margin-top: 2.5rem;
   }
-  .project-gallery__grid {
-    grid-template-columns: 1fr;
-  }
   .project-story__grid, .project-testimonial__inner {
     grid-template-columns: 1fr;
-  }
-  .project-gallery__grid figure:only-child,
-  .project-gallery__grid figure:last-child:nth-child(odd) {
-    aspect-ratio: 4/3;
   }
 }
 @media (max-width: 575.98px) {
