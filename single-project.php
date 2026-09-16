@@ -103,24 +103,27 @@ get_header();
 						<h2 class="visually-hidden" id="project-story-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Design Process', 'alder-stone' ); ?></h2>
 						<div class="project-story__grid">
 							<?php if ( $challenge ) : ?>
-								<div class="project-story__chapter">
+								<article class="project-story__item">
+									<p class="project-story__number">01</p>
 									<h3 class="alder-heading-item"><?php esc_html_e( 'The Challenge', 'alder-stone' ); ?></h3>
 									<div class="alder-copy"><?php echo $format_project_copy( $challenge ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
-								</div>
+								</article>
 							<?php endif; ?>
 							<?php if ( $response ) : ?>
-								<div class="project-story__chapter">
+								<article class="project-story__item">
+									<p class="project-story__number">02</p>
 									<h3 class="alder-heading-item"><?php esc_html_e( 'Our Response', 'alder-stone' ); ?></h3>
 									<div class="alder-copy"><?php echo $format_project_copy( $response ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
-								</div>
+								</article>
+							<?php endif; ?>
+							<?php if ( $outcome ) : ?>
+								<article class="project-story__item project-story__item--outcome">
+									<p class="project-story__number">03</p>
+									<h3 class="alder-heading-item"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></h3>
+									<div class="alder-copy"><?php echo $format_project_copy( $outcome ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+								</article>
 							<?php endif; ?>
 						</div>
-						<?php if ( $outcome ) : ?>
-							<div class="project-story__outcome">
-								<p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></p>
-								<p class="project-story__outcome-statement"><?php echo esc_html( $outcome ); ?></p>
-							</div>
-						<?php endif; ?>
 					</div>
 				</section>
 			<?php endif; ?>

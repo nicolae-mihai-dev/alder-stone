@@ -257,44 +257,52 @@
 
 .project-story__grid {
   display: grid;
-  gap: clamp(2.5rem, 7vw, 8rem);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.project-story__chapter .alder-copy {
+.project-story__item {
+  background: #27372e;
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(20rem, 25vw, 25rem);
+  padding: clamp(1.75rem, 4vw, 4rem);
+}
+.project-story__item .alder-heading-item {
+  color: #f2eee6;
+}
+
+.project-story__number {
+  color: #b98959;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 auto;
+}
+
+.project-story__item .alder-copy {
   color: #d8d4cb;
   max-width: 31rem;
 }
-.project-story__chapter .alder-copy > :first-child {
+.project-story__item .alder-copy > :first-child {
   margin-top: 0;
 }
-.project-story__chapter .alder-copy > :last-child {
+.project-story__item .alder-copy > :last-child {
   margin-bottom: 0;
 }
 
-.project-story__outcome {
-  border-top: 1px solid rgba(242, 238, 230, 0.26);
-  display: grid;
-  gap: 3rem clamp(2rem, 7vw, 8rem);
-  grid-template-columns: minmax(9rem, 0.2fr) minmax(0, 1fr);
-  margin-top: clamp(3rem, 6vw, 6rem);
-  padding-top: 1.5rem;
+.project-story__item--outcome {
+  background: #b98959;
+  grid-column: 1/-1;
+  justify-self: center;
+  max-width: 42rem;
+  min-height: 0;
+  width: 100%;
 }
-
-.project-story__outcome .alder-eyebrow {
-  --alder-eyebrow-space-after:0;
+.project-story__item--outcome .alder-heading-item, .project-story__item--outcome .alder-copy {
+  color: #1b2721;
 }
-
-.project-story__outcome-statement {
-  color: #f2eee6;
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(1.5rem, 2.1vw, 2.25rem);
-  font-weight: 400;
-  letter-spacing: -0.025em;
-  line-height: 1.3;
-  margin: 0;
-  max-width: 40rem;
-  text-wrap: balance;
+.project-story__item--outcome .project-story__number {
+  color: rgba(27, 39, 33, 0.7);
 }
 
 .project-testimonial {
@@ -389,8 +397,11 @@
   .project-facts {
     margin-top: 2.5rem;
   }
-  .project-story__grid, .project-story__outcome {
+  .project-story__grid {
     grid-template-columns: 1fr;
+  }
+  .project-story__item--outcome {
+    grid-column: auto;
   }
 }
 @media (max-width: 575.98px) {
