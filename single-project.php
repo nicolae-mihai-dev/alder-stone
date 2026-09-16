@@ -54,20 +54,21 @@ get_header();
 		$response  = $get_project_field( 'project_response' );
 		$outcome   = $get_project_field( 'project_outcome' );
 		$outcome_image = $get_project_field( 'project_outcome_image' );
-		$gallery = $get_project_field( 'project_gallery' );
-
-		// Preserve galleries entered before the single, reorderable Gallery field was introduced.
-		if ( ! is_array( $gallery ) || ! $gallery ) {
-			$gallery = array_filter(
-				array(
-					$get_project_field( 'project_gallery_image_1' ),
-					$get_project_field( 'project_gallery_image_2' ),
-					$get_project_field( 'project_gallery_image_3' ),
+		$gallery = array_values(
+			array_filter(
+				array_map(
+					'absint',
+					array(
+						$get_project_field( 'project_gallery_image_1' ),
+						$get_project_field( 'project_gallery_image_2' ),
+						$get_project_field( 'project_gallery_image_3' ),
+						$get_project_field( 'project_gallery_image_4' ),
+						$get_project_field( 'project_gallery_image_5' ),
+						$get_project_field( 'project_gallery_image_6' ),
+					)
 				)
-			);
-		}
-
-		$gallery = array_values( array_filter( array_map( 'absint', $gallery ) ) );
+			)
+		);
 		$quote     = $get_project_field( 'project_quote' );
 		$quote_by  = $get_project_field( 'project_quote_attribution' );
 		$facts     = array_filter( array( __( 'Location', 'alder-stone' ) => $location, __( 'Year', 'alder-stone' ) => $year, __( 'Client', 'alder-stone' ) => $client, __( 'Type', 'alder-stone' ) => $type, __( 'Scope', 'alder-stone' ) => $scope, __( 'Scale', 'alder-stone' ) => $area ) );
