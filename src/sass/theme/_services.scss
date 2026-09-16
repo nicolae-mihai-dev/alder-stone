@@ -24,13 +24,14 @@
   background: $alder-canvas-light;
   padding: $alder-page-hero-padding;
 
+  .services-eyebrow {
+    color: $alder-mineral;
+    margin-bottom: 1.375rem;
+  }
+
   &__inner {
     border-top: 1px solid $alder-rule;
     padding-top: $alder-space-md;
-  }
-
-  .services-eyebrow {
-    color: $alder-mineral;
   }
 
   &__title {
@@ -39,6 +40,7 @@
 
   &__text {
     color: $alder-stone;
+    margin-top: 1.375rem;
     max-width: 39rem;
 
     p {
@@ -53,6 +55,7 @@
     --button-hover-background: #{$alder-mineral};
     --button-hover-border: #{$alder-mineral};
     --button-hover-color: #{$alder-forest};
+    margin-top: 1.9375rem;
     max-width: 100%;
 
   }
