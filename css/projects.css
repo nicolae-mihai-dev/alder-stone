@@ -284,19 +284,44 @@
 }
 
 .project-testimonial {
-  background: #f8f5ef;
+  background: #f2eee6;
   padding: clamp(5rem, 8vw, 8rem) 0;
 }
 
 .project-testimonial__inner {
-  border-top: 1px solid rgba(27, 39, 33, 0.18);
+  background: #b98959;
   display: grid;
   gap: 3rem clamp(2rem, 7vw, 8rem);
   grid-template-columns: minmax(9rem, 0.2fr) minmax(0, 1fr);
-  padding-top: 1.5rem;
+  min-height: clamp(25rem, 38vw, 34rem);
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 5rem);
+  position: relative;
+}
+.project-testimonial__inner::after {
+  color: rgba(27, 39, 33, 0.14);
+  content: "“";
+  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: clamp(15rem, 27vw, 30rem);
+  font-weight: 400;
+  line-height: 0.7;
+  pointer-events: none;
+  position: absolute;
+  right: clamp(1rem, 4vw, 4rem);
+  top: clamp(1rem, 3vw, 3rem);
+}
+.project-testimonial__inner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-testimonial__inner > .alder-eyebrow {
+  --alder-eyebrow-space-after:0;
+  color: #1b2721;
 }
 
 .project-testimonial blockquote {
+  align-self: center;
   margin: 0;
   max-width: 52rem;
 }
@@ -304,9 +329,10 @@
 .project-testimonial__quote {
   color: #1b2721;
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-size: clamp(2rem, 3.4vw, 3.5rem);
+  font-size: clamp(2.25rem, 3.8vw, 4.25rem);
   letter-spacing: -0.04em;
-  line-height: 1.03;
+  line-height: 0.98;
+  text-wrap: balance;
 }
 .project-testimonial__quote > :first-child {
   margin-top: 0;
@@ -315,13 +341,16 @@
   margin-bottom: 0;
 }
 
-.project-testimonial cite {
-  color: #77766e;
+.project-testimonial__attribution {
+  border-top: 1px solid rgba(27, 39, 33, 0.28);
+  color: #1b2721;
   display: block;
   font-size: 0.8125rem;
   font-style: normal;
-  letter-spacing: 0.04em;
-  margin-top: 2rem;
+  letter-spacing: 0.05em;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  max-width: 28rem;
+  padding-top: 1.5rem;
 }
 
 @media (max-width: 767.98px) {
