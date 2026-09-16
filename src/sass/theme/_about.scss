@@ -235,7 +235,7 @@
 
 .about-cta {
   align-items: center;
-  background: $alder-forest;
+  background: #27372e;
   color: $alder-canvas;
   display: flex;
   min-height: clamp(28rem, 40vw, 38rem);
@@ -256,7 +256,7 @@
   &__title {
     --alder-heading-margin-inline: auto;
     color: $alder-canvas;
-    max-width: 16ch;
+    max-width: 17ch;
   }
 
   &__text {

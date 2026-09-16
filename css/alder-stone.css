@@ -16708,7 +16708,7 @@ textarea:focus-visible {
 
 .about-cta {
   align-items: center;
-  background: #1b2721;
+  background: #27372e;
   color: #f2eee6;
   display: flex;
   min-height: clamp(28rem, 40vw, 38rem);
@@ -16727,7 +16727,7 @@ textarea:focus-visible {
 .about-cta__title {
   --alder-heading-margin-inline: auto;
   color: #f2eee6;
-  max-width: 16ch;
+  max-width: 17ch;
 }
 .about-cta__text {
   --alder-copy-margin-inline: auto;
