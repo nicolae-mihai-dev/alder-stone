@@ -13,9 +13,8 @@
 .projects-eyebrow { color: $alder-mineral; }
 .project-case-study .projects-eyebrow { margin-bottom:.375rem; }
 
-.projects-archive__hero { background: $alder-canvas-light; padding: $alder-page-hero-padding; }
-.projects-archive__hero-inner { border-top: 1px solid $alder-rule; padding-top: $alder-space-md; }
-.projects-archive__intro { color: $alder-stone; max-width: 39rem; }
+.projects-archive__hero { background: $alder-canvas-light; padding: 7.75rem 0 7.375rem; }
+.projects-archive__intro { color: $alder-stone; margin-top: 1.3125rem; max-width: 39rem; }
 .projects-archive__collection { padding: $alder-section-space 0; }
 .projects-archive__empty { margin: 0; }
 
@@ -117,7 +116,6 @@
   .project-story,
   .project-testimonial { padding:$alder-section-space-mobile 0; }
 
-  .projects-archive__hero { padding:$alder-page-hero-padding-mobile; }
   .projects-grid { grid-template-columns:1fr; } .project-card:nth-child(even) { margin-top:0; }
   .project-hero { padding-top:$alder-page-hero-space-top-mobile; } .project-hero__media { aspect-ratio:1 / 1; }
   .project-overview__grid { display:block; } .project-overview__content { --alder-copy-space-before:#{$alder-space-heading-to-copy}; } .project-facts { margin-top:2.5rem; }

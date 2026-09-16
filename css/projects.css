@@ -25,16 +25,12 @@
 
 .projects-archive__hero {
   background: #f8f5ef;
-  padding: clamp(3.75rem, 6vw, 7rem) 0 clamp(4.5rem, 8vw, 8.5rem);
-}
-
-.projects-archive__hero-inner {
-  border-top: 1px solid rgba(27, 39, 33, 0.18);
-  padding-top: 1.5rem;
+  padding: 7.75rem 0 7.375rem;
 }
 
 .projects-archive__intro {
   color: #77766e;
+  margin-top: 1.3125rem;
   max-width: 39rem;
 }
 
@@ -369,9 +365,6 @@
   .project-story,
   .project-testimonial {
     padding: 5.5rem 0;
-  }
-  .projects-archive__hero {
-    padding: 3.5rem 0 5rem;
   }
   .projects-grid {
     grid-template-columns: 1fr;
