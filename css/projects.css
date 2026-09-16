@@ -318,21 +318,14 @@
   margin-top: 0;
 }
 .project-testimonial__quote > :first-child::before {
-  align-items: center;
-  background: #1b2721;
-  border-radius: 48% 52% 45% 55%;
   content: "“";
-  color: #f2eee6;
-  display: inline-flex;
+  color: rgba(27, 39, 33, 0.7);
+  display: block;
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-size: clamp(3.5rem, 5vw, 5.5rem);
-  height: clamp(4rem, 5.5vw, 5.75rem);
-  justify-content: center;
-  line-height: 0.8;
-  margin-right: 0.35em;
-  padding: 0 0.06em 0.16em 0;
-  vertical-align: -0.58em;
-  width: clamp(4rem, 5.5vw, 5.75rem);
+  font-size: clamp(6rem, 10vw, 10rem);
+  font-style: normal;
+  line-height: 0.38;
+  margin: 0 0 0.24em -0.06em;
 }
 .project-testimonial__quote > :last-child {
   margin-bottom: 0;
