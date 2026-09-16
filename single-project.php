@@ -94,8 +94,11 @@ get_header();
 				</div>
 			</section>
 
-			<?php if ( $challenge || $response ) : ?>
+			<?php if ( $challenge || $response || $outcome ) : ?>
 				<section class="project-story" aria-labelledby="project-story-title-<?php echo esc_attr( $project_id ); ?>">
+					<?php if ( $outcome_image ) : ?>
+						<figure class="project-story__media" aria-hidden="true"><?php echo wp_get_attachment_image( absint( $outcome_image ), 'full', false, array( 'class' => 'project-story__image', 'alt' => '' ) ); ?></figure>
+					<?php endif; ?>
 					<div class="container">
 						<h2 class="visually-hidden" id="project-story-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Design Process', 'alder-stone' ); ?></h2>
 						<div class="project-story__grid">
@@ -112,20 +115,12 @@ get_header();
 								</div>
 							<?php endif; ?>
 						</div>
-					</div>
-				</section>
-			<?php endif; ?>
-
-			<?php if ( $outcome ) : ?>
-				<section class="project-outcome<?php echo esc_attr( $outcome_image ? ' project-outcome--with-media' : '' ); ?>" aria-labelledby="project-outcome-title-<?php echo esc_attr( $project_id ); ?>">
-					<?php if ( $outcome_image ) : ?>
-						<figure class="project-outcome__media" aria-hidden="true"><?php echo wp_get_attachment_image( absint( $outcome_image ), 'full', false, array( 'class' => 'project-outcome__image', 'alt' => '' ) ); ?></figure>
-					<?php endif; ?>
-					<div class="container">
-						<div class="project-outcome__inner">
-							<p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></p>
-							<h2 class="alder-heading-section" id="project-outcome-title-<?php echo esc_attr( $project_id ); ?>"><?php echo esc_html( $outcome ); ?></h2>
-						</div>
+						<?php if ( $outcome ) : ?>
+							<div class="project-story__outcome">
+								<p class="alder-eyebrow projects-eyebrow"><?php esc_html_e( 'The Outcome', 'alder-stone' ); ?></p>
+								<h2 class="alder-heading-section"><?php echo esc_html( $outcome ); ?></h2>
+							</div>
+						<?php endif; ?>
 					</div>
 				</section>
 			<?php endif; ?>

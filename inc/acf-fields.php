@@ -100,10 +100,10 @@ function alder_stone_register_project_acf_fields() {
 				),
 				array(
 					'key'           => 'field_alder_stone_project_outcome_image',
-					'label'         => __( 'Outcome Background Image', 'alder-stone' ),
+					'label'         => __( 'Case Study Background Image', 'alder-stone' ),
 					'name'          => 'project_outcome_image',
 					'type'          => 'image',
-					'instructions'  => __( 'A dedicated background for The Outcome. Recommended: 1920 × 1080 px, with calm areas for text.', 'alder-stone' ),
+					'instructions'  => __( 'Background image for the complete Challenge, Response and Outcome section. Recommended: 1920 × 1080 px, with calm areas for text.', 'alder-stone' ),
 					'return_format' => 'id',
 					'preview_size'  => 'medium_large',
 				),

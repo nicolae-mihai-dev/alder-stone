@@ -227,7 +227,32 @@
 .project-story {
   background: #27372e;
   color: #f2eee6;
+  isolation: isolate;
+  overflow: hidden;
   padding: clamp(5rem, 8vw, 8rem) 0;
+  position: relative;
+}
+.project-story::before {
+  background: linear-gradient(90deg, rgba(27, 39, 33, 0.94), rgba(27, 39, 33, 0.8));
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.project-story__media {
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  z-index: -2;
+}
+
+.project-story__image {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
 }
 
 .project-story__grid {
@@ -249,36 +274,14 @@
   margin-bottom: 0;
 }
 
-.project-outcome {
-  background: #f2eee6;
-  isolation: isolate;
-  overflow: hidden;
-  padding: clamp(5rem, 8vw, 8rem) 0;
-  position: relative;
-}
-
-.project-outcome__media {
-  inset: 0;
-  margin: 0;
-  position: absolute;
-  z-index: -2;
-}
-
-.project-outcome__image {
-  display: block;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-}
-
-.project-outcome__inner {
-  border-top: 1px solid rgba(27, 39, 33, 0.18);
+.project-story__outcome {
+  border-top: 1px solid rgba(242, 238, 230, 0.26);
+  margin-top: clamp(3rem, 6vw, 6rem);
   max-width: 64rem;
   padding-top: 1.5rem;
 }
-
-.project-outcome .alder-heading-section {
+.project-story__outcome .alder-heading-section {
+  color: #f2eee6;
   max-width: 18ch;
 }
 
@@ -323,31 +326,10 @@
   margin-top: 2rem;
 }
 
-.project-outcome--with-media {
-  color: #f2eee6;
-}
-.project-outcome--with-media::before {
-  background: linear-gradient(90deg, rgba(27, 39, 33, 0.9), rgba(27, 39, 33, 0.7));
-  content: "";
-  inset: 0;
-  position: absolute;
-  z-index: -1;
-}
-.project-outcome--with-media .project-outcome__inner {
-  border-color: rgba(242, 238, 230, 0.26);
-}
-.project-outcome--with-media .projects-eyebrow {
-  color: #b98959;
-}
-.project-outcome--with-media .alder-heading-section {
-  color: #f2eee6;
-}
-
 @media (max-width: 767.98px) {
   .projects-archive__collection,
   .project-overview,
   .project-story,
-  .project-outcome,
   .project-testimonial {
     padding: 5.5rem 0;
   }
