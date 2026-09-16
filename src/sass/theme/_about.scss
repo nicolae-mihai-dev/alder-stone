@@ -73,11 +73,10 @@
   padding: clamp(4rem, 5vw, 5.5rem) 0;
 
   &__inner {
-    border-top: 1px solid $alder-rule;
-    display: grid;
-    gap: 0;
-    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
-    padding-top: $alder-space-md;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   &__eyebrow {
@@ -87,12 +86,11 @@
   &__title {
     --alder-heading-section-size: clamp(2.5rem, 3.4vw, 3.5rem);
     color: $alder-forest;
-    grid-column: 2;
   }
 
   &__text {
+    --alder-copy-margin-inline: auto;
     color: $alder-stone;
-    grid-column: 2;
     margin-top: 1.25rem;
     max-width: 42rem;
 
@@ -305,11 +303,6 @@
 
   .about-page .about-intro {
     padding: 4rem 0;
-
-    &__inner {
-      display: block;
-    }
-
   }
 
   .about-values {

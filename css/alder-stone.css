@@ -16575,11 +16575,10 @@ textarea:focus-visible {
   padding: clamp(4rem, 5vw, 5.5rem) 0;
 }
 .about-page .about-intro__inner {
-  border-top: 1px solid rgba(27, 39, 33, 0.18);
-  display: grid;
-  gap: 0;
-  grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
-  padding-top: 1.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .about-page .about-intro__eyebrow {
   color: #b98959;
@@ -16587,11 +16586,10 @@ textarea:focus-visible {
 .about-page .about-intro__title {
   --alder-heading-section-size: clamp(2.5rem, 3.4vw, 3.5rem);
   color: #1b2721;
-  grid-column: 2;
 }
 .about-page .about-intro__text {
+  --alder-copy-margin-inline: auto;
   color: #77766e;
-  grid-column: 2;
   margin-top: 1.25rem;
   max-width: 42rem;
 }
@@ -16766,9 +16764,6 @@ textarea:focus-visible {
   }
   .about-page .about-intro {
     padding: 4rem 0;
-  }
-  .about-page .about-intro__inner {
-    display: block;
   }
   .about-values {
     padding: 5.5rem 0;
