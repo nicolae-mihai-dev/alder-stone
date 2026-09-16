@@ -92,13 +92,14 @@
 
     &::before {
       content:"“";
-      color:rgba(27,39,33,.7);
-      display:block;
+      color:$alder-forest;
+      display:inline;
       font-family:$alder-display;
-      font-size:clamp(6rem, 10vw, 10rem);
+      font-size:clamp(4.5rem, 7vw, 7.5rem);
       font-style:normal;
-      line-height:.38;
-      margin:0 0 .24em -.06em;
+      line-height:0;
+      margin-right:.08em;
+      vertical-align:-.34em;
     }
   }
   > :last-child { margin-bottom:0; }

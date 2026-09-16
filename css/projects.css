@@ -319,13 +319,14 @@
 }
 .project-testimonial__quote > :first-child::before {
   content: "“";
-  color: rgba(27, 39, 33, 0.7);
-  display: block;
+  color: #1b2721;
+  display: inline;
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-size: clamp(6rem, 10vw, 10rem);
+  font-size: clamp(4.5rem, 7vw, 7.5rem);
   font-style: normal;
-  line-height: 0.38;
-  margin: 0 0 0.24em -0.06em;
+  line-height: 0;
+  margin-right: 0.08em;
+  vertical-align: -0.34em;
 }
 .project-testimonial__quote > :last-child {
   margin-bottom: 0;
