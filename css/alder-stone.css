@@ -16668,7 +16668,7 @@ textarea:focus-visible {
   align-items: center;
   display: grid;
   gap: clamp(2.5rem, 7vw, 8rem);
-  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.75fr);
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 1fr);
 }
 .about-studio__content {
   grid-column: 2;
@@ -16679,7 +16679,7 @@ textarea:focus-visible {
 }
 .about-studio__title {
   color: #1b2721;
-  max-width: 12ch;
+  max-width: 17ch;
 }
 .about-studio__text {
   color: #77766e;
