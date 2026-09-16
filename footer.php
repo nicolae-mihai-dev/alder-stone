@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="site-footer alder-stone-footer" id="colophon">
 		<div class="container">
-			<div class="row gy-4 align-items-start">
+			<div class="row gy-4 align-items-end">
 				<div class="col-lg-6">
 					<a class="alder-stone-brand alder-stone-footer-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<svg class="alder-stone-brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
