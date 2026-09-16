@@ -16522,8 +16522,7 @@ textarea:focus-visible {
   padding: clamp(3.75rem, 6vw, 7rem) 0 clamp(4.5rem, 8vw, 8.5rem);
 }
 .about-hero__inner {
-  align-items: end;
-  border-top: 1px solid rgba(27, 39, 33, 0.18);
+  align-items: center;
   display: grid;
   gap: clamp(2.5rem, 5vw, 6.5rem);
   grid-template-columns: minmax(0, 1.02fr) minmax(18rem, 0.78fr);

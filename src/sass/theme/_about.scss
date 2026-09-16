@@ -19,8 +19,7 @@
   padding: $alder-page-hero-padding;
 
   &__inner {
-    align-items: end;
-    border-top: 1px solid $alder-rule;
+    align-items: center;
     display: grid;
     gap: clamp(2.5rem, 5vw, 6.5rem);
     grid-template-columns: minmax(0, 1.02fr) minmax(18rem, 0.78fr);
