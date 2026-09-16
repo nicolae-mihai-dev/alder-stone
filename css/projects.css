@@ -299,17 +299,20 @@
 }
 
 .project-testimonial blockquote {
+  border-top: 0;
   margin: 0;
   max-width: 62rem;
+  padding-top: 0;
 }
 
 .project-testimonial__quote {
   color: #1b2721;
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(1.25rem, 1.65vw, 1.75rem);
+  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: clamp(1.65rem, 2.35vw, 2.6rem);
   font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 1.55;
+  font-style: italic;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
 }
 .project-testimonial__quote > :first-child {
   margin-top: 0;
@@ -328,7 +331,6 @@
 }
 
 .project-testimonial__attribution {
-  border-top: 1px solid rgba(27, 39, 33, 0.28);
   color: #1b2721;
   display: block;
   font-size: 0.8125rem;
@@ -336,7 +338,6 @@
   letter-spacing: 0.05em;
   margin-top: clamp(2rem, 4vw, 3.5rem);
   max-width: 28rem;
-  padding-top: 1.5rem;
 }
 
 @media (max-width: 767.98px) {
