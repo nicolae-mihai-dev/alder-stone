@@ -67,7 +67,7 @@ function alder_stone_register_project_acf_fields() {
 				),
 				array(
 					'key'       => 'field_alder_stone_project_tab_story',
-					'label'     => __( 'Challenge & Response', 'alder-stone' ),
+					'label'     => __( 'Project Story', 'alder-stone' ),
 					'type'      => 'tab',
 					'placement' => 'left',
 				),
@@ -84,12 +84,6 @@ function alder_stone_register_project_acf_fields() {
 					'name'  => 'project_response',
 					'type'  => 'textarea',
 					'instructions' => __( 'Explain the design decisions and approach taken in response.', 'alder-stone' ),
-				),
-				array(
-					'key'       => 'field_alder_stone_project_tab_outcome',
-					'label'     => __( 'The Outcome', 'alder-stone' ),
-					'type'      => 'tab',
-					'placement' => 'left',
 				),
 				array(
 					'key'   => 'field_alder_stone_project_outcome',
