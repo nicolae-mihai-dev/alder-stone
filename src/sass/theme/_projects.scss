@@ -79,7 +79,7 @@
 }
 
 .project-testimonial { background:$alder-canvas; padding:$alder-section-space 0; }
-.project-testimonial__title { color:$alder-forest; margin-bottom:1.25rem; }
+.project-testimonial__title { --alder-heading-margin-inline:auto; --alder-heading-space-after:1.5rem; color:$alder-forest; text-align:center; }
 .project-testimonial__inner { background:$alder-mineral; margin:auto; max-width:71rem; padding:clamp(2rem, 5vw, 5rem); }
 .project-testimonial blockquote { border-top:0; margin:0; max-width:62rem; padding-top:0; }
 .project-testimonial__quote {

@@ -128,7 +128,7 @@ get_header();
 			<?php if ( $quote ) : ?>
 				<section class="project-testimonial" aria-labelledby="project-testimonial-title-<?php echo esc_attr( $project_id ); ?>">
 					<div class="container">
-						<h2 class="alder-eyebrow projects-eyebrow project-testimonial__title" id="project-testimonial-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Client Testimonial', 'alder-stone' ); ?></h2>
+						<h2 class="alder-heading-section project-testimonial__title" id="project-testimonial-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Client Testimonial', 'alder-stone' ); ?></h2>
 						<div class="project-testimonial__inner">
 							<blockquote>
 								<div class="project-testimonial__quote"><?php echo $format_project_copy( $quote ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
