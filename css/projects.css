@@ -304,15 +304,16 @@
   padding: clamp(5rem, 8vw, 8rem) 0;
 }
 
+.project-testimonial__title {
+  color: #1b2721;
+  margin-bottom: 1.25rem;
+}
+
 .project-testimonial__inner {
   background: #b98959;
   margin: auto;
   max-width: 71rem;
   padding: clamp(2rem, 5vw, 5rem);
-}
-
-.project-testimonial__inner > .alder-eyebrow {
-  color: #1b2721;
 }
 
 .project-testimonial blockquote {
