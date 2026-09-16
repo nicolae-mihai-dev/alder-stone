@@ -46,8 +46,9 @@
 .project-card__link:hover .project-card__title { color: $alder-mineral; }
 
 .project-hero { background: $alder-canvas-light; padding: clamp(5rem, 8vw, 8rem) 0; }
-.project-hero__header { border-top: 1px solid $alder-rule; padding: 1.5rem 0; }
-.project-hero__meta { color: $alder-stone; font-size: .9375rem; margin: 1.5rem 0 0; }
+.project-hero__header { border-top: 1px solid $alder-rule; padding: 2.1875rem 0 2rem; }
+.project-hero .projects-eyebrow { margin-bottom: 1.375rem; }
+.project-hero__meta { color: $alder-stone; font-size: .9375rem; margin: 1.5625rem 0 0; }
 .project-hero__media { aspect-ratio: 2 / 1; margin: 0; overflow: hidden; }
 .project-hero__image { display:block; height:100%; object-fit:cover; width:100%; }
 
