@@ -16588,7 +16588,6 @@ textarea:focus-visible {
   --alder-heading-section-size: clamp(2.5rem, 3.4vw, 3.5rem);
   color: #1b2721;
   grid-column: 2;
-  max-width: 16ch;
 }
 .about-page .about-intro__text {
   color: #77766e;
