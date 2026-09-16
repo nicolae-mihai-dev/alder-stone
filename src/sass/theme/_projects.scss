@@ -66,7 +66,7 @@
 .project-story__media { inset:0; margin:0; position:absolute; z-index:-2; }
 .project-story__image { display:block; height:100%; object-fit:cover; width:100%; }
 .project-story__grid { display:grid; gap:clamp(1.5rem, 2.5vw, 2rem); grid-template-columns:repeat(2,minmax(0,1fr)); }
-.project-story__item { background:$alder-forest-deep; display:flex; flex-direction:column; justify-content:center; min-height:clamp(20rem, 25vw, 25rem); padding:clamp(1.75rem, 4vw, 4rem);
+.project-story__item { background:$alder-forest-deep; display:flex; flex-direction:column; min-height:clamp(20rem, 25vw, 25rem); padding:clamp(1.75rem, 4vw, 4rem);
   .alder-heading-item { color:$alder-canvas; }
 }
 .project-story__item .alder-copy { color:$alder-light-text; max-width:31rem;
