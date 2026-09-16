@@ -25,8 +25,8 @@ textarea:focus-visible {
   display: inline-flex;
   font-size: 1rem;
   font-weight: 700;
-  gap: 0.75rem;
-  letter-spacing: 0.12em;
+  gap: 0.6875rem;
+  letter-spacing: 0.14em;
   line-height: 1;
   text-decoration: none;
 
@@ -41,8 +41,8 @@ textarea:focus-visible {
   }
 
   &__mark-secondary {
-    fill: currentColor;
-    opacity: 0.72;
+    fill: $alder-mineral;
+    opacity: 1;
   }
 
   &__mark-detail {
@@ -103,6 +103,10 @@ textarea:focus-visible {
 
   &:hover,
   &:focus { color: $alder-canvas; }
+}
+
+.alder-stone-footer-brand .alder-stone-brand__mark-detail {
+  stroke: $alder-forest;
 }
 
 .alder-stone-footer-intro,

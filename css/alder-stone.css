@@ -15417,8 +15417,8 @@ textarea:focus-visible {
   display: inline-flex;
   font-size: 1rem;
   font-weight: 700;
-  gap: 0.75rem;
-  letter-spacing: 0.12em;
+  gap: 0.6875rem;
+  letter-spacing: 0.14em;
   line-height: 1;
   text-decoration: none;
 }
@@ -15431,8 +15431,8 @@ textarea:focus-visible {
   fill: currentColor;
 }
 .alder-stone-brand__mark-secondary {
-  fill: currentColor;
-  opacity: 0.72;
+  fill: #b98959;
+  opacity: 1;
 }
 .alder-stone-brand__mark-detail {
   fill: none;
@@ -15485,6 +15485,10 @@ textarea:focus-visible {
 }
 .alder-stone-footer-brand:hover, .alder-stone-footer-brand:focus {
   color: #f2eee6;
+}
+
+.alder-stone-footer-brand .alder-stone-brand__mark-detail {
+  stroke: #1b2721;
 }
 
 .alder-stone-footer-intro,
