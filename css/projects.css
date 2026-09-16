@@ -256,11 +256,9 @@
 }
 
 .project-story__grid {
-  border-top: 1px solid rgba(242, 238, 230, 0.26);
   display: grid;
   gap: clamp(2.5rem, 7vw, 8rem);
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  padding-top: 1.5rem;
 }
 
 .project-story__chapter .alder-copy {
