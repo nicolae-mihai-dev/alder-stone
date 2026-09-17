@@ -262,7 +262,7 @@
 .project-story__grid {
   display: grid;
   gap: clamp(1.5rem, 2.5vw, 2rem);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project-story__item {
@@ -288,6 +288,10 @@
 
 .project-story__item--outcome {
   background: #b98959;
+  grid-column: 1/-1;
+  justify-self: center;
+  max-width: 42rem;
+  width: 100%;
 }
 .project-story__item--outcome .alder-heading-item, .project-story__item--outcome .alder-copy {
   color: #1b2721;
@@ -356,14 +360,6 @@
   max-width: 28rem;
 }
 
-@media (max-width: 991.98px) {
-  .project-story__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .project-story__item--outcome {
-    grid-column: 1/-1;
-  }
-}
 @media (max-width: 767.98px) {
   .projects-archive__collection,
   .project-overview,
