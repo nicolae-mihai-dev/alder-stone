@@ -78,8 +78,8 @@
   .alder-heading-item, .alder-copy { color:$alder-forest; }
 }
 
-.project-testimonial { background:$alder-canvas; padding:$alder-section-space 0; }
-.project-testimonial__title { --alder-heading-margin-inline:auto; --alder-heading-space-after:1.5rem; color:$alder-forest; text-align:center; }
+.project-testimonial { background:$alder-canvas; padding:7.3125rem 0 $alder-section-space; }
+.project-testimonial__title { --alder-heading-margin-inline:auto; --alder-heading-space-after:3.0625rem; color:$alder-forest; text-align:center; }
 .project-testimonial__inner { background:$alder-mineral; margin:auto; max-width:71rem; padding:clamp(2rem, 5vw, 5rem); }
 .project-testimonial blockquote { border-top:0; margin:0; max-width:62rem; padding-top:0; }
 .project-testimonial__quote {
@@ -108,7 +108,7 @@
   }
   > :last-child { margin-bottom:0; }
 }
-.project-testimonial__attribution { color:$alder-forest; display:block; font-size:.8125rem; font-style:normal; letter-spacing:.05em; margin-top:clamp(2rem, 4vw, 3.5rem); max-width:28rem; }
+.project-testimonial__attribution { color:$alder-forest; display:block; font-size:.8125rem; font-style:normal; letter-spacing:.05em; margin-top:1.25rem; max-width:28rem; }
 
 @media (max-width: 991.98px) {
   .project-story__grid { grid-template-columns:repeat(2,minmax(0,1fr)); }

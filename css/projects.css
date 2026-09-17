@@ -295,12 +295,12 @@
 
 .project-testimonial {
   background: #f2eee6;
-  padding: clamp(5rem, 8vw, 8rem) 0;
+  padding: 7.3125rem 0 clamp(5rem, 8vw, 8rem);
 }
 
 .project-testimonial__title {
   --alder-heading-margin-inline:auto;
-  --alder-heading-space-after:1.5rem;
+  --alder-heading-space-after:3.0625rem;
   color: #1b2721;
   text-align: center;
 }
@@ -352,7 +352,7 @@
   font-size: 0.8125rem;
   font-style: normal;
   letter-spacing: 0.05em;
-  margin-top: clamp(2rem, 4vw, 3.5rem);
+  margin-top: 1.25rem;
   max-width: 28rem;
 }
 
