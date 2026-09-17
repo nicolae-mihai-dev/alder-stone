@@ -30,6 +30,14 @@ function alder_stone_register_project_acf_fields() {
 					'placement' => 'left',
 				),
 				array(
+					'key'           => 'field_alder_stone_project_overview_title',
+					'label'         => __( 'Overview Title', 'alder-stone' ),
+					'name'          => 'project_overview_title',
+					'type'          => 'text',
+					'default_value' => __( 'Project Overview', 'alder-stone' ),
+					'instructions'  => __( 'Heading displayed above the project description and details.', 'alder-stone' ),
+				),
+				array(
 					'key'   => 'field_alder_stone_project_location',
 					'label' => __( 'Location', 'alder-stone' ),
 					'name'  => 'project_location',

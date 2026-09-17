@@ -29,7 +29,7 @@
 }
 
 .projects-archive__intro {
-  color: #77766e;
+  color: #6b6a62;
   margin-top: 1.3125rem;
   max-width: 39rem;
 }
@@ -119,7 +119,7 @@
 }
 
 .project-card__meta {
-  color: #77766e;
+  color: #6b6a62;
   display: flex;
   flex-wrap: wrap;
   font-size: 0.8125rem;
@@ -162,7 +162,7 @@
 }
 
 .project-hero__meta {
-  color: #77766e;
+  color: #6b6a62;
   font-size: 0.9375rem;
   margin: 1.5625rem 0 0;
 }
@@ -195,7 +195,7 @@
 
 .project-overview__content {
   --alder-copy-space-before:0;
-  color: #77766e;
+  color: #6b6a62;
   grid-column: 2;
   max-width: 44rem;
 }
@@ -221,7 +221,7 @@
 }
 .project-facts dt {
   --alder-eyebrow-space-after:0;
-  color: #77766e;
+  color: #6b6a62;
 }
 .project-facts dd {
   margin: 0;

@@ -80,7 +80,7 @@
   }
 
   .home-eyebrow {
-    color: $alder-mineral;
+    color: $alder-mineral-light;
   }
 
   &__title {
@@ -139,7 +139,7 @@
     align-items: start;
     display: grid;
     gap: clamp(3.75rem, 7vw, 7.5rem);
-    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.15fr);
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
   }
 
   &__content,
@@ -153,7 +153,7 @@
   }
 
   &__eyebrow {
-    color: $alder-mineral;
+    color: $alder-mineral-strong;
   }
 
   &__title {
@@ -188,7 +188,7 @@
     gap: 0.65rem;
 
     &-number {
-      color: $alder-mineral;
+      color: $alder-mineral-strong;
       font-family: $alder-display;
       font-size: clamp(1.5rem, 2vw, 2.1rem);
       font-weight: 400;
@@ -250,7 +250,7 @@
 
   .home-eyebrow,
   .home-service__number {
-    color: $alder-mineral;
+    color: $alder-mineral-light;
   }
 
   .home-section-title,
@@ -311,7 +311,7 @@
 
 .home-featured-projects .home-eyebrow,
 .home-featured-projects .home-project__meta {
-  color: $alder-mineral;
+  color: $alder-mineral-light;
 }
 
 .home-featured-projects .home-section-title,
@@ -489,7 +489,7 @@
 
 .home-process .home-eyebrow,
 .home-process .home-process__number {
-  color: $alder-mineral;
+  color: $alder-mineral-strong;
 }
 
 .home-process__list {
@@ -552,6 +552,10 @@
     border-top: 0.25rem solid $alder-mineral;
     max-width: clamp(22rem, 46vw, 42rem);
     padding: clamp(2rem, 4.2vw, 4.5rem);
+
+    .home-eyebrow {
+      color: $alder-mineral-light;
+    }
   }
 
   &__title {

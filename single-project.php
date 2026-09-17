@@ -44,6 +44,7 @@ get_header();
 
 			return null !== $value && '' !== $value && false !== $value ? $value : ( $project_defaults[ $field_name ] ?? null );
 		};
+		$overview_title = $get_project_field( 'project_overview_title' ) ?: __( 'Project Overview', 'alder-stone' );
 		$location  = $get_project_field( 'project_location' );
 		$year      = $get_project_field( 'project_year' );
 		$client    = $get_project_field( 'project_client' );
@@ -77,7 +78,7 @@ get_header();
 				<div class="container">
 					<div class="project-overview__grid">
 						<div>
-							<h2 class="alder-heading-item project-overview__title" id="project-overview-title-<?php echo esc_attr( $project_id ); ?>"><?php esc_html_e( 'Project Overview', 'alder-stone' ); ?></h2>
+							<h2 class="alder-heading-item project-overview__title" id="project-overview-title-<?php echo esc_attr( $project_id ); ?>"><?php echo esc_html( $overview_title ); ?></h2>
 						</div>
 						<div class="alder-copy project-overview__content entry-content"><?php the_content(); ?></div>
 						<?php if ( $facts ) : ?>

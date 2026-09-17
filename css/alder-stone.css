@@ -15452,7 +15452,7 @@ textarea:focus-visible {
   padding: 0.25rem 0;
 }
 .alder-stone-navbar .nav-link:hover, .alder-stone-navbar .nav-link:focus, .alder-stone-navbar .nav-link.active {
-  color: #77766e;
+  color: #6b6a62;
 }
 
 .alder-stone-navbar .navbar-toggler {
@@ -15617,7 +15617,7 @@ textarea:focus-visible {
 }
 
 .home-eyebrow {
-  color: #77766e;
+  color: #6b6a62;
 }
 
 .home-hero {
@@ -15659,7 +15659,7 @@ textarea:focus-visible {
   padding: clamp(1.75rem, 3.8vw, 4rem);
 }
 .home-hero .home-eyebrow {
-  color: #b98959;
+  color: #e0b777;
 }
 .home-hero__title {
   color: #f2eee6;
@@ -15714,7 +15714,7 @@ textarea:focus-visible {
   align-items: start;
   display: grid;
   gap: clamp(3.75rem, 7vw, 7.5rem);
-  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.15fr);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
 }
 .home-page .about-intro__content, .home-page .about-intro__visual {
   min-width: 0;
@@ -15724,14 +15724,14 @@ textarea:focus-visible {
   max-width: 40rem;
 }
 .home-page .about-intro__eyebrow {
-  color: #b98959;
+  color: #8a5a32;
 }
 .home-page .about-intro__title {
   color: #1b2721;
   max-width: 40rem;
 }
 .home-page .about-intro__copy {
-  color: #77766e;
+  color: #6b6a62;
   max-width: 31.25rem;
 }
 .home-page .about-intro__copy p {
@@ -15753,7 +15753,7 @@ textarea:focus-visible {
   gap: 0.65rem;
 }
 .home-page .about-intro__principle-number {
-  color: #b98959;
+  color: #8a5a32;
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   font-size: clamp(1.5rem, 2vw, 2.1rem);
   font-weight: 400;
@@ -15806,7 +15806,7 @@ textarea:focus-visible {
 }
 .home-services .home-eyebrow,
 .home-services .home-service__number {
-  color: #b98959;
+  color: #e0b777;
 }
 .home-services .home-section-title,
 .home-services .home-service__title {
@@ -15862,7 +15862,7 @@ textarea:focus-visible {
 
 .home-featured-projects .home-eyebrow,
 .home-featured-projects .home-project__meta {
-  color: #b98959;
+  color: #e0b777;
 }
 
 .home-featured-projects .home-section-title,
@@ -16036,7 +16036,7 @@ textarea:focus-visible {
 
 .home-process .home-eyebrow,
 .home-process .home-process__number {
-  color: #b98959;
+  color: #8a5a32;
 }
 
 .home-process__list {
@@ -16068,7 +16068,7 @@ textarea:focus-visible {
 }
 
 .home-process__text {
-  color: #77766e;
+  color: #6b6a62;
   max-width: 19rem;
 }
 
@@ -16097,6 +16097,9 @@ textarea:focus-visible {
   border-top: 0.25rem solid #b98959;
   max-width: clamp(22rem, 46vw, 42rem);
   padding: clamp(2rem, 4.2vw, 4.5rem);
+}
+.home-cta__grid .home-eyebrow {
+  color: #e0b777;
 }
 .home-cta__title {
   color: #f2eee6;
@@ -16305,7 +16308,7 @@ textarea:focus-visible {
   color: #1b2721;
 }
 .services-hero__text {
-  color: #77766e;
+  color: #6b6a62;
   margin-top: 1.375rem;
   max-width: 39rem;
 }
@@ -16356,7 +16359,7 @@ textarea:focus-visible {
 }
 .services-intro__text {
   --alder-copy-margin-inline: auto;
-  color: #77766e;
+  color: #6b6a62;
   max-width: 43rem;
 }
 .services-intro__text > :first-child {
@@ -16461,7 +16464,7 @@ textarea:focus-visible {
   max-width: 18ch;
 }
 .services-process__text {
-  color: #77766e;
+  color: #6b6a62;
   max-width: 34rem;
 }
 .services-process__text > :first-child {
@@ -16569,7 +16572,7 @@ textarea:focus-visible {
   color: #1b2721;
 }
 .about-hero__text {
-  color: #77766e;
+  color: #6b6a62;
 }
 .about-hero__text p {
   margin-bottom: 0;
@@ -16606,7 +16609,7 @@ textarea:focus-visible {
 }
 .about-page .about-intro__text {
   --alder-copy-margin-inline: auto;
-  color: #77766e;
+  color: #6b6a62;
   margin-top: 1.25rem;
   max-width: 42rem;
 }
@@ -16697,7 +16700,7 @@ textarea:focus-visible {
   max-width: 17ch;
 }
 .about-studio__text {
-  color: #77766e;
+  color: #6b6a62;
   max-width: 31rem;
 }
 .about-studio__text > :first-child {
