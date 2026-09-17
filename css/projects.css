@@ -189,8 +189,14 @@
   border-top: 1px solid rgba(27, 39, 33, 0.18);
   display: grid;
   gap: 3rem clamp(2rem, 7vw, 8rem);
-  grid-template-columns: minmax(9rem, 0.2fr) minmax(0, 1fr);
+  grid-template-columns: minmax(9rem, 0.42fr) minmax(0, 1fr);
   padding-top: 1.5rem;
+}
+
+.project-overview__title {
+  align-self: start;
+  position: sticky;
+  top: clamp(1.5rem, 4vw, 4rem);
 }
 
 .project-overview__content {
@@ -382,6 +388,9 @@
   }
   .project-overview__grid {
     display: block;
+  }
+  .project-overview__title {
+    position: static;
   }
   .project-overview__content {
     --alder-copy-space-before:2rem;

@@ -57,6 +57,15 @@ function alder_stone_register_services_acf_fields() {
 					'type'          => 'textarea',
 					'default_value' => __( 'From early thinking to final delivery, we bring clarity, coordination and craft to every stage of the project.', 'alder-stone' ),
 				),
+				array(
+					'key'           => 'field_alder_stone_services_hero_image',
+					'label'         => __( 'Services Hero Image', 'alder-stone' ),
+					'name'          => 'services_hero_image',
+					'type'          => 'image',
+					'instructions'  => __( 'Image displayed beside the Services hero content. This takes priority over Featured Image.', 'alder-stone' ),
+					'return_format' => 'id',
+					'preview_size'  => 'medium_large',
+				),
 
 				// Introduction.
 				array(
@@ -70,7 +79,7 @@ function alder_stone_register_services_acf_fields() {
 					'label'         => __( 'Services Intro Title', 'alder-stone' ),
 					'name'          => 'services_intro_title',
 					'type'          => 'text',
-					'default_value' => __( 'Built around the way you live and work.', 'alder-stone' ),
+					'default_value' => __( 'Architecture and Construction Services Built Around the Way You Live and Work.', 'alder-stone' ),
 				),
 				array(
 					'key'           => 'field_alder_stone_services_intro_text',

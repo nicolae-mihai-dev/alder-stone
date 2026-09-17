@@ -16355,7 +16355,7 @@ textarea:focus-visible {
 .services-intro__title {
   --alder-heading-margin-inline: auto;
   color: #1b2721;
-  max-width: 46.8125rem;
+  max-width: 57rem;
 }
 .services-intro__text {
   --alder-copy-margin-inline: auto;

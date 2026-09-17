@@ -26,7 +26,7 @@
 .alder-heading-item {
   font-size: var(--alder-heading-item-size, clamp(1.7rem, 2.45vw, 2.85rem));
   letter-spacing: -0.035em;
-  line-height: 0.98;
+  line-height: 1.15;
 }
 
 .alder-heading-feature {
@@ -59,6 +59,26 @@
   line-height: 1.65;
   margin-block: var(--alder-copy-space-before, 2rem) var(--alder-copy-space-after, 0);
   margin-inline: var(--alder-copy-margin-inline, 0);
+}
+
+:where(.alder-copy, .entry-content) a:not(.alder-button) {
+  color: inherit;
+  font-weight: 400;
+  text-decoration-color: currentcolor;
+  text-decoration-line: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-thickness 180ms ease, text-underline-offset 180ms ease;
+}
+:where(.alder-copy, .entry-content) a:not(.alder-button):hover {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.23em;
+}
+:where(.alder-copy, .entry-content) a:not(.alder-button):focus-visible {
+  outline: 3px solid currentcolor;
+  outline-offset: 0.25rem;
 }
 
 .alder-eyebrow {
