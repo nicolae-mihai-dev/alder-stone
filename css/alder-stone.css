@@ -16310,7 +16310,7 @@ textarea:focus-visible {
 }
 
 .services-intro {
-  padding: clamp(5rem, 8vw, 8rem) 0;
+  padding: 7.375rem 0 7.4375rem;
 }
 .services-intro__content {
   text-align: center;
