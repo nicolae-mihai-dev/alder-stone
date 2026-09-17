@@ -269,8 +269,8 @@
   }
 
   &__button {
-    max-width: 15.3125rem;
-    width: 15.3125rem;
+    max-width: 15.3125rem !important;
+    width: 15.3125rem !important;
 
     &::after {
       height: 22px;
