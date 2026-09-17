@@ -223,31 +223,17 @@ get_header();
 			</section>
 		<?php endif; ?>
 
-		<?php if ( $has_value( $cta_title ) || $has_value( $cta_text ) || ! empty( $cta_button ) ) : ?>
-			<section class="about-cta">
-				<div class="container">
-					<div class="about-cta__content">
-						<?php if ( $has_value( $cta_title ) ) : ?>
-							<h2 class="alder-heading-section about-cta__title"><?php echo esc_html( $cta_title ); ?></h2>
-						<?php endif; ?>
-
-						<?php if ( $has_value( $cta_text ) ) : ?>
-							<div class="alder-copy about-cta__text"><?php echo wp_kses_post( wpautop( esc_html( $cta_text ) ) ); ?></div>
-						<?php endif; ?>
-
-						<?php if ( is_array( $cta_button ) && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) : ?>
-							<?php
-							$cta_button_target = ! empty( $cta_button['target'] ) ? $cta_button['target'] : '_self';
-							$cta_button_rel    = '_blank' === $cta_button_target ? 'noopener noreferrer' : '';
-							?>
-							<a class="alder-button about-cta__button" href="<?php echo esc_url( $cta_button['url'] ); ?>" target="<?php echo esc_attr( $cta_button_target ); ?>"<?php echo $cta_button_rel ? ' rel="' . esc_attr( $cta_button_rel ) . '"' : ''; ?>>
-								<?php echo esc_html( $cta_button['title'] ); ?>
-							</a>
-						<?php endif; ?>
-					</div>
-				</div>
-			</section>
-		<?php endif; ?>
+		<?php
+		get_template_part(
+			'template-parts/section',
+			'cta',
+			array(
+				'title'  => $cta_title,
+				'text'   => $cta_text,
+				'button' => $cta_button,
+			)
+		);
+		?>
 	<?php endwhile; ?>
 </main>
 

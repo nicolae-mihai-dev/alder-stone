@@ -231,47 +231,6 @@
   }
 }
 
-.about-cta {
-  align-items: center;
-  background: #27372e;
-  color: $alder-canvas;
-  display: flex;
-  min-height: clamp(28rem, 40vw, 38rem);
-  padding: $alder-section-space 0;
-
-  .container {
-    width: 100%;
-  }
-
-  &__content {
-    border-top: 1px solid $alder-light-rule;
-    margin: 0 auto;
-    max-width: 47rem;
-    padding-top: $alder-space-md;
-    text-align: center;
-  }
-
-  &__title {
-    --alder-heading-margin-inline: auto;
-    color: $alder-canvas;
-    max-width: 17ch;
-  }
-
-  &__text {
-    --alder-copy-margin-inline: auto;
-    color: $alder-light-text;
-    max-width: 34rem;
-
-    p {
-      margin-bottom: 0;
-    }
-  }
-
-  &__button {
-    max-width: 100%;
-  }
-}
-
 @media (max-width: 991.98px) {
   .about-hero__inner {
     gap: clamp(2.5rem, 5vw, 4rem);
@@ -343,10 +302,6 @@
     }
   }
 
-  .about-cta {
-    min-height: 32rem;
-    padding: $alder-section-space-mobile 0;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -357,11 +312,5 @@
 
   .about-values__number {
     font-size: 4.5rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .about-cta__button {
-    transition: none;
   }
 }
