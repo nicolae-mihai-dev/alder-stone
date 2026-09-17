@@ -361,6 +361,10 @@
 }
 
 @media (max-width: 767.98px) {
+  .projects-archive__hero,
+  .project-hero {
+    padding: 3.5rem 0 5rem;
+  }
   .projects-archive__collection,
   .project-overview,
   .project-story,
@@ -372,9 +376,6 @@
   }
   .project-card:nth-child(even) {
     margin-top: 0;
-  }
-  .project-hero {
-    padding-top: 3.5rem;
   }
   .project-hero__media {
     aspect-ratio: 1/1;
