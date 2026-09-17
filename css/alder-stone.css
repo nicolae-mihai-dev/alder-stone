@@ -16505,6 +16505,26 @@ textarea:focus-visible {
   }
   .services-list__item:nth-child(odd) {
     border-right: 0;
+    background: #b98959;
+    color: #27372e;
+  }
+  .services-list__item:nth-child(odd) .services-list__number,
+  .services-list__item:nth-child(odd) .services-list__title,
+  .services-list__item:nth-child(odd) .services-list__text {
+    color: #27372e;
+  }
+  .services-list__item:nth-child(4n) {
+    background: #27372e;
+    color: #f2eee6;
+  }
+  .services-list__item:nth-child(4n) .services-list__number {
+    color: #b98959;
+  }
+  .services-list__item:nth-child(4n) .services-list__title {
+    color: #f2eee6;
+  }
+  .services-list__item:nth-child(4n) .services-list__text {
+    color: #d8d4cb;
   }
   .services-list__item--last-row {
     border-bottom: 1px solid rgba(242, 238, 230, 0.26);

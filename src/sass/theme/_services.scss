@@ -254,12 +254,37 @@
     grid-template-columns: 1fr;
   }
 
-  .services-list__item {
-    border-right: 0;
+	.services-list__item {
+		border-right: 0;
 
-    &:nth-child(odd) {
-      border-right: 0;
-    }
+		&:nth-child(odd) {
+			border-right: 0;
+			background: $alder-mineral;
+			color: $alder-forest-deep;
+
+			.services-list__number,
+			.services-list__title,
+			.services-list__text {
+				color: $alder-forest-deep;
+			}
+		}
+
+		&:nth-child(4n) {
+			background: $alder-forest-deep;
+			color: $alder-canvas;
+
+			.services-list__number {
+				color: $alder-mineral;
+			}
+
+			.services-list__title {
+				color: $alder-canvas;
+			}
+
+			.services-list__text {
+				color: $alder-light-text;
+			}
+		}
 
     &--last-row {
       border-bottom: 1px solid $alder-light-rule;
