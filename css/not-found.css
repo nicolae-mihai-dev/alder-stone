@@ -34,8 +34,8 @@
 }
 
 .not-found-page__title {
-  --alder-heading-size:clamp(2.5rem, 4.2vw, 4.5rem);
-  --alder-heading-mobile-size:clamp(2.3rem, 10.5vw, 3.35rem);
+  --alder-heading-size:4.05rem;
+  --alder-heading-mobile-size:clamp(2.07rem, 9.45vw, 3.015rem);
   max-width: 10ch;
 }
 

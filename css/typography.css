@@ -1,3 +1,16 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+body:not(.home) main h1 {
+  font-size: 4.375rem;
+}
+
 .alder-heading,
 .alder-heading-section,
 .alder-heading-item,
@@ -8,7 +21,7 @@
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   font-weight: 400;
   letter-spacing: -0.04em;
-  line-height: 0.93;
+  line-height: 1;
   margin-block: var(--alder-heading-space-before, 0) var(--alder-heading-space-after, 0);
   margin-inline: var(--alder-heading-margin-inline, 0);
   padding: 0;
@@ -16,41 +29,36 @@
 }
 
 .alder-heading {
-  font-size: var(--alder-heading-size, clamp(2.75rem, 4.6vw, 5rem));
+  font-size: var(--alder-heading-size, 5rem);
 }
 
 .alder-heading-section {
-  font-size: var(--alder-heading-section-size, clamp(2.5rem, 4.2vw, 4.5rem));
+  font-size: var(--alder-heading-section-size, 4.05rem);
 }
 
 .alder-heading-item {
-  font-size: var(--alder-heading-item-size, clamp(1.7rem, 2.45vw, 2.85rem));
+  font-size: var(--alder-heading-item-size, 2.565rem);
   letter-spacing: -0.035em;
-  line-height: 1.15;
 }
 
 .alder-heading-feature {
   font-size: clamp(2.25rem, 3.3vw, 3.75rem);
   letter-spacing: -0.05em;
-  line-height: 0.85;
 }
 
 .alder-heading-4 {
-  font-size: clamp(1.375rem, 1.8vw, 1.75rem);
-  line-height: 1.08;
+  font-size: 1.575rem;
 }
 
 .alder-heading-5 {
-  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
-  line-height: 1.2;
+  font-size: 1.2375rem;
 }
 
 .alder-heading-6 {
   font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.7875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  line-height: 1.35;
   text-transform: uppercase;
 }
 
@@ -92,12 +100,26 @@
   text-transform: uppercase;
 }
 
+@media (max-width: 991.98px) {
+  body:not(.home) main h1 {
+    font-size: clamp(2.75rem, 5.75vw, 4.375rem);
+  }
+  .alder-heading {
+    font-size: var(--alder-heading-tablet-size, clamp(2.75rem, 7.8vw, 5rem));
+  }
+  .alder-heading-section {
+    font-size: var(--alder-heading-section-tablet-size, clamp(2.25rem, 3.78vw, 4.05rem));
+  }
+  .alder-heading-item {
+    font-size: var(--alder-heading-item-tablet-size, clamp(1.53rem, 2.205vw, 2.565rem));
+  }
+}
 @media (max-width: 575.98px) {
   .alder-heading {
     font-size: var(--alder-heading-mobile-size, clamp(2.45rem, 11.5vw, 3.6rem));
   }
   .alder-heading-section {
-    font-size: var(--alder-heading-section-mobile-size, clamp(2.3rem, 10.5vw, 3.35rem));
+    font-size: var(--alder-heading-section-mobile-size, clamp(2.07rem, 9.45vw, 3.015rem));
   }
   .alder-heading-feature {
     font-size: 2.75rem;

@@ -7,6 +7,8 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+$privacy_policy_url = get_privacy_policy_url();
 ?>
 
 	<footer class="site-footer alder-stone-footer" id="colophon">
@@ -29,6 +31,9 @@ defined( 'ABSPATH' ) || exit;
 				<p class="mb-0">
 					&copy; <?php echo esc_html( wp_date( 'Y' ) ); ?> <?php esc_html_e( 'Alder & Stone.', 'alder-stone' ); ?>
 					<?php esc_html_e( 'All rights reserved.', 'alder-stone' ); ?>
+					<?php if ( $privacy_policy_url ) : ?>
+						<span aria-hidden="true"> | </span><a class="alder-stone-footer-bottom__privacy" href="<?php echo esc_url( $privacy_policy_url ); ?>"><?php esc_html_e( 'Privacy Policy', 'alder-stone' ); ?></a>
+					<?php endif; ?>
 				</p>
 			</div>
 		</div>

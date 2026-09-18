@@ -40,6 +40,7 @@ get_header();
 		$hero_eyebrow = $get_contact_field( 'contact_eyebrow' );
 		$hero_title   = $get_contact_field( 'contact_title' );
 		$hero_text    = $get_contact_field( 'contact_text' );
+		$hero_image_id = absint( $get_contact_field( 'contact_hero_image' ) );
 		$contact_email = sanitize_email( (string) $get_contact_field( 'contact_email' ) );
 		$contact_phone = $get_contact_field( 'contact_phone' );
 		$contact_location = $get_contact_field( 'contact_location' );
@@ -90,7 +91,7 @@ get_header();
 						<?php endif; ?>
 
 						<?php if ( $has_value( $hero_text ) ) : ?>
-							<div class="alder-copy contact-hero__text"><?php echo wp_kses_post( wpautop( esc_html( $hero_text ) ) ); ?></div>
+							<div class="alder-copy contact-hero__text"><?php echo wp_kses_post( wpautop( $hero_text ) ); ?></div>
 						<?php endif; ?>
 					</div>
 
@@ -111,6 +112,23 @@ get_header();
 						</dl>
 					<?php endif; ?>
 				</div>
+
+				<?php if ( $hero_image_id ) : ?>
+					<figure class="contact-hero__media">
+						<?php
+						echo wp_get_attachment_image(
+							$hero_image_id,
+							'large',
+							false,
+							array(
+								'class'   => 'contact-hero__image',
+								'loading' => 'lazy',
+								'sizes'   => '(min-width: 1200px) 82.5rem, 100vw',
+							)
+						);
+						?>
+					</figure>
+				<?php endif; ?>
 			</div>
 		</section>
 

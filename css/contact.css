@@ -35,6 +35,18 @@
 .contact-hero__text p {
   margin-bottom: 0;
 }
+.contact-hero__media {
+  aspect-ratio: 2.25/1;
+  margin: clamp(3rem, 7vw, 6rem) 0 0;
+  overflow: hidden;
+}
+.contact-hero__image {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
 
 .contact-details {
   border-bottom: 1px solid rgba(27, 39, 33, 0.18);
@@ -78,8 +90,6 @@
   grid-template-columns: minmax(0, 0.55fr) minmax(16rem, 1.15fr);
 }
 .contact-inquiry__title {
-  --alder-heading-section-size: clamp(2.5rem, 4.2vw, 3.2rem);
-  --alder-heading-section-mobile-size: clamp(2.25rem, 10vw, 3rem);
   color: #f2eee6;
 }
 .contact-inquiry__text {
@@ -206,6 +216,9 @@
   .contact-hero__inner {
     align-items: start;
     grid-template-columns: 1fr;
+  }
+  .contact-hero__media {
+    aspect-ratio: 4/3;
   }
   .contact-inquiry {
     padding: 5.5rem 0;

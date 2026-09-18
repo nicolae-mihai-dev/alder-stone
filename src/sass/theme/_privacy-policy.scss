@@ -1,0 +1,185 @@
+// A legal page should read as a calm, single-column document rather than a blog post with widgets.
+
+.privacy-page {
+  background: $alder-canvas;
+  color: $alder-forest;
+  overflow-x: clip;
+
+  .container {
+    max-width: $alder-content-width;
+  }
+}
+
+.privacy-page + .alder-stone-footer {
+  margin-top: 0;
+}
+
+.privacy-hero {
+  background: $alder-canvas-light;
+  padding: $alder-page-hero-padding;
+
+  &__eyebrow {
+    color: $alder-mineral-strong;
+    margin-bottom: $alder-space-eyebrow-to-heading;
+  }
+
+  &__title {
+    color: $alder-forest;
+    max-width: 16ch;
+  }
+}
+
+.privacy-content {
+  padding: $alder-section-space 0;
+
+  &__layout {
+    display: grid;
+    gap: clamp(3rem, 6vw, 6rem);
+    grid-template-columns: minmax(0, 52rem) minmax(14rem, 18rem);
+  }
+
+  &__article {
+    color: $alder-stone;
+    max-width: 52rem;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > p:first-child {
+      color: $alder-forest;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+    }
+
+    p {
+      font-size: clamp(1rem, 1.25vw, 1.2rem);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    p + p,
+    ul + p,
+    ol + p {
+      margin-top: $alder-space-md;
+    }
+
+    h2,
+    h3,
+    h4 {
+      color: $alder-forest;
+      font-family: $alder-display;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+      line-height: 1;
+      margin: clamp(3rem, 6vw, 5rem) 0 $alder-space-sm;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 2.75vw, 2.6rem);
+    }
+
+    h3,
+    h4 {
+      font-size: clamp(1.4rem, 2vw, 1.85rem);
+    }
+
+    ul,
+    ol {
+      margin: $alder-space-md 0 0;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      padding-left: 0.35rem;
+    }
+
+    li + li {
+      margin-top: 0.65rem;
+    }
+
+    strong {
+      color: $alder-forest;
+      font-weight: 700;
+    }
+  }
+
+  &__toc {
+    align-self: start;
+    position: sticky;
+    top: clamp(1.5rem, 4vw, 4rem);
+
+    h2,
+    h3 {
+      color: $alder-forest;
+      font-family: $alder-sans;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      margin: 0 0 1rem;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    li + li {
+      margin-top: 0.5rem;
+    }
+
+    a {
+      color: $alder-stone;
+      display: inline;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.4;
+      text-decoration-color: currentcolor;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+
+      &:hover {
+        color: $alder-forest;
+      }
+
+      &:focus-visible {
+        outline: 3px solid $alder-mineral-light;
+        outline-offset: 0.25rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .privacy-hero {
+    padding: $alder-page-hero-padding-mobile;
+  }
+
+  .privacy-content {
+    padding: $alder-section-space-mobile 0;
+
+    &__layout {
+      display: block;
+    }
+
+    &__toc {
+      margin-bottom: 3rem;
+      position: static;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .privacy-page .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}

@@ -1,6 +1,20 @@
 // One visual source of truth for all reusable Alder & Stone type roles.
 // Semantic HTML levels remain meaningful; the class selects the visual role.
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+// The Home hero keeps the 80px reference; every other public-page H1 caps at 70px.
+body:not(.home) main h1 {
+  font-size: $alder-page-title-size;
+}
+
 .alder-heading,
 .alder-heading-section,
 .alder-heading-item,
@@ -11,7 +25,7 @@
   font-family: $alder-display;
   font-weight: 400;
   letter-spacing: -0.04em;
-  line-height: 0.93;
+  line-height: 1;
   margin-block: var(--alder-heading-space-before, 0) var(--alder-heading-space-after, 0);
   margin-inline: var(--alder-heading-margin-inline, 0);
   padding: 0;
@@ -29,32 +43,27 @@
 .alder-heading-item {
   font-size: var(--alder-heading-item-size, #{$alder-item-title-size});
   letter-spacing: -0.035em;
-  line-height: 1.15;
 }
 
 .alder-heading-feature {
   font-size: clamp(2.25rem, 3.3vw, 3.75rem);
   letter-spacing: -0.05em;
-  line-height: 0.85;
 }
 
 // Available for future content without reintroducing page-level heading CSS.
 .alder-heading-4 {
-  font-size: clamp(1.375rem, 1.8vw, 1.75rem);
-  line-height: 1.08;
+  font-size: $alder-heading-4-size;
 }
 
 .alder-heading-5 {
-  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
-  line-height: 1.2;
+  font-size: $alder-heading-5-size;
 }
 
 .alder-heading-6 {
   font-family: $alder-sans;
-  font-size: 0.875rem;
+  font-size: $alder-heading-6-size;
   font-weight: 700;
   letter-spacing: 0.08em;
-  line-height: 1.35;
   text-transform: uppercase;
 }
 
@@ -96,6 +105,24 @@
   margin-block: var(--alder-eyebrow-space-before, 0) var(--alder-eyebrow-space-after, #{$alder-space-eyebrow-to-heading});
   margin-inline: var(--alder-eyebrow-margin-inline, 0);
   text-transform: uppercase;
+}
+
+@media (max-width: 991.98px) {
+  body:not(.home) main h1 {
+    font-size: $alder-page-title-size-tablet;
+  }
+
+  .alder-heading {
+    font-size: var(--alder-heading-tablet-size, clamp(2.75rem, 7.8vw, 5rem));
+  }
+
+  .alder-heading-section {
+    font-size: var(--alder-heading-section-tablet-size, #{$alder-section-title-size-tablet});
+  }
+
+  .alder-heading-item {
+    font-size: var(--alder-heading-item-tablet-size, #{$alder-item-title-size-tablet});
+  }
 }
 
 @media (max-width: 575.98px) {

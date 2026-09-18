@@ -41,6 +41,19 @@
       margin-bottom: 0;
     }
   }
+
+  &__media {
+    aspect-ratio: 2.25 / 1;
+    margin: clamp(3rem, 7vw, 6rem) 0 0;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
 }
 
 .contact-details {
@@ -95,8 +108,6 @@
   }
 
   &__title {
-    --alder-heading-section-size: clamp(2.5rem, 4.2vw, 3.2rem);
-    --alder-heading-section-mobile-size: clamp(2.25rem, 10vw, 3rem);
     color: $alder-canvas;
   }
 
@@ -237,6 +248,10 @@
     &__inner {
       align-items: start;
       grid-template-columns: 1fr;
+    }
+
+    &__media {
+      aspect-ratio: 4 / 3;
     }
   }
 
