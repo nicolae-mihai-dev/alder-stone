@@ -152,7 +152,7 @@ get_header();
 		<section class="home-hero<?php echo esc_attr( $hero_image ? ' home-hero--with-media' : '' ); ?>">
 			<?php if ( $hero_image ) : ?>
 				<figure class="home-hero__media" aria-hidden="true">
-					<?php echo wp_get_attachment_image( $hero_image, 'full', false, array( 'class' => 'home-hero__image', 'alt' => '' ) ); ?>
+					<?php echo wp_get_attachment_image( $hero_image, 'full', false, array( 'class' => 'home-hero__image', 'alt' => '', 'decoding' => 'async', 'fetchpriority' => 'high', 'loading' => 'eager' ) ); ?>
 				</figure>
 			<?php endif; ?>
 
@@ -227,7 +227,7 @@ get_header();
 					<?php if ( $intro_image ) : ?>
 						<figure class="about-intro__visual">
 							<div class="about-intro__image-wrap">
-								<?php echo wp_get_attachment_image( $intro_image, 'large', false, array( 'class' => 'about-intro__image' ) ); ?>
+								<?php echo wp_get_attachment_image( $intro_image, 'about-intro', false, array( 'class' => 'about-intro__image', 'decoding' => 'async', 'loading' => 'lazy', 'sizes' => '(min-width: 1320px) 43.5rem, (min-width: 768px) 45vw, 100vw' ) ); ?>
 							</div>
 						</figure>
 					<?php endif; ?>
@@ -318,13 +318,15 @@ get_header();
 						$project_id       = $featured_project->ID;
 						$project_location = function_exists( 'get_field' ) ? get_field( 'project_location', $project_id ) : get_post_meta( $project_id, 'project_location', true );
 						$project_year     = function_exists( 'get_field' ) ? get_field( 'project_year', $project_id ) : get_post_meta( $project_id, 'project_year', true );
-						$project_image_size = 0 === $project_index ? 'full' : 'large';
+						$project_image_size = 0 === $project_index ? 'home-project-primary' : 'home-project-card';
 						$project_image_attributes = array(
 							'class' => 'home-project__image',
+							'decoding' => 'async',
+							'loading' => 'lazy',
 						);
 
 						if ( 0 === $project_index ) {
-							$project_image_attributes['sizes'] = '(min-width: 1200px) 42vw, 100vw';
+							$project_image_attributes['sizes'] = '(min-width: 1320px) 50rem, (min-width: 1200px) 52vw, 100vw';
 						}
 						?>
 
@@ -435,7 +437,7 @@ get_header();
 		<section class="home-cta<?php echo esc_attr( $cta_image_id ? ' home-cta--with-media' : '' ); ?>">
 			<?php if ( $cta_image_id ) : ?>
 				<figure class="home-cta__media" aria-hidden="true">
-					<?php echo wp_get_attachment_image( $cta_image_id, 'full', false, array( 'class' => 'home-cta__image', 'alt' => '' ) ); ?>
+					<?php echo wp_get_attachment_image( $cta_image_id, 'full', false, array( 'class' => 'home-cta__image', 'alt' => '', 'decoding' => 'async', 'loading' => 'lazy' ) ); ?>
 				</figure>
 			<?php endif; ?>
 

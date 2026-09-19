@@ -27,8 +27,35 @@ function alder_stone_remove_parent_scripts() {
 
 	wp_dequeue_script( 'understrap-scripts' );
 	wp_deregister_script( 'understrap-scripts' );
+
+	// The Alder Stone bundle uses Bootstrap 5's vanilla-JS components and has no
+	// jQuery dependency. Understrap enqueues it by default, so remove it from
+	// logged-out frontend views after the parent enqueue callback has run. Keep
+	// it for the logged-in toolbar, where Rank Math uses jQuery.
+	if ( ! is_admin_bar_showing() ) {
+		wp_dequeue_script( 'jquery' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'alder_stone_remove_parent_scripts', 20 );
+
+/**
+ * Removes legacy emoji detection from public pages.
+ *
+ * Modern browsers render native emoji without WordPress's compatibility
+ * loader. Keep WordPress admin and feed transformations untouched.
+ *
+ * @return void
+ */
+function alder_stone_disable_frontend_emojis() {
+	if ( is_admin() ) {
+		return;
+	}
+
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+}
+add_action( 'init', 'alder_stone_disable_frontend_emojis', 20 );
 
 
 
@@ -50,25 +77,35 @@ function alder_stone_enqueue_assets() {
 
 	wp_enqueue_style( 'alder-stone-styles', get_stylesheet_directory_uri() . $theme_styles, array(), $css_version );
 
-	$responsive_styles      = "/css/responsive{$suffix}.css";
-	$responsive_styles_path = get_stylesheet_directory() . $responsive_styles;
+	$page_style_handles = array();
 
-	if ( file_exists( $responsive_styles_path ) ) {
-		wp_enqueue_style( 'alder-stone-responsive', get_stylesheet_directory_uri() . $responsive_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $responsive_styles_path ) );
+	if ( is_front_page() ) {
+		$page_style_handles['alder-stone-home'] = 'home';
 	}
 
-	$accessibility_styles      = "/css/accessibility{$suffix}.css";
-	$accessibility_styles_path = get_stylesheet_directory() . $accessibility_styles;
-
-	if ( file_exists( $accessibility_styles_path ) ) {
-		wp_enqueue_style( 'alder-stone-accessibility', get_stylesheet_directory_uri() . $accessibility_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $accessibility_styles_path ) );
+	if ( is_page( 'about' ) ) {
+		$page_style_handles['alder-stone-about'] = 'about';
 	}
 
-	$button_styles      = "/css/buttons{$suffix}.css";
-	$button_styles_path = get_stylesheet_directory() . $button_styles;
+	if ( is_page( 'services' ) ) {
+		$page_style_handles['alder-stone-services'] = 'services';
+	}
 
-	if ( file_exists( $button_styles_path ) ) {
-		wp_enqueue_style( 'alder-stone-buttons', get_stylesheet_directory_uri() . $button_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $button_styles_path ) );
+	if ( is_home() || is_singular( 'post' ) || is_category() || is_tag() || is_date() || is_author() ) {
+		$page_style_handles['alder-stone-journal'] = 'journal';
+	}
+
+	if ( is_page( 'privacy-policy' ) ) {
+		$page_style_handles['alder-stone-privacy-policy'] = 'privacy-policy';
+	}
+
+	foreach ( $page_style_handles as $style_handle => $style_name ) {
+		$page_stylesheet      = "/css/{$style_name}{$suffix}.css";
+		$page_stylesheet_path = get_stylesheet_directory() . $page_stylesheet;
+
+		if ( file_exists( $page_stylesheet_path ) ) {
+			wp_enqueue_style( $style_handle, get_stylesheet_directory_uri() . $page_stylesheet, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $page_stylesheet_path ) );
+		}
 	}
 
 	if ( is_page( 'contact' ) ) {
@@ -102,16 +139,6 @@ function alder_stone_enqueue_assets() {
 		}
 	}
 
-	// Shared typography comes last so reusable roles override legacy page selectors.
-	$typography_styles      = "/css/typography{$suffix}.css";
-	$typography_styles_path = get_stylesheet_directory() . $typography_styles;
-
-	if ( file_exists( $typography_styles_path ) ) {
-		wp_enqueue_style( 'alder-stone-typography', get_stylesheet_directory_uri() . $typography_styles, array( 'alder-stone-styles' ), $theme_version . '.' . filemtime( $typography_styles_path ) );
-	}
-
-	wp_enqueue_script( 'jquery' );
-	
 	$js_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_scripts );
 	
 	wp_enqueue_script( 'alder-stone-scripts', get_stylesheet_directory_uri() . $theme_scripts, array(), $js_version, true );
@@ -138,6 +165,9 @@ add_action( 'after_setup_theme', 'alder_stone_load_textdomain' );
  */
 function alder_stone_theme_setup() {
 	add_theme_support( 'title-tag' );
+	add_image_size( 'home-project-card', 600, 0, false );
+	add_image_size( 'home-project-primary', 900, 0, false );
+	add_image_size( 'about-intro', 720, 0, false );
 }
 add_action( 'after_setup_theme', 'alder_stone_theme_setup', 20 );
 

@@ -16,15 +16,9 @@ const replace = require( '@rollup/plugin-replace' );
 const banner = require( './banner.js' );
 
 // Populate Bootstrap version specific variables.
-let bsVersion = 5;
-let bsSrcFile = 'bootstrap.js';
-let fileDest = 'child-theme';
-let globals = {
-	jquery: 'jQuery', // Ensure we use jQuery which is always available even in noConflict mode
-	'@popperjs/core': 'Popper',
-};
-
-const external = [ 'jquery' ];
+const bsVersion = 5;
+const bsSrcFile = 'bootstrap.js';
+const fileDest = 'child-theme';
 
 const plugins = [
 	babel( {
@@ -52,17 +46,14 @@ module.exports = {
 			banner: banner(''),
 			file: path.resolve( __dirname, `../../js/${ fileDest }.js` ),
 			format: 'umd',
-			globals,
 			name: 'understrap',
 		},
 		{
 			banner: banner(''),
 			file: path.resolve( __dirname, `../../js/${ fileDest }.min.js` ),
 			format: 'umd',
-			globals,
 			name: 'understrap',
 		},
 	],
-	external,
 	plugins,
 };

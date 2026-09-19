@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 
 $brand_classes = isset( $args['classes'] ) ? trim( (string) $args['classes'] ) : '';
 $brand_variant = isset( $args['variant'] ) && 'light' === $args['variant'] ? 'light' : 'dark';
-$brand_logo    = 'light' === $brand_variant ? 'alder-stone-logo-light.png' : 'alder-stone-logo-dark.png';
+$brand_logo    = 'light' === $brand_variant ? 'alder-stone-logo-light-80.png' : 'alder-stone-logo-dark-80.png';
 ?>
 
 <a class="alder-stone-brand<?php echo $brand_classes ? ' ' . esc_attr( $brand_classes ) : ''; ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php esc_attr_e( 'Alder & Stone home', 'alder-stone' ); ?>">
